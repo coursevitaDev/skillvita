@@ -11,7 +11,6 @@ import {
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Header } from "@/components/header";
 import { useEffect, useState } from "react";
 import { Search, Edit2, Save, X } from "lucide-react";
 
@@ -160,19 +159,14 @@ export default function AdminPage() {
 
   if (loading) {
     return (
-      <>
-        <Header />
-        <div className="container mx-auto py-10">
-          <div className="text-center">Loading admin panel...</div>
-        </div>
-      </>
+      <div className="container mx-auto py-10">
+        <div className="text-center">Loading admin panel...</div>
+      </div>
     );
   }
 
   return (
-    <>
-      <Header />
-      <div className="container mx-auto py-10">
+    <div className="container mx-auto py-10">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Admin Panel - Game Leaderboard</h1>
           <p className="text-muted-foreground">
@@ -407,6 +401,5 @@ export default function AdminPage() {
         </div>
       )}
     </div>
-    </>
   );
 }

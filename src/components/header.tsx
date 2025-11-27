@@ -1,9 +1,18 @@
+import Image from "next/image"
+
 export function Header() {
   return (
-    <header className="border-b border-border/40">
+    <header className="border-b border-gray-800 bg-black">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-center">
-          <h1 className="text-2xl font-bold text-foreground">Skillvita</h1>
+          <Image
+            src="/skillvita.svg"
+            alt="Skillvita Logo"
+            width={200}
+            height={50}
+            priority
+            className="py-2"
+          />
         </div>
       </div>
     </header>

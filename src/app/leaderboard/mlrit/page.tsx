@@ -11,7 +11,6 @@ import {
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Header } from "@/components/header";
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
 
@@ -95,22 +94,17 @@ export default function MLRITLeaderboard() {
 
   if (loading) {
     return (
-      <>
-        <Header />
-        <div className="container mx-auto py-10">
-          <div className="text-center">Loading leaderboard...</div>
-        </div>
-      </>
+      <div className="container mx-auto py-10">
+        <div className="text-center">Loading leaderboard...</div>
+      </div>
     );
   }
 
   return (
-    <>
-      <Header />
-      <div className="container mx-auto py-10">
+    <div className="container mx-auto py-10">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">MLRIT Leaderboard</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-4xl font-bold mb-2" style={{ color: '#32FE6B' }}>MLRIT Leaderboard</h1>
+          <p className="text-muted-foreground" style={{ color: '#32FE6B' }}>
             Player rankings across all rounds
           </p>
         </div>
@@ -129,14 +123,14 @@ export default function MLRITLeaderboard() {
 
       <Card className="p-6">
         <Table>
-          <TableHeader>
+          <TableHeader style={{ backgroundColor: '#014051' }}>
             <TableRow>
-              <TableHead className="w-12">#</TableHead>
-              <TableHead>Name</TableHead>
-              <TableHead className="text-center">Round 1</TableHead>
-              <TableHead className="text-center">Round 2</TableHead>
-              <TableHead className="text-center">Round 3</TableHead>
-              <TableHead className="text-center font-bold">Total Score</TableHead>
+              <TableHead className="w-12" style={{ color: '#32FE6B' }}>#</TableHead>
+              <TableHead style={{ color: '#32FE6B' }}>Name</TableHead>
+              <TableHead className="text-center" style={{ color: '#32FE6B' }}>Round 1</TableHead>
+              <TableHead className="text-center" style={{ color: '#32FE6B' }}>Round 2</TableHead>
+              <TableHead className="text-center" style={{ color: '#32FE6B' }}>Round 3</TableHead>
+              <TableHead className="text-center font-bold" style={{ color: '#32FE6B' }}>Total Score</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -144,24 +138,24 @@ export default function MLRITLeaderboard() {
               const globalIndex = startIndex + index;
               return (
               <TableRow key={index}>
-                <TableCell className="font-medium">{globalIndex + 1}</TableCell>
-                <TableCell className="font-medium">{player.name}</TableCell>
-                <TableCell className="text-center">{player.round1}</TableCell>
-                <TableCell className="text-center">
+                <TableCell className="font-medium" style={{ color: '#32FE6B' }}>{globalIndex + 1}</TableCell>
+                <TableCell className="font-medium" style={{ color: '#32FE6B' }}>{player.name}</TableCell>
+                <TableCell className="text-center" style={{ color: '#32FE6B' }}>{player.round1}</TableCell>
+                <TableCell className="text-center" style={{ color: '#32FE6B' }}>
                   {player.round2 !== false ? (
                     player.round2
                   ) : (
                     <span className="text-muted-foreground italic">Not Played</span>
                   )}
                 </TableCell>
-                <TableCell className="text-center">
+                <TableCell className="text-center" style={{ color: '#32FE6B' }}>
                   {player.round3 !== false ? (
                     player.round3
                   ) : (
                     <span className="text-muted-foreground italic">Not Played</span>
                   )}
                 </TableCell>
-                <TableCell className="text-center font-bold text-lg">
+                <TableCell className="text-center font-bold text-lg" style={{ color: '#32FE6B' }}>
                   {calculateTotalScore(player)}
                 </TableCell>
               </TableRow>
@@ -182,7 +176,7 @@ export default function MLRITLeaderboard() {
       {/* Pagination Controls */}
       {totalPages > 1 && (
         <div className="mt-6 flex items-center justify-between">
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-muted-foreground" style={{ color: '#32FE6B' }}>
             Showing {startIndex + 1} to {Math.min(endIndex, sortedLeaderboard.length)} of{" "}
             {sortedLeaderboard.length} players
           </div>
@@ -236,6 +230,5 @@ export default function MLRITLeaderboard() {
         </div>
       )}
     </div>
-    </>
   );
 }

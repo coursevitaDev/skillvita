@@ -5,7 +5,6 @@ import { Question } from '@/lib/quizData';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Header } from '@/components/header';
 
 interface QuizComponentProps {
   title: string;
@@ -177,68 +176,81 @@ export default function QuizComponent({ title, questions, domain }: QuizComponen
   // Form Stage
   if (stage === 'form') {
     return (
-      <>
-        <Header />
-        <div className="container mx-auto py-10">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">{title} Quiz</h1>
-            <p className="text-muted-foreground">
-              Please fill in your details to start the quiz
-            </p>
-          </div>
-
-          <Card className="p-6 max-w-2xl mx-auto">
-            <form onSubmit={handleFormSubmit} className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium mb-2">Name *</label>
-                <Input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Enter your name"
-                  className={formErrors.name ? 'border-red-500' : ''}
-                />
-                {formErrors.name && (
-                  <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2">Email *</label>
-                <Input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="Enter your email"
-                  className={formErrors.email ? 'border-red-500' : ''}
-                />
-                {formErrors.email && (
-                  <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-2">Phone Number (10 digits) *</label>
-                <Input
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="Enter 10-digit phone number"
-                  maxLength={10}
-                  className={formErrors.phone ? 'border-red-500' : ''}
-                />
-                {formErrors.phone && (
-                  <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>
-                )}
-              </div>
-
-              <Button type="submit" className="w-full" size="lg">
-                Start Quiz
-              </Button>
-            </form>
-          </Card>
+      <div className="container mx-auto py-10 px-4">
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl font-bold mb-2" style={{ color: '#32FE6B' }}>{title} Quiz</h1>
+          <p className="text-gray-400">
+            Please fill in your details to start the quiz
+          </p>
         </div>
-      </>
+
+        <Card className="p-8 max-w-xl mx-auto border-2 rounded-2xl" style={{ borderColor: '#014051' }}>
+          <form onSubmit={handleFormSubmit} className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#32FE6B' }}>Name *</label>
+              <Input
+                type="text"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                placeholder="Enter your name"
+                className={formErrors.name ? 'border-red-500' : ''}
+                style={{ borderColor: formErrors.name ? undefined : '#014051' }}
+                onFocus={(e) => !formErrors.name && (e.target.style.borderColor = '#32FE6B')}
+                onBlur={(e) => !formErrors.name && (e.target.style.borderColor = '#014051')}
+              />
+              {formErrors.name && (
+                <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
+              )}
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#32FE6B' }}>Email *</label>
+              <Input
+                type="email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                placeholder="Enter your email"
+                className={formErrors.email ? 'border-red-500' : ''}
+                style={{ borderColor: formErrors.email ? undefined : '#014051' }}
+                onFocus={(e) => !formErrors.email && (e.target.style.borderColor = '#32FE6B')}
+                onBlur={(e) => !formErrors.email && (e.target.style.borderColor = '#014051')}
+              />
+              {formErrors.email && (
+                <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
+              )}
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" style={{ color: '#32FE6B' }}>Phone Number (10 digits) *</label>
+              <Input
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                placeholder="Enter 10-digit phone number"
+                maxLength={10}
+                className={formErrors.phone ? 'border-red-500' : ''}
+                style={{ borderColor: formErrors.phone ? undefined : '#014051' }}
+                onFocus={(e) => !formErrors.phone && (e.target.style.borderColor = '#32FE6B')}
+                onBlur={(e) => !formErrors.phone && (e.target.style.borderColor = '#014051')}
+              />
+              {formErrors.phone && (
+                <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>
+              )}
+            </div>
+
+            <Button 
+              type="submit" 
+              className="w-full font-semibold text-black transition-all" 
+              size="lg"
+              style={{ backgroundColor: '#32FE6B' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2de55f'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#32FE6B'}
+            >
+              Start Quiz
+            </Button>
+          </form>
+        </Card>
+      </div>
     );
   }
 
@@ -249,127 +261,150 @@ export default function QuizComponent({ title, questions, domain }: QuizComponen
     const allAnswered = selectedAnswers.every((answer) => answer !== null);
 
     return (
-      <>
-        <Header />
-        <div className="container mx-auto py-10">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">{title} Quiz</h1>
-            <p className="text-muted-foreground">
-              Question {currentQuestion + 1} of {quizQuestions.length} • {selectedAnswers.filter((a) => a !== null).length} answered
-            </p>
+      <div className="container mx-auto py-6 md:py-10 px-4">
+        <div className="mb-6 md:mb-8 text-center">
+          <h1 className="text-2xl md:text-4xl font-bold mb-2" style={{ color: '#32FE6B' }}>{title} Quiz</h1>
+          <p className="text-sm md:text-base text-gray-400">
+            Question {currentQuestion + 1} of {quizQuestions.length} • {selectedAnswers.filter((a) => a !== null).length} answered
+          </p>
+        </div>
+
+        <Card className="p-4 md:p-6 border-2 rounded-2xl" style={{ borderColor: '#014051' }}>
+          {/* Progress Bar */}
+          <div className="mb-4 md:mb-6">
+            <div className="w-full bg-gray-800 rounded-full h-2">
+              <div
+                className="h-2 rounded-full transition-all duration-300"
+                style={{ 
+                  width: `${((currentQuestion + 1) / quizQuestions.length) * 100}%`,
+                  backgroundColor: '#32FE6B'
+                }}
+              />
+            </div>
           </div>
 
-          <Card className="p-6">
-            {/* Progress Bar */}
-            <div className="mb-6">
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-primary h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${((currentQuestion + 1) / quizQuestions.length) * 100}%` }}
-                />
-              </div>
-            </div>
+          {/* Question */}
+          <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-6" style={{ color: '#32FE6B' }}>{currentQ.question}</h3>
 
-            {/* Question */}
-            <h3 className="text-xl font-semibold mb-6">{currentQ.question}</h3>
-
-            {/* Options */}
-            <div className="space-y-3 mb-8">
-              {currentQ.shuffledOptions.map((option, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleAnswerSelect(index)}
-                  className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
-                    selectedAnswers[currentQuestion] === index
-                      ? 'border-primary bg-primary/5'
-                      : 'border-border hover:border-primary/50 hover:bg-accent'
-                  }`}
-                >
-                  <span className="font-medium mr-3">
-                    {String.fromCharCode(65 + index)}.
-                  </span>
-                  {option}
-                </button>
-              ))}
-            </div>
-
-            {/* Navigation */}
-            <div className="flex justify-between items-center pt-4 border-t">
-              <Button
-                onClick={handlePrevious}
-                disabled={currentQuestion === 0}
-                variant="outline"
-                size="sm"
+          {/* Options */}
+          <div className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+            {currentQ.shuffledOptions.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswerSelect(index)}
+                className="w-full p-3 md:p-4 text-left text-sm md:text-base rounded-lg border-2 transition-all"
+                style={{
+                  borderColor: selectedAnswers[currentQuestion] === index ? '#32FE6B' : '#014051',
+                  backgroundColor: selectedAnswers[currentQuestion] === index ? 'rgba(50, 254, 107, 0.1)' : 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  if (selectedAnswers[currentQuestion] !== index) {
+                    e.currentTarget.style.borderColor = '#32FE6B';
+                    e.currentTarget.style.backgroundColor = 'rgba(50, 254, 107, 0.05)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (selectedAnswers[currentQuestion] !== index) {
+                    e.currentTarget.style.borderColor = '#014051';
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                  }
+                }}
               >
-                Previous
-              </Button>
+                <span className="font-medium mr-2 md:mr-3" style={{ color: '#32FE6B' }}>
+                  {String.fromCharCode(65 + index)}.
+                </span>
+                {option}
+              </button>
+            ))}
+          </div>
 
-              {isLastQuestion ? (
-                <Button
-                  onClick={handleSubmitQuiz}
-                  disabled={!allAnswered}
-                  size="sm"
-                >
-                  Submit Quiz
-                </Button>
-              ) : (
-                <Button onClick={handleNext} size="sm">Next</Button>
-              )}
-            </div>
-          </Card>
-        </div>
-      </>
+          {/* Navigation */}
+          <div className="flex items-center gap-3 pt-4 border-t" style={{ borderColor: '#014051' }}>
+            <Button
+              onClick={handlePrevious}
+              disabled={currentQuestion === 0}
+              variant="outline"
+              className="flex-1 md:flex-none md:min-w-[120px]"
+              style={{ borderColor: '#014051', color: '#32FE6B' }}
+            >
+              Previous
+            </Button>
+
+            <div className="flex-1 md:flex-none"></div>
+
+            {isLastQuestion ? (
+              <Button
+                onClick={handleSubmitQuiz}
+                disabled={!allAnswered}
+                className="flex-1 md:flex-none md:min-w-[120px] font-semibold text-black transition-all md:ml-auto"
+                style={{ backgroundColor: '#32FE6B' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2de55f'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#32FE6B'}
+              >
+                Submit Quiz
+              </Button>
+            ) : (
+              <Button 
+                onClick={handleNext} 
+                className="flex-1 md:flex-none md:min-w-[120px] font-semibold text-black transition-all md:ml-auto"
+                style={{ backgroundColor: '#32FE6B' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2de55f'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#32FE6B'}
+              >
+                Next
+              </Button>
+            )}
+          </div>
+        </Card>
+      </div>
     );
   }
 
   // Result Stage
   return (
-    <>
-      <Header />
-      <div className="container mx-auto py-10">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Quiz Complete!</h1>
-          <p className="text-muted-foreground">
-            Thank you for completing the {title} quiz
+    <div className="container mx-auto py-10 px-4">
+      <div className="mb-8 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: '#32FE6B' }}>Quiz Complete!</h1>
+        <p className="text-gray-400">
+          Thank you for completing the {title} quiz
+        </p>
+      </div>
+
+      <Card className="p-6 max-w-2xl mx-auto border-2 rounded-2xl" style={{ borderColor: '#014051' }}>
+        {/* Score Display */}
+        <div className="text-center mb-8 pb-8 border-b" style={{ borderColor: '#014051' }}>
+          <div className="text-7xl font-bold mb-4" style={{ color: '#32FE6B' }}>
+            {score}/{quizQuestions.length}
+          </div>
+          <p className="text-2xl font-semibold mb-2" style={{ color: '#32FE6B' }}>
+            {Math.round((score / quizQuestions.length) * 100)}%
           </p>
+          <p className="text-gray-400">Great job, {formData.name}!</p>
         </div>
 
-        <Card className="p-6 max-w-2xl mx-auto">
-          {/* Score Display */}
-          <div className="text-center mb-8 pb-8 border-b">
-            <div className="text-7xl font-bold text-primary mb-4">
-              {score}/{quizQuestions.length}
+        {/* User Details */}
+        <div className="p-6 rounded-lg space-y-3 mb-6 border-2" style={{ borderColor: '#014051', backgroundColor: 'rgba(1, 64, 81, 0.1)' }}>
+          <h3 className="font-semibold text-lg mb-4" style={{ color: '#32FE6B' }}>Submission Details</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div>
+              <span className="text-sm text-gray-500">Name</span>
+              <p className="font-medium">{formData.name}</p>
             </div>
-            <p className="text-2xl font-semibold mb-2">
-              {Math.round((score / quizQuestions.length) * 100)}%
-            </p>
-            <p className="text-muted-foreground">Great job, {formData.name}!</p>
-          </div>
-
-          {/* User Details */}
-          <div className="bg-accent/50 p-6 rounded-lg space-y-3 mb-6">
-            <h3 className="font-semibold text-lg mb-4">Submission Details</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div>
-                <span className="text-sm text-muted-foreground">Name</span>
-                <p className="font-medium">{formData.name}</p>
-              </div>
-              <div>
-                <span className="text-sm text-muted-foreground">Email</span>
-                <p className="font-medium">{formData.email}</p>
-              </div>
-              <div>
-                <span className="text-sm text-muted-foreground">Phone</span>
-                <p className="font-medium">{formData.phone}</p>
-              </div>
-              <div>
-                <span className="text-sm text-muted-foreground">Domain</span>
-                <p className="font-medium">{title}</p>
-              </div>
+            <div>
+              <span className="text-sm text-gray-500">Email</span>
+              <p className="font-medium">{formData.email}</p>
+            </div>
+            <div>
+              <span className="text-sm text-gray-500">Phone</span>
+              <p className="font-medium">{formData.phone}</p>
+            </div>
+            <div>
+              <span className="text-sm text-gray-500">Domain</span>
+              <p className="font-medium">{title}</p>
             </div>
           </div>
-        </Card>
-      </div>
-    </>
+        </div>
+      </Card>
+    </div>
   );
 }

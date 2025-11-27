@@ -154,7 +154,7 @@ export function TicTacToeGame() {
 
   const minimax = (currentBoard: Board, depth: number, isMaximizing: boolean): number => {
     const { winner } = checkWinner(currentBoard);
-    
+
     if (winner === 'O') return 10 - depth;
     if (winner === 'X') return depth - 10;
     if (isBoardFull(currentBoard)) return 0;
@@ -203,7 +203,7 @@ export function TicTacToeGame() {
   // Get a suboptimal move to help user win
   const getSuboptimalMove = (currentBoard: Board): number => {
     const availableMoves = getAvailableMoves(currentBoard);
-    
+
     // First, check if user can win on next move and DON'T block them
     for (const move of availableMoves) {
       const testBoard = [...currentBoard];
@@ -217,7 +217,7 @@ export function TicTacToeGame() {
         }
       }
     }
-    
+
     // Otherwise just pick a random move that's not optimal
     const randomIndex = Math.floor(Math.random() * availableMoves.length);
     return availableMoves[randomIndex];
@@ -238,11 +238,11 @@ export function TicTacToeGame() {
       const newWins = wins + 1;
       setWins(newWins);
       localStorage.setItem('tictactoe_wins', newWins.toString());
-      
+
       const newGamesPlayed = gamesPlayed + 1;
       setGamesPlayed(newGamesPlayed);
       localStorage.setItem('tictactoe_games_played', newGamesPlayed.toString());
-      
+
       if (gamesPlayed === 0 && !isContactSubmitted) {
         setShowContactForm(true);
         localStorage.setItem('tictactoe_contact_form_shown', 'true');
@@ -256,11 +256,11 @@ export function TicTacToeGame() {
       const newDraws = draws + 1;
       setDraws(newDraws);
       localStorage.setItem('tictactoe_draws', newDraws.toString());
-      
+
       const newGamesPlayed = gamesPlayed + 1;
       setGamesPlayed(newGamesPlayed);
       localStorage.setItem('tictactoe_games_played', newGamesPlayed.toString());
-      
+
       if (gamesPlayed === 0 && !isContactSubmitted) {
         setShowContactForm(true);
         localStorage.setItem('tictactoe_contact_form_shown', 'true');
@@ -290,13 +290,13 @@ export function TicTacToeGame() {
             localStorage.setItem('tictactoe_losses', newLosses.toString());
             return newLosses;
           });
-          
+
           setGamesPlayed(prev => {
             const newGamesPlayed = prev + 1;
             localStorage.setItem('tictactoe_games_played', newGamesPlayed.toString());
             return newGamesPlayed;
           });
-          
+
           if (gamesPlayed === 0 && !isContactSubmitted) {
             setShowContactForm(true);
             localStorage.setItem('tictactoe_contact_form_shown', 'true');
@@ -312,13 +312,13 @@ export function TicTacToeGame() {
             localStorage.setItem('tictactoe_draws', newDraws.toString());
             return newDraws;
           });
-          
+
           setGamesPlayed(prev => {
             const newGamesPlayed = prev + 1;
             localStorage.setItem('tictactoe_games_played', newGamesPlayed.toString());
             return newGamesPlayed;
           });
-          
+
           if (gamesPlayed === 0 && !isContactSubmitted) {
             setShowContactForm(true);
             localStorage.setItem('tictactoe_contact_form_shown', 'true');
@@ -356,12 +356,12 @@ export function TicTacToeGame() {
   const handleNameSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const nameError = validateName(playerName);
-    
+
     if (nameError) {
       setErrors({ ...errors, name: nameError });
       return;
     }
-    
+
     localStorage.setItem('tictactoe_player_name', playerName.trim());
     setIsNameSubmitted(true);
     setShowNameForm(false);
@@ -370,20 +370,20 @@ export function TicTacToeGame() {
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const emailError = validateEmail(playerEmail);
     const phoneError = validatePhone(playerPhone);
-    
+
     setErrors({
       ...errors,
       email: emailError,
       phone: phoneError,
     });
-    
+
     if (emailError || phoneError) {
       return;
     }
-    
+
     // Post to backend
     try {
       const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5002';
@@ -420,19 +420,19 @@ export function TicTacToeGame() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-black">
+    <div className="flex flex-col items-center justify-center min-h-full p-4 bg-black">
       {/* Name Form at Start */}
       {showNameForm && (
         <div className="fixed inset-0 bg-black flex items-center justify-center z-50 p-4">
-          <div className="p-8 max-w-md w-full">
+          <div className="p-8 max-w-md w-full border-2 rounded-lg" style={{ borderColor: '#32FE6B' }}>
             <div className="text-center mb-6">
-              <h2 className="text-4xl font-bold text-white mb-2">🎮 Tic-Tac-Toe</h2>
+              <h2 className="text-4xl font-bold mb-2" style={{ color: '#32FE6B' }}>🎮 Tic-Tac-Toe</h2>
               <p className="text-gray-400">Enter your name to start playing!</p>
             </div>
-            
+
             <form onSubmit={handleNameSubmit} className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="playerName" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="playerName" className="block text-sm font-medium mb-2" style={{ color: '#32FE6B' }}>
                   Your Name
                 </label>
                 <Input
@@ -446,17 +446,31 @@ export function TicTacToeGame() {
                     }
                   }}
                   placeholder="Enter your name"
-                  className="w-full bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-500 focus:border-blue-500"
+                  className="w-full bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-500"
+                  style={{
+                    borderColor: '#014051',
+                    '--tw-ring-color': '#32FE6B',
+                    color: 'white'
+                  } as React.CSSProperties}
+                  onFocus={(e) => e.target.style.borderColor = '#32FE6B'}
+                  onBlur={(e) => e.target.style.borderColor = '#014051'}
                   required
                 />
                 {errors.name && (
                   <p className="text-sm text-red-400">{errors.name}</p>
                 )}
               </div>
-              
-              <Button 
+
+              <Button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+                className="w-full font-semibold text-black border-2 transition-all"
+                style={{ backgroundColor: '#32FE6B', borderColor: '#32FE6B' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#2de55f';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#32FE6B';
+                }}
               >
                 Start Game
               </Button>
@@ -468,15 +482,15 @@ export function TicTacToeGame() {
       {/* Contact Form after first game */}
       {showContactForm && (
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
-          <div className="p-8 max-w-md w-full">
+          <div className="p-8 max-w-md w-full border-2 rounded-lg" style={{ borderColor: '#32FE6B' }}>
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-white mb-2">🎉 Great Game, {playerName}!</h2>
+              <h2 className="text-3xl font-bold mb-2" style={{ color: '#32FE6B' }}>🎉 Great Game, {playerName}!</h2>
               <p className="text-gray-400">Share your contact to continue playing</p>
             </div>
-            
+
             <form onSubmit={handleContactSubmit} className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="playerEmail" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="playerEmail" className="block text-sm font-medium mb-2" style={{ color: '#32FE6B' }}>
                   Email
                 </label>
                 <Input
@@ -490,7 +504,14 @@ export function TicTacToeGame() {
                     }
                   }}
                   placeholder="your@email.com"
-                  className="w-full bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-500 focus:border-blue-500"
+                  className="w-full bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-500"
+                  style={{
+                    borderColor: '#014051',
+                    '--tw-ring-color': '#32FE6B',
+                    color: 'white'
+                  } as React.CSSProperties}
+                  onFocus={(e) => e.target.style.borderColor = '#32FE6B'}
+                  onBlur={(e) => e.target.style.borderColor = '#014051'}
                   required
                 />
                 {errors.email && (
@@ -499,7 +520,7 @@ export function TicTacToeGame() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="playerPhone" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="playerPhone" className="block text-sm font-medium mb-2" style={{ color: '#32FE6B' }}>
                   Phone Number
                 </label>
                 <Input
@@ -513,17 +534,31 @@ export function TicTacToeGame() {
                     }
                   }}
                   placeholder="+1 234 567 8900"
-                  className="w-full bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-500 focus:border-blue-500"
+                  className="w-full bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-500"
+                  style={{
+                    borderColor: '#014051',
+                    '--tw-ring-color': '#32FE6B',
+                    color: 'white'
+                  } as React.CSSProperties}
+                  onFocus={(e) => e.target.style.borderColor = '#32FE6B'}
+                  onBlur={(e) => e.target.style.borderColor = '#014051'}
                   required
                 />
                 {errors.phone && (
                   <p className="text-sm text-red-400">{errors.phone}</p>
                 )}
               </div>
-              
-              <Button 
+
+              <Button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+                className="w-full font-semibold text-black border-2 transition-all"
+                style={{ backgroundColor: '#32FE6B', borderColor: '#32FE6B' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#2de55f';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#32FE6B';
+                }}
               >
                 Continue Playing
               </Button>
@@ -535,37 +570,33 @@ export function TicTacToeGame() {
       <div className="p-8 bg-black">
         <div className="text-center mb-6">
           <h1 className="text-4xl font-bold text-white mb-2">Tic-Tac-Toe</h1>
-          <p className="text-gray-400 text-sm">You are <span className="text-blue-400 font-semibold">X</span>, Computer is <span className="text-red-400 font-semibold">O</span></p>
+          <p className="text-gray-400 text-sm flex items-center justify-center gap-2">
+            You are <span className="font-semibold" style={{ color: '#014051' }}>X</span>, Computer is <span className="font-semibold" style={{ color: '#32FE6B' }}>O</span>
+          </p>
           {isNameSubmitted && playerName && (
             <p className="text-green-400 text-sm mt-1">Welcome, {playerName}! 👋</p>
           )}
         </div>
-        
+
         {/* Stats */}
         {isContactSubmitted && (
-          <div className="mb-6 flex justify-center gap-6 text-sm">
+          <div className="mb-6 flex justify-center gap-6">
             <div className="text-center">
-              <div className="text-green-400 font-bold text-lg">{wins}</div>
-              <div className="text-gray-500">Wins</div>
+              <div className="text-green-400 font-bold text-2xl">{wins}</div>
+              <div className="text-gray-400 text-base">Wins</div>
             </div>
             <div className="text-center">
-              <div className="text-red-400 font-bold text-lg">{losses}</div>
-              <div className="text-gray-500">Losses</div>
+              <div className="text-red-400 font-bold text-2xl">{losses}</div>
+              <div className="text-gray-400 text-base">Losses</div>
             </div>
             <div className="text-center">
-              <div className="text-yellow-400 font-bold text-lg">{draws}</div>
-              <div className="text-gray-500">Draws</div>
+              <div className="text-yellow-400 font-bold text-2xl">{draws}</div>
+              <div className="text-gray-400 text-base">Draws</div>
             </div>
           </div>
         )}
-
         <div className="mb-6 text-center">
-          <p className={`text-xl font-semibold ${
-            gameStatus === 'won' ? 'text-green-400' :
-            gameStatus === 'lost' ? 'text-red-400' :
-            gameStatus === 'draw' ? 'text-yellow-400' :
-            'text-blue-400'
-          }`}>
+          <p className={`text-xl font-semibold`} style={{ color: gameStatus === 'won' ? '#22c55e' : gameStatus === 'lost' ? '#ef4444' : gameStatus === 'draw' ? '#eab308' : '#32FE6B' }}>
             {getStatusMessage()}
           </p>
         </div>
@@ -579,12 +610,10 @@ export function TicTacToeGame() {
               disabled={!isPlayerTurn || gameStatus !== 'playing' || cell !== null}
               className={`
                 w-24 h-24 text-5xl font-bold rounded-xl
-                transition-all duration-200
-                ${cell === 'X' ? 'text-blue-400' : cell === 'O' ? 'text-red-400' : 'text-transparent'}
-                ${
-                  winningLine?.includes(index) 
-                    ? 'bg-gradient-to-br from-yellow-500/40 to-orange-500/40 border-yellow-400/60' 
-                    : 'bg-gray-800/40 border-gray-600/40'
+                transition-all duration-200 flex items-center justify-center overflow-hidden
+                ${winningLine?.includes(index)
+                  ? 'bg-gradient-to-br from-yellow-500/40 to-orange-500/40 border-yellow-400/60'
+                  : 'bg-gray-800/40 border-gray-600/40'
                 }
                 ${!cell && isPlayerTurn && gameStatus === 'playing' ? 'cursor-pointer hover:bg-gray-700/60 hover:border-blue-500/60' : 'cursor-not-allowed'}
                 border-2
@@ -594,15 +623,41 @@ export function TicTacToeGame() {
                 backdrop-blur-sm
               `}
             >
-              {cell || ''}
+              {cell === 'O' ? (
+                <img
+                  src="/assets/skillvita_icon.svg"
+                  alt="O"
+                  width="60"
+                  height="60"
+                  className="animate-in zoom-in duration-200"
+                  style={{
+                    opacity: 1,
+                    filter: 'none',
+                    objectFit: 'contain',
+                    color: 'inherit',
+                    mixBlendMode: 'normal'
+                  }}
+                />
+              ) : cell === 'X' ? (
+                <span style={{ color: '#014051' }}>{cell}</span>
+              ) : (
+                ''
+              )}
             </button>
           ))}
         </div>
 
         <div className="flex gap-4">
-          <Button 
+          <Button
             onClick={resetGame}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold border border-blue-500/30"
+            className="w-full font-semibold text-black border-2 transition-all"
+            style={{ backgroundColor: '#32FE6B', borderColor: '#32FE6B' }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#2de55f';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#32FE6B';
+            }}
           >
             New Game
           </Button>
