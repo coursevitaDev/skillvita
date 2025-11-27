@@ -18,122 +18,104 @@ export const quizData: QuizData = {
     questions: [
       {
         id: 1,
-        question: "What is an AI agent?",
-        options: ["A software program that acts autonomously", "A human operator", "A database system", "A web browser"],
-        correctAnswer: 0
-      },
-      {
-        id: 2,
-        question: "Which of the following is a key characteristic of agentic AI?",
-        options: ["Passive response", "Autonomous decision-making", "Manual control", "Static behavior"],
+        question: "An agentic AI system primarily differs from traditional AI because it can:",
+        options: ["Store data locally", "Take autonomous actions", "Require GPU inference", "Use rule-based logic"],
         correctAnswer: 1
       },
       {
-        id: 3,
-        question: "What does LLM stand for?",
-        options: ["Large Language Model", "Limited Learning Machine", "Linear Logic Module", "Logical Language Mapping"],
+        id: 2,
+        question: "Which component enables an AI agent to evaluate if it achieved its goal?",
+        options: ["Reward model", "Prompt manager", "Vector store", "Tokenizer"],
         correctAnswer: 0
+      },
+      {
+        id: 3,
+        question: "A multi-agent AI system reduces hallucinations by:",
+        options: ["Prompt shortening", "Cross-agent verification", "Removing context", "Limiting memory"],
+        correctAnswer: 1
       },
       {
         id: 4,
-        question: "Which framework is commonly used for building AI agents?",
-        options: ["LangChain", "Bootstrap", "jQuery", "Angular"],
-        correctAnswer: 0
+        question: "The architecture where an agent 'reflects, plans, and acts' is called:",
+        options: ["PEAS", "ReAct", "RNN", "Q-Learning"],
+        correctAnswer: 1
       },
       {
         id: 5,
-        question: "What is the purpose of a reward function in reinforcement learning?",
-        options: ["To punish the agent", "To guide the agent towards desired behavior", "To stop the agent", "To delete the model"],
+        question: "An AI agent accessing external APIs requires:",
+        options: ["Token embeddings", "Tool calling", "Few-shot prompting", "Sampling temperature"],
         correctAnswer: 1
       },
       {
         id: 6,
-        question: "Which company developed GPT models?",
-        options: ["Google", "OpenAI", "Meta", "Amazon"],
+        question: "Memory in AI agents is stored in:",
+        options: ["SQL tables", "Vector embeddings", "BSON documents", "Flat files"],
         correctAnswer: 1
       },
       {
         id: 7,
-        question: "What is prompt engineering?",
-        options: ["Building hardware", "Crafting effective inputs for AI models", "Network engineering", "Database design"],
+        question: "Which is an example of a reactive agent?",
+        options: ["GPT-based planner", "Thermostat", "Financial chatbot", "Self-driving car planner"],
         correctAnswer: 1
       },
       {
         id: 8,
-        question: "What is RAG in AI context?",
-        options: ["Retrieval Augmented Generation", "Random Agent Generator", "Rapid Action Gateway", "Resource Allocation Graph"],
-        correctAnswer: 0
-      },
-      {
-        id: 9,
-        question: "Which is NOT a component of an AI agent?",
-        options: ["Perception", "Action", "Static HTML page", "Decision-making"],
-        correctAnswer: 2
-      },
-      {
-        id: 10,
-        question: "What is the role of embeddings in AI?",
-        options: ["To slow down processing", "To represent data in vector space", "To delete information", "To compile code"],
+        question: "Which parameter controls creativity in LLM responses?",
+        options: ["Max tokens", "Temperature", "Embedding dimension", "Latency"],
         correctAnswer: 1
       },
       {
+        id: 9,
+        question: "LLM stands for:",
+        options: ["Large Language Model", "Linear Learning Model", "Logical Learning Machine", "Long Memory Model"],
+        correctAnswer: 0
+      },
+      {
+        id: 10,
+        question: "Agents can use tools like:",
+        options: ["APIs & databases", "Shoes", "Microphones only", "RAM chips"],
+        correctAnswer: 0
+      },
+      {
         id: 11,
-        question: "Which of these is a vector database?",
-        options: ["MySQL", "Pinecone", "Excel", "Notepad"],
+        question: "In reinforcement learning for agents, what does the Bellman equation calculate?",
+        options: ["Token probability", "Optimal value function", "Embedding dimensions", "Training loss"],
         correctAnswer: 1
       },
       {
         id: 12,
-        question: "What is fine-tuning in AI?",
-        options: ["Adjusting screen brightness", "Training a pre-trained model on specific data", "Deleting data", "Installing software"],
+        question: "Which technique prevents agents from getting stuck in local optima during planning?",
+        options: ["Greedy search only", "Epsilon-greedy exploration", "Fixed temperature", "Removing memory"],
         correctAnswer: 1
       },
       {
         id: 13,
-        question: "What does 'temperature' control in LLM outputs?",
-        options: ["CPU heat", "Randomness/creativity", "Speed", "Memory usage"],
+        question: "What is the primary challenge in multi-agent coordination?",
+        options: ["Memory storage", "Handling conflicting goals and communication", "Token limits", "API costs only"],
         correctAnswer: 1
       },
       {
         id: 14,
-        question: "Which is an example of multi-agent system?",
-        options: ["Single chatbot", "Collaborative AI agents working together", "Static website", "PDF reader"],
+        question: "In tool-augmented LLMs, what is function calling?",
+        options: ["Hardcoded responses", "Structured API invocation from model output", "Random tool selection", "User manual input"],
         correctAnswer: 1
       },
       {
         id: 15,
-        question: "What is token in LLM context?",
-        options: ["Security key", "Unit of text processing", "Database entry", "CSS class"],
+        question: "Which agent architecture separates world model from policy?",
+        options: ["Reactive agents", "Model-based agents", "Reflex agents only", "Simple agents"],
         correctAnswer: 1
       },
       {
         id: 16,
-        question: "What is chain-of-thought prompting?",
-        options: ["Random questioning", "Step-by-step reasoning in prompts", "Quick responses", "Image generation"],
+        question: "What does RLHF stand for in LLM training?",
+        options: ["Recursive Learning High Frequency", "Reinforcement Learning from Human Feedback", "Random Learning Hybrid Function", "Rapid Language Handling Framework"],
         correctAnswer: 1
       },
       {
         id: 17,
-        question: "Which technique helps reduce AI hallucinations?",
-        options: ["Increasing temperature", "Grounding with factual data", "Random outputs", "Ignoring context"],
-        correctAnswer: 1
-      },
-      {
-        id: 18,
-        question: "What is the Turing Test?",
-        options: ["Speed test", "Test of machine intelligence", "Memory test", "Graphics test"],
-        correctAnswer: 1
-      },
-      {
-        id: 19,
-        question: "What is few-shot learning?",
-        options: ["No training", "Learning from few examples", "Long training", "Video editing"],
-        correctAnswer: 1
-      },
-      {
-        id: 20,
-        question: "Which is a key challenge in agentic AI?",
-        options: ["Too much memory", "Alignment with human values", "Too fast processing", "Perfect accuracy"],
+        question: "In agent memory systems, what distinguishes episodic from semantic memory?",
+        options: ["Storage format", "Episodic stores experiences, semantic stores facts", "Database type", "Token count"],
         correctAnswer: 1
       }
     ]
@@ -143,122 +125,104 @@ export const quizData: QuizData = {
     questions: [
       {
         id: 1,
-        question: "What is vibe coding primarily about?",
-        options: ["Strict rules", "Creative and intuitive programming", "Only using AI", "Copying code"],
+        question: "What is the time complexity of binary search?",
+        options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
         correctAnswer: 1
       },
       {
         id: 2,
-        question: "Which tool is popular for AI-assisted coding?",
-        options: ["Notepad", "GitHub Copilot", "Paint", "Calculator"],
-        correctAnswer: 1
+        question: "In JavaScript, == differs from === because:",
+        options: ["== checks type & value", "=== checks type only", "=== checks type & value", "They are identical"],
+        correctAnswer: 2
       },
       {
         id: 3,
-        question: "What does IDE stand for?",
-        options: ["Internet Data Explorer", "Integrated Development Environment", "Internal Design Engine", "Interactive Display Element"],
+        question: "Which DS uses FIFO?",
+        options: ["Stack", "Queue", "Linked List", "Binary Tree"],
         correctAnswer: 1
       },
       {
         id: 4,
-        question: "Which is a benefit of vibe coding?",
-        options: ["Slower development", "Faster prototyping", "More bugs", "Less creativity"],
+        question: "In programming, a closure is:",
+        options: ["A function inside a class", "A function with access to its outer scope", "A deprecated JavaScript feature", "A variable with limited scope"],
         correctAnswer: 1
       },
       {
         id: 5,
-        question: "What is pair programming?",
-        options: ["Two people coding together", "Solo coding", "No coding", "Only AI coding"],
-        correctAnswer: 0
-      },
-      {
-        id: 6,
-        question: "Which language is known for 'developer happiness'?",
-        options: ["Assembly", "Ruby", "Machine code", "Binary"],
-        correctAnswer: 1
-      },
-      {
-        id: 7,
-        question: "What is live reloading?",
-        options: ["Restarting computer", "Automatic update of running application", "Deleting files", "Saving manually"],
-        correctAnswer: 1
-      },
-      {
-        id: 8,
-        question: "Which is NOT a code editor?",
-        options: ["VS Code", "Sublime Text", "Photoshop", "Vim"],
+        question: "Recursion must always include:",
+        options: ["A print statement", "Two parameters", "A base condition", "A loop"],
         correctAnswer: 2
       },
       {
+        id: 6,
+        question: "Which loop runs at least once?",
+        options: ["for", "while", "do…while", "foreach"],
+        correctAnswer: 2
+      },
+      {
+        id: 7,
+        question: "const variable in JS:",
+        options: ["Cannot be reassigned", "Cannot store objects", "Is faster than let", "Is global always"],
+        correctAnswer: 0
+      },
+      {
+        id: 8,
+        question: "Arrays in JS are:",
+        options: ["Fixed size", "Dynamic", "Not iterable", "Only numeric"],
+        correctAnswer: 1
+      },
+      {
         id: 9,
-        question: "What is refactoring?",
-        options: ["Breaking code", "Improving code structure without changing behavior", "Deleting code", "Adding bugs"],
+        question: "JS stands for:",
+        options: ["JavaSystem", "JavaScript", "JustScript", "JServer"],
         correctAnswer: 1
       },
       {
         id: 10,
-        question: "What does DRY principle mean?",
-        options: ["Do Repeat Yourself", "Don't Repeat Yourself", "Delete Random Years", "Debug Ruby Yearly"],
+        question: "Which symbol starts a comment in JS?",
+        options: ["#", "//", "%", "<>"],
         correctAnswer: 1
       },
       {
         id: 11,
-        question: "What is a code snippet?",
-        options: ["Full application", "Reusable piece of code", "Bug", "Comment"],
-        correctAnswer: 1
+        question: "What is the space complexity of merge sort?",
+        options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+        correctAnswer: 2
       },
       {
         id: 12,
-        question: "Which is a version control system?",
-        options: ["Git", "HTML", "CSS", "JSON"],
-        correctAnswer: 0
+        question: "In JavaScript, what is the event loop responsible for?",
+        options: ["Variable declaration", "Managing asynchronous callback execution", "Memory allocation", "Syntax parsing"],
+        correctAnswer: 1
       },
       {
         id: 13,
-        question: "What is hot reloading?",
-        options: ["Heating up computer", "Updating code without losing state", "Burning CD", "Overheating"],
+        question: "Which design pattern ensures a class has only one instance?",
+        options: ["Factory", "Singleton", "Observer", "Prototype"],
         correctAnswer: 1
       },
       {
         id: 14,
-        question: "What is rubber duck debugging?",
-        options: ["Using a real duck", "Explaining code to inanimate object to find bugs", "Playing games", "Swimming"],
+        question: "What is memoization?",
+        options: ["Deleting unused variables", "Caching function results to avoid recomputation", "Memory leak prevention", "Variable hoisting"],
         correctAnswer: 1
       },
       {
         id: 15,
-        question: "What is clean code?",
-        options: ["Virus-free code", "Readable and maintainable code", "Minified code", "Obfuscated code"],
+        question: "In dynamic programming, what distinguishes it from divide-and-conquer?",
+        options: ["Problem size", "Overlapping subproblems with memoization", "Recursion depth", "Language support"],
         correctAnswer: 1
       },
       {
         id: 16,
-        question: "What is a boilerplate?",
-        options: ["Kitchen item", "Template code to start projects", "Error message", "Database"],
+        question: "What does lexical scoping mean in JavaScript?",
+        options: ["Global variables only", "Scope determined by code structure, not runtime", "No nested functions", "Dynamic typing"],
         correctAnswer: 1
       },
       {
         id: 17,
-        question: "What is TDD?",
-        options: ["Test Driven Development", "Total Data Deletion", "Typed Document Design", "Time Delay Debug"],
-        correctAnswer: 0
-      },
-      {
-        id: 18,
-        question: "What is a linter?",
-        options: ["Cleaning tool", "Code quality and style checker", "Browser", "Database"],
-        correctAnswer: 1
-      },
-      {
-        id: 19,
-        question: "What is IntelliSense?",
-        options: ["AI model", "Code completion feature", "Game", "Social media"],
-        correctAnswer: 1
-      },
-      {
-        id: 20,
-        question: "What is the flow state in coding?",
-        options: ["Water coding", "Deep focus and productivity", "Sleeping", "Procrastinating"],
+        question: "Which complexity class describes NP-complete problems?",
+        options: ["Solvable in polynomial time", "Verifiable in polynomial time, no known polynomial solution", "Unsolvable", "Constant time"],
         correctAnswer: 1
       }
     ]
@@ -268,122 +232,104 @@ export const quizData: QuizData = {
     questions: [
       {
         id: 1,
-        question: "What does HTML stand for?",
-        options: ["Hyper Text Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
-        correctAnswer: 0
+        question: "Which HTTP method is idempotent?",
+        options: ["POST", "PATCH", "PUT", "CONNECT"],
+        correctAnswer: 2
       },
       {
         id: 2,
-        question: "Which CSS property changes text color?",
-        options: ["text-color", "color", "font-color", "text-style"],
+        question: "React uses which algorithm for UI updates?",
+        options: ["Dijkstra", "Diffing algorithm", "Kruskal", "Heapsort"],
         correctAnswer: 1
       },
       {
         id: 3,
-        question: "What is the correct HTML tag for the largest heading?",
-        options: ["<heading>", "<h6>", "<h1>", "<head>"],
+        question: "Which status code indicates unprocessable entity?",
+        options: ["200", "400", "422", "504"],
         correctAnswer: 2
       },
       {
         id: 4,
-        question: "Which JavaScript method is used to write into HTML?",
-        options: ["document.write()", "console.log()", "window.alert()", "innerHTML()"],
+        question: "CORS stands for:",
+        options: ["Cross-Origin Resource Sharing", "Client-Origin Resource Service", "Code Origin Response Set", "Central API Routing System"],
         correctAnswer: 0
       },
       {
         id: 5,
-        question: "What does CSS stand for?",
-        options: ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style System", "Colorful Style Sheets"],
-        correctAnswer: 0
+        question: "Node.js runs on which engine?",
+        options: ["Chakra", "V8", "SpiderMonkey", "EdgeHTML"],
+        correctAnswer: 1
       },
       {
         id: 6,
-        question: "Which HTTP method is used to submit form data?",
-        options: ["GET", "POST", "PUT", "DELETE"],
+        question: "CSS stands for:",
+        options: ["Creative Style System", "Cascading Style Sheets", "Color Styling Syntax", "Core Styling Sheet"],
         correctAnswer: 1
       },
       {
         id: 7,
-        question: "What is React?",
-        options: ["Database", "JavaScript library for UI", "CSS framework", "Backend framework"],
+        question: "SQL is used for:",
+        options: ["Styling pages", "Managing databases", "Writing server apps", "Testing APIs"],
         correctAnswer: 1
       },
       {
         id: 8,
-        question: "What does DOM stand for?",
-        options: ["Document Object Model", "Data Object Management", "Digital Orientation Method", "Document Orientation Model"],
-        correctAnswer: 0
-      },
-      {
-        id: 9,
-        question: "Which is NOT a JavaScript framework?",
-        options: ["Angular", "Vue", "Django", "Svelte"],
-        correctAnswer: 2
-      },
-      {
-        id: 10,
-        question: "What is Bootstrap?",
-        options: ["JavaScript library", "CSS framework", "Database", "Server"],
+        question: "Which tag loads JavaScript?",
+        options: ["<js>", "<script>", "<javascript>", "<link>"],
         correctAnswer: 1
       },
       {
-        id: 11,
-        question: "What does API stand for?",
-        options: ["Application Programming Interface", "Advanced Programming Integration", "Automated Program Interaction", "Application Process Integration"],
+        id: 9,
+        question: "HTML stands for:",
+        options: ["HyperText Markup Language", "HyperTalk Machine Language", "HighText Marking Layout", "Hyper Terminal Machine Language"],
         correctAnswer: 0
       },
       {
+        id: 10,
+        question: "Which is a backend language?",
+        options: ["CSS", "HTML", "Java", "Figma"],
+        correctAnswer: 2
+      },
+      {
+        id: 11,
+        question: "What is the purpose of Content Security Policy (CSP)?",
+        options: ["Speed up page load", "Mitigate XSS and injection attacks", "Compress images", "Manage cookies"],
+        correctAnswer: 1
+      },
+      {
         id: 12,
-        question: "Which tag is used for creating a hyperlink?",
-        options: ["<link>", "<a>", "<href>", "<hyperlink>"],
+        question: "In HTTP/2, what improvement does multiplexing provide?",
+        options: ["Larger file sizes", "Multiple requests over single TCP connection", "Slower responses", "No encryption"],
         correctAnswer: 1
       },
       {
         id: 13,
-        question: "What is the purpose of media queries in CSS?",
-        options: ["Play music", "Responsive design", "Database queries", "API calls"],
+        question: "What is hydration in SSR frameworks like Next.js?",
+        options: ["Adding water to servers", "Attaching event listeners to server-rendered HTML", "Database migration", "CSS preprocessing"],
         correctAnswer: 1
       },
       {
         id: 14,
-        question: "What is localhost?",
-        options: ["Remote server", "Your own computer", "Cloud server", "Database"],
-        correctAnswer: 1
+        question: "Which caching strategy serves stale content while revalidating in background?",
+        options: ["Cache-first", "Network-first", "Stale-while-revalidate", "No-cache"],
+        correctAnswer: 2
       },
       {
         id: 15,
-        question: "Which is a CSS preprocessor?",
-        options: ["HTML", "SASS", "JavaScript", "PHP"],
+        question: "What does the OPTIONS HTTP method do?",
+        options: ["Delete resources", "Describe communication options for target resource", "Update partial data", "Authenticate users"],
         correctAnswer: 1
       },
       {
         id: 16,
-        question: "What is npm?",
-        options: ["Node Package Manager", "New Programming Method", "Network Protocol Manager", "Node Process Module"],
-        correctAnswer: 0
+        question: "In WebSockets, what enables full-duplex communication?",
+        options: ["Polling", "Persistent TCP connection with bidirectional data flow", "HTTP headers only", "REST APIs"],
+        correctAnswer: 1
       },
       {
         id: 17,
-        question: "What does AJAX stand for?",
-        options: ["Asynchronous JavaScript and XML", "Advanced Java and XML", "Automated JavaScript and XHTML", "Asynchronous Java and XHTML"],
-        correctAnswer: 0
-      },
-      {
-        id: 18,
-        question: "Which is a backend framework?",
-        options: ["React", "Express.js", "Tailwind CSS", "Bootstrap"],
-        correctAnswer: 1
-      },
-      {
-        id: 19,
-        question: "What is Webpack?",
-        options: ["CSS framework", "Module bundler", "Database", "Testing tool"],
-        correctAnswer: 1
-      },
-      {
-        id: 20,
-        question: "What is the box model in CSS?",
-        options: ["3D graphics", "Content, padding, border, margin", "Animation model", "Grid system"],
+        question: "What is tree shaking in webpack?",
+        options: ["Rendering DOM trees", "Eliminating unused code from bundles", "Sorting algorithms", "Database indexing"],
         correctAnswer: 1
       }
     ]
@@ -393,122 +339,104 @@ export const quizData: QuizData = {
     questions: [
       {
         id: 1,
-        question: "What does UI stand for?",
-        options: ["User Interface", "Universal Integration", "Uniform Interaction", "User Integration"],
-        correctAnswer: 0
+        question: "Which principle states that users transfer expectations from one familiar interface to another?",
+        options: ["Hick's Law", "Mental Model", "Gestalt Similarity", "Cognitive Load"],
+        correctAnswer: 1
       },
       {
         id: 2,
-        question: "What does UX stand for?",
-        options: ["User Exchange", "User Experience", "Universal Experience", "Unified Exchange"],
-        correctAnswer: 1
+        question: "In Fitts's Law, which factor most significantly reduces target acquisition time?",
+        options: ["Border radius", "Distance", "Target size", "Color contrast"],
+        correctAnswer: 2
       },
       {
         id: 3,
-        question: "What is a wireframe?",
-        options: ["Final design", "Low-fidelity sketch of design", "Code structure", "Database schema"],
-        correctAnswer: 1
+        question: "Which UX research method best uncovers latent user needs?",
+        options: ["A/B Testing", "Surveys", "Contextual Inquiry", "Usability Testing"],
+        correctAnswer: 2
       },
       {
         id: 4,
-        question: "Which tool is commonly used for UI design?",
-        options: ["Excel", "Figma", "Word", "PowerPoint"],
+        question: "A UI designer uses 'progressive disclosure' to:",
+        options: ["Improve color contrast", "Reduce cognitive overload", "Increase visual hierarchy", "Improve brand consistency"],
         correctAnswer: 1
       },
       {
         id: 5,
-        question: "What is a prototype?",
-        options: ["Final product", "Interactive model of design", "Bug report", "Documentation"],
+        question: "The aesthetic–usability effect states that:",
+        options: ["Simpler designs are always more functional", "Beautiful designs are perceived as easier to use", "Users prefer minimalistic layouts", "Motion increases usability"],
         correctAnswer: 1
       },
       {
         id: 6,
-        question: "What is the F-pattern in web design?",
-        options: ["Font style", "Eye-tracking reading pattern", "Footer design", "Form layout"],
-        correctAnswer: 1
+        question: "What does a low-fidelity wireframe focus on?",
+        options: ["Visual design", "Color and branding", "Layout & structure", "Typography"],
+        correctAnswer: 2
       },
       {
         id: 7,
-        question: "What is white space in design?",
-        options: ["Blank paper", "Empty space around elements", "Color white", "Errors"],
-        correctAnswer: 1
+        question: "Gestalt's Proximity principle helps:",
+        options: ["Group related items", "Identify primary actions", "Improve load speed", "Improve navigation"],
+        correctAnswer: 0
       },
       {
         id: 8,
-        question: "What is a persona in UX?",
-        options: ["Designer's name", "Fictional user representation", "Color scheme", "Font type"],
+        question: "Which tool is most commonly used for UI prototyping?",
+        options: ["Jenkins", "Figma", "Blender", "MongoDB"],
         correctAnswer: 1
       },
       {
         id: 9,
-        question: "What is A/B testing?",
-        options: ["Alphabet testing", "Comparing two versions", "Bug testing", "Grading system"],
-        correctAnswer: 1
+        question: "UX stands for:",
+        options: ["User Experience", "Unified Exchange", "User Expansion", "Universal Experience"],
+        correctAnswer: 0
       },
       {
         id: 10,
-        question: "What is the golden ratio in design?",
-        options: ["Color code", "Mathematical proportion (1:1.618)", "Font size", "Screen size"],
-        correctAnswer: 1
+        question: "Which is a UI element?",
+        options: ["Persona", "Sitemap", "Button", "Journey Map"],
+        correctAnswer: 2
       },
       {
         id: 11,
-        question: "What is information architecture?",
-        options: ["Building design", "Organizing and structuring content", "Server setup", "Coding structure"],
-        correctAnswer: 1
+        question: "In atomic design methodology, which level combines atoms into functional units?",
+        options: ["Molecules", "Organisms", "Templates", "Pages"],
+        correctAnswer: 0
       },
       {
         id: 12,
-        question: "What is a call-to-action (CTA)?",
-        options: ["Phone call", "Button/element prompting user action", "Error message", "Loading screen"],
-        correctAnswer: 1
+        question: "Which accessibility principle ensures content can be accessed through different modalities?",
+        options: ["Perceivable", "Operable", "Understandable", "Robust"],
+        correctAnswer: 0
       },
       {
         id: 13,
-        question: "What is responsive design?",
-        options: ["Fast loading", "Design adapting to screen sizes", "Interactive elements", "Color changes"],
+        question: "The Doherty Threshold states that productivity increases when system response time is under:",
+        options: ["100ms", "400ms", "1000ms", "3000ms"],
         correctAnswer: 1
       },
       {
         id: 14,
-        question: "What is the 60-30-10 rule in design?",
-        options: ["Time management", "Color proportion rule", "Font sizes", "Page layout"],
-        correctAnswer: 1
+        question: "In user testing, what is 'thinking aloud protocol'?",
+        options: ["Users speak their thoughts during task completion", "Designers explain the interface", "Automated voice feedback", "Audio-based navigation"],
+        correctAnswer: 0
       },
       {
         id: 15,
-        question: "What is a mood board?",
-        options: ["Emotional chart", "Visual collection of design inspiration", "User feedback", "Bug tracker"],
+        question: "Which cognitive bias causes users to prefer the first solution they encounter?",
+        options: ["Serial position effect", "Anchoring bias", "Confirmation bias", "Availability heuristic"],
         correctAnswer: 1
       },
       {
         id: 16,
-        question: "What is accessibility in design?",
-        options: ["Easy to find", "Design usable by people with disabilities", "Fast loading", "Mobile-first"],
+        question: "What is the primary goal of a design system?",
+        options: ["Increase file sizes", "Ensure consistency and scalability across products", "Replace developers", "Eliminate user testing"],
         correctAnswer: 1
       },
       {
         id: 17,
-        question: "What is a heatmap in UX?",
-        options: ["Temperature chart", "Visual showing user interaction areas", "Color palette", "Error log"],
-        correctAnswer: 1
-      },
-      {
-        id: 18,
-        question: "What is the principle of proximity?",
-        options: ["Far away items", "Related items should be grouped", "Color matching", "Font pairing"],
-        correctAnswer: 1
-      },
-      {
-        id: 19,
-        question: "What is user flow?",
-        options: ["Water design", "Path users take through app", "Animation", "Loading sequence"],
-        correctAnswer: 1
-      },
-      {
-        id: 20,
-        question: "What is contrast in design?",
-        options: ["Similarity", "Difference between elements", "Alignment", "Repetition"],
+        question: "In the double diamond design process, the second diamond represents:",
+        options: ["Problem definition", "Solution development and refinement", "User research", "Stakeholder interviews"],
         correctAnswer: 1
       }
     ]
