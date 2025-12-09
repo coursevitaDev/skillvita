@@ -15,7 +15,7 @@ const EventsBentoGrid = () => {
             height={660}
              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
           />
-          <div className="absolute bottom-0 w-full bg-gradient-to-t from-indigo-900/80 to-transparent  text-white text-center">
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-brand-950/80 to-transparent  text-white text-center">
             <h3 className="text-xl font-semibold text-shadow">
               Pair Programming Hackathon
             </h3>
@@ -33,7 +33,7 @@ const EventsBentoGrid = () => {
               className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
             />
           </div>
-          <div className="absolute bottom-0 w-full bg-gradient-to-t from-indigo-900/80 to-transparent  text-white text-center">
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-brand-950/80 to-transparent  text-white text-center">
             <h3 className="text-xl font-semibold text-shadow">
               SNIST Hackathon 
             </h3>
@@ -42,7 +42,7 @@ const EventsBentoGrid = () => {
         </div>
 
         <div
-          className="col-span-3 bg-[#7234F7] h-[145px] rounded-xl text-white flex items-center justify-center text-center relative transition-transform duration-300"
+          className="col-span-3 bg-brand-500 h-[145px] rounded-xl text-white flex items-center justify-center text-center relative transition-transform duration-300"
           style={{
             backgroundImage: "url(/images/events/circle.png)",
             backgroundPosition: "right bottom",
@@ -68,7 +68,7 @@ const EventsBentoGrid = () => {
             height={317}
              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
           />
-          <div className="absolute bottom-0 w-full bg-gradient-to-t from-indigo-900/80 to-transparent  text-white text-center">
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-brand-950/80 to-transparent  text-white text-center">
             <h3 className="text-xl font-semibold text-shadow">KLU Hackathon </h3>
             <h5 className="mb-2">29-Sep-2024</h5>
           </div>
@@ -82,7 +82,7 @@ const EventsBentoGrid = () => {
             height={152}
              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
           />
-          <div className="absolute bottom-0 w-full bg-gradient-to-t from-indigo-900/80 to-transparent  text-white text-center">
+          <div className="absolute bottom-0 w-full bg-gradient-to-t from-brand-950/80 to-transparent  text-white text-center">
             <h3 className="text-xl font-semibold text-shadow">
               Student Interactions 
             </h3>
@@ -110,7 +110,7 @@ const EventsBentoGrid = () => {
         </div>
 
         <div
-          className="bg-[#7234F7] h-[150px] rounded-xl text-white flex items-center justify-center text-center relative transition-transform duration-300"
+          className="bg-brand-500 h-[150px] rounded-xl text-white flex items-center justify-center text-center relative transition-transform duration-300"
           style={{
             backgroundImage: "url(/images/events/circle.png)",
             backgroundPosition: "right bottom",

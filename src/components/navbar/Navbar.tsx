@@ -3,9 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
-import { ChevronRight, Sun, Moon } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "@/context/ThemeContext";
 import LearnMenu from "./LearnMenu";
 import JobPrepMenu from "./JobPrepMenu";
 import HiringMenu from "./HiringMenu";
@@ -28,7 +27,7 @@ const AnimatedMenuIcon = ({ isOpen }: { isOpen: boolean }) => (
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-black dark:text-white w-5 h-5"
+    className="text-white w-5 h-5"
   >
     {/* Top line - transforms to one half of the X */}
     <motion.line
@@ -68,7 +67,6 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
   const pathname = usePathname();
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const [showUpskill, setShowUpskill] = useState(true);
@@ -171,8 +169,8 @@ export default function Navbar() {
           <div
             className={`${
               isMegaMenuOpen
-                ? "bg-white dark:bg-black"
-                : `bg-white/60 dark:bg-black/60 ${
+                ? "bg-black"
+                : `bg-black/60 ${
                     isScrolled ? "backdrop-blur-sm" : ""
                   }`
             } ${
@@ -181,24 +179,14 @@ export default function Navbar() {
           >
             {/* Logo */}
             <Link href="/">
-              {/* Light mode logo */}
+              {/* Skillvita logo for both light and dark mode */}
               <Image
-                src="/images/new-logo.svg"
-                alt="Coursevita Logo"
-                width={180}
-                height={28}
+                src="/skillvita.svg"
+                alt="Skillvita Logo"
+                width={200}
+                height={50}
                 priority
-                className="w-auto h-10 md:h-11 cursor-pointer dark:hidden"
-              />
-
-              {/* Dark mode logo */}
-              <Image
-                src="/images/new-logo-dark.svg"
-                alt="Coursevita Logo Dark"
-                width={180}
-                height={28}
-                priority
-                className="w-auto h-10 md:h-11 cursor-pointer hidden dark:block"
+                className="w-auto h-10 md:h-11 cursor-pointer"
               />
             </Link>
 
@@ -219,8 +207,8 @@ export default function Navbar() {
                   className={`${
                     pathname === "/" ||
                     (isMegaMenuOpen && activeMegaMenu === "learn")
-                      ? "text-brand-500 dark:text-brand-300"
-                      : "text-black dark:text-white"
+                      ? "text-accent-500"
+                      : "text-white"
                   } flex items-center space-x-1 relative z-50 transition duration-200`}
                 >
                   <span>Learn</span>
@@ -250,8 +238,8 @@ export default function Navbar() {
                   }}
                   className={`${
                     isMegaMenuOpen && activeMegaMenu === "jobprep"
-                      ? "text-brand-500 dark:text-brand-300"
-                      : "text-black dark:text-white"
+                      ? "text-accent-500"
+                      : "text-white"
                   } flex items-center space-x-1 relative z-50 transition duration-200`}
                 >
                   <span>Job Prep</span>
@@ -279,8 +267,8 @@ export default function Navbar() {
                   }}
                   className={`${
                     isMegaMenuOpen && activeMegaMenu === "hiring"
-                      ? "text-brand-500 dark:text-brand-300"
-                      : "text-black dark:text-white"
+                      ? "text-accent-500"
+                      : "text-white"
                   } flex items-center space-x-1 relative z-50 transition duration-200`}
                 >
                   <span>For Employers</span>
@@ -294,8 +282,8 @@ export default function Navbar() {
                 }}
                 className={`transition duration-300 ${
                   pathname === "/events"
-                    ? "text-brand-500 dark:text-brand-300"
-                    : "text-black dark:text-white hover:text-brand-500"
+                    ? "text-accent-500"
+                    : "text-white hover:text-accent-500"
                 }`}
               >
                 Events
@@ -308,8 +296,8 @@ export default function Navbar() {
                 }}
                 className={`transition duration-300 ${
                   pathname === "/about-us"
-                    ? "text-brand-500 dark:text-brand-300"
-                    : "text-black dark:text-white hover:text-brand-500"
+                    ? "text-accent-500"
+                    : "text-white hover:text-accent-500"
                 }`}
               >
                 About Us
@@ -348,24 +336,11 @@ export default function Navbar() {
                 </button>
               )} */}
 
-              <button
-  type="button"
-  onClick={toggleTheme}
-   aria-label={theme === "light" ? "Activate dark mode" : "Activate light mode"}
-  className="w-9 h-9 lg:w-11 lg:h-11 flex items-center justify-center rounded-full border border-black/20 dark:border-white/20 hover:bg-black/10 dark:hover:bg-white/10 transition"
->
-  {theme === "light" ? (
-    <Moon size={18} className="text-gray-600" aria-hidden="true" />
-  ) : (
-    <Sun size={18} className="text-white" aria-hidden="true" />
-  )}
-</button>
-
 
               {/* CTA Button - Desktop Only */}
               <Link
                 href="https://dashboard.coursevita.com/"
-                className="hidden md:block bg-brand-500 text-white text-sm px-5 py-3 rounded-full font-medium"
+                className="hidden md:block bg-brand-500 hover:bg-brand-600 text-accent-500 text-sm px-5 py-3 rounded-full font-medium transition-colors"
               >
                 Get Started
               </Link>
@@ -375,7 +350,7 @@ export default function Navbar() {
                 <button
                   onClick={handleMobileMenuToggle}
                   aria-label="Toggle Menu"
-                  className="w-9 h-9 flex items-center justify-center rounded-full border-[0.8] border-black/[0.2] dark:border-white/[0.2] transition"
+                  className="w-9 h-9 flex items-center justify-center rounded-full border-[0.8] border-white/[0.2] transition"
                 >
                   <AnimatedMenuIcon isOpen={isMegaMenuOpen} />
                 </button>
@@ -392,7 +367,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-                className={`bg-white dark:bg-black transition duration-300 ${
+                className={`bg-black transition duration-300 ${
                   isMobile ? "h-auto" : ""
                 }`}
                 style={{
@@ -450,8 +425,8 @@ export default function Navbar() {
                                   onClick={() => setIsMegaMenuOpen(false)}
                                   className={`flex items-center justify-between rounded-lg px-4 py-3 ${
                                     pathname === item.path
-                                      ? "bg-brand-50 text-brand-500"
-                                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                    ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"
+                                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                                   }`}
                                 >
                                   <div className="flex items-center space-x-2">

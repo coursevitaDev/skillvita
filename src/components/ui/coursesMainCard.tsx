@@ -52,7 +52,7 @@ const CourseMainCard: React.FC<CourseMainCardProps> = ({
 
         {/* Placement Text */}
         <div className="mb-2">
-          <span className="bg-gradient-to-r from-[#5028FF] to-[#FF4B00] text-transparent bg-clip-text text-base font-[500]">
+          <span className="bg-gradient-to-r from-accent-600 to-accent-500 text-transparent bg-clip-text text-base font-[500]">
             100% Placement Assistance
           </span>
         </div>
@@ -74,28 +74,28 @@ const CourseMainCard: React.FC<CourseMainCardProps> = ({
               >
                 <path
                   d="M6.66699 1.66699V5.00033"
-                  stroke="#644DFF"
+                  stroke="#32FE6B"
                   strokeWidth="1.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d="M13.333 1.66699V5.00033"
-                  stroke="#644DFF"
+                  stroke="#32FE6B"
                   strokeWidth="1.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d="M15.8333 3.33301H4.16667C3.24619 3.33301 2.5 4.0792 2.5 4.99967V16.6663C2.5 17.5868 3.24619 18.333 4.16667 18.333H15.8333C16.7538 18.333 17.5 17.5868 17.5 16.6663V4.99967C17.5 4.0792 16.7538 3.33301 15.8333 3.33301Z"
-                  stroke="#644DFF"
+                  stroke="#32FE6B"
                   strokeWidth="1.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d="M2.5 8.33301H17.5"
-                  stroke="#644DFF"
+                  stroke="#32FE6B"
                   strokeWidth="1.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -116,19 +116,19 @@ const CourseMainCard: React.FC<CourseMainCardProps> = ({
               >
                 <path
                   d="M17.4455 4.85906L12.7581 0.17168C12.6487 0.0622266 12.4994 0 12.3438 0H4.14062C3.17137 0 2.38281 0.788555 2.38281 1.75781V18.2422C2.38281 19.2114 3.17137 20 4.14062 20H15.8594C16.8286 20 17.6172 19.2114 17.6172 18.2422V5.27344C17.6172 5.11367 17.5501 4.96363 17.4455 4.85906ZM12.9297 2.00051L15.6167 4.6875H13.5156C13.1925 4.6875 12.9297 4.42465 12.9297 4.10156V2.00051ZM15.8594 18.8281H4.14062C3.81754 18.8281 3.55469 18.5653 3.55469 18.2422V1.75781C3.55469 1.43473 3.81754 1.17188 4.14062 1.17188H11.7578V4.10156C11.7578 5.07082 12.5464 5.85938 13.5156 5.85938H16.4453V18.2422C16.4453 18.5653 16.1825 18.8281 15.8594 18.8281Z"
-                  fill="#644DFF"
+                  fill="#32FE6B"
                 />
                 <path
                   d="M13.5156 8.28125H6.48438C6.16078 8.28125 5.89844 8.54359 5.89844 8.86719C5.89844 9.19078 6.16078 9.45312 6.48438 9.45312H13.5156C13.8392 9.45312 14.1016 9.19078 14.1016 8.86719C14.1016 8.54359 13.8392 8.28125 13.5156 8.28125Z"
-                  fill="#644DFF"
+                  fill="#32FE6B"
                 />
                 <path
                   d="M13.5156 10.625H6.48438C6.16078 10.625 5.89844 10.8873 5.89844 11.2109C5.89844 11.5345 6.16078 11.7969 6.48438 11.7969H13.5156C13.8392 11.7969 14.1016 11.5345 14.1016 11.2109C14.1016 10.8873 13.8392 10.625 13.5156 10.625Z"
-                  fill="#644DFF"
+                  fill="#32FE6B"
                 />
                 <path
                   d="M13.5156 12.9688H6.48438C6.16078 12.9688 5.89844 13.2311 5.89844 13.5547C5.89844 13.8783 6.16078 14.1406 6.48438 14.1406H13.5156C13.8392 14.1406 14.1016 13.8783 14.1016 13.5547C14.1016 13.2311 13.8392 12.9688 13.5156 12.9688Z"
-                  fill="#644DFF"
+                  fill="#32FE6B"
                 />
               </svg>
             </div>
@@ -139,13 +139,13 @@ const CourseMainCard: React.FC<CourseMainCardProps> = ({
         {/* Learn More Button */}
         <div className="flex gap-2">
           <Link href={`/courses/${coursePath}`} className="flex-1">
-            <button className="w-full py-2.5 px-4 rounded-lg hover:bg-[#6B46FE] hover:text-white transition-all duration-300 border border-[#6B46FE] text-[#6B46FE] text-base font-medium text-center cursor-pointer">
+            <button className="w-full py-2.5 px-4 rounded-lg hover:bg-brand-500 hover:text-white transition-all duration-300 border border-accent-500 text-accent-500 text-base font-medium text-center cursor-pointer">
               Learn more
             </button>
           </Link>
           <button
             onClick={handleDownload}
-            className="p-2.5 rounded-lg bg-[#6B46FE] transition-all duration-300 group flex items-center gap-2 cursor-pointer"
+            className="p-2.5 rounded-lg bg-brand-500 hover:bg-brand-600 transition-all duration-300 group flex items-center gap-2 cursor-pointer text-accent-500"
             title="Download Brochure"
           >
             <DownloadIcon />

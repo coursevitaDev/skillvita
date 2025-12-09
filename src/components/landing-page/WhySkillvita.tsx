@@ -42,7 +42,7 @@ const features = [
   },
 ];
 
-const WhyCoursevita = () => {
+const WhySkillvita = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const router = useRouter();
 
@@ -52,7 +52,7 @@ const WhyCoursevita = () => {
         <div className="max-w-7xl mx-auto text-center md:py-6 md:pb-6">
           <h2 className="text-center text-black dark:text-white mb-6 relative inline-block">
             <span className="text-xl md:text-3xl font-normal block">
-              Why Coursevita?
+              Why Skillvita?
             </span>
             <span className="text-xl md:text-3xl font-medium block mt-1 relative">
               Because{" "}
@@ -125,10 +125,10 @@ const WhyCoursevita = () => {
             ))}
           </div>
 
-          <div className="bg-[#0F002E] dark:bg-[#0F002E]/[0.8] text-white rounded-3xl flex flex-col justify-start text-center overflow-hidden relative">
+          <div className="bg-brand-950 dark:bg-brand-950/[0.8] text-white rounded-3xl flex flex-col justify-start text-center overflow-hidden relative">
             {/* Top content */}
             <div className="px-6 pt-8 pb-4 z-10">
-              <h3 className="text-lg md:text-[22px] font-bold text-[#BD89FF] mb-2">
+              <h3 className="text-lg md:text-[22px] font-bold text-accent-500 mb-2">
                 Want to upskill?
               </h3>
               <p className="text-[16px] font-light mb-5">
@@ -191,4 +191,4 @@ const WhyCoursevita = () => {
   );
 };
 
-export default WhyCoursevita;
+export default WhySkillvita;

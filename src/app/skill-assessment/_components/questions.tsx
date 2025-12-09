@@ -173,7 +173,7 @@ export default function Questions({}: QuestionsProps) {
   text-left px-4 py-3 border border-[#E4E4E7] dark:border-[#27272A] rounded-lg font-medium transition-none
   ${
     isSelected
-      ? "bg-brand-500 text-white"
+      ? "bg-accent-50 text-accent-700 border-accent-500 dark:bg-accent-900/30 dark:text-accent-400"
       : "bg-white dark:bg-black text-gray-900 dark:text-gray-200"
   }
 `}
@@ -189,7 +189,7 @@ export default function Questions({}: QuestionsProps) {
                     <div className="flex justify-end items-center gap-4 mt-6 mb-4 w-full">
                       <button
                         onClick={handlePrevious}
-                        className="border border-[#644DFF] text-[#644DFF] px-[75px] py-4 w-[234px] h-[55px] rounded-[10px] font-bold text-sm"
+                        className="border border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-white px-[75px] py-4 w-[234px] h-[55px] rounded-[10px] font-bold text-sm transition-colors"
                       >
                         Previous
                       </button>
@@ -224,7 +224,7 @@ export default function Questions({}: QuestionsProps) {
                             }
                           }
                         }}
-                        className="bg-[#644DFF] text-white font-semibold rounded-md w-full sm:w-[234px] h-[55px] px-5 py-3"
+                        className="bg-brand-500 text-accent-500 hover:bg-brand-600 font-semibold rounded-md w-full sm:w-[234px] h-[55px] px-5 py-3 transition-colors"
                       >
                         {questionNo === questionList.length
                           ? submitCount === 1
@@ -252,7 +252,7 @@ export default function Questions({}: QuestionsProps) {
                         setIsResult(false);
                         beginSkillAssessment();
                       }}
-                      className="bg-gradient-to-r from-brand-700 to-[#fe7465] text-white px-6 py-3 rounded-lg font-semibold"
+                      className="bg-brand-500 hover:bg-brand-600 text-accent-500 px-6 py-3 rounded-lg font-semibold transition-colors"
                     >
                       Begin Skill Assessment
                     </button>

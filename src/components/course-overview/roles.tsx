@@ -30,7 +30,7 @@ const Roles: React.FC<RolesProps> = ({ courseContent }) => {
   return (
     <div className="relative py-[70px] md:py-20 text-center max-w-7xl mx-auto px-4">
       <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-[400] leading-normal">
-        What <span className="text-[#FE7465] font-bold">roles</span> you will be
+        What <span className="text-accent-500 font-bold">roles</span> you will be
         eligible for?
       </h2>
       <p className="mx-auto px-2 md:px-0 pt-2 md:w-[55%] text-xs md:text-lg font-normal leading-normal text-gray-600 dark:text-gray-400">
@@ -48,7 +48,7 @@ const Roles: React.FC<RolesProps> = ({ courseContent }) => {
               className="relative min-w-[326px] flex-shrink-0 bg-white dark:bg-[#18181B] rounded-xl p-3 py-5 border border-[#E4E4E7] dark:border-[#27272A]"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-[4px] h-[25px] rounded-full bg-[#FE7465]"></div>
+                <div className="w-[4px] h-[25px] rounded-full bg-accent-500"></div>
                 <h3 className="text-left text-base font-semibold text-gray-600 dark:text-gray-300 leading-normal">
                   {data?.name}
                 </h3>
@@ -62,7 +62,7 @@ const Roles: React.FC<RolesProps> = ({ courseContent }) => {
                 />
                 <p className="text-sm font-light text-black dark:text-white leading-normal">
                   Number of openings{" "}
-                  <span className="text-[#fe7465] text-base font-bold">
+                  <span className="text-accent-500 text-base font-bold">
                     {data?.openings}
                   </span>
                 </p>
@@ -71,7 +71,7 @@ const Roles: React.FC<RolesProps> = ({ courseContent }) => {
                 <Image src={money} alt="Money icon" width={20} height={20} />
                 <p className="text-sm font-light text-black dark:text-white leading-normal">
                   Average salary{" "}
-                  <span className="text-[#fe7465] text-base font-bold">
+                  <span className="text-accent-500 text-base font-bold">
                     {data?.avgSalary}
                   </span>
                 </p>

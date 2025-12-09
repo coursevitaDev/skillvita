@@ -53,7 +53,7 @@ const Pagination: React.FC<PaginationControlProps> = ({
         size="icon"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="h-9 w-9 rounded-md border border-gray-300 text-gray-600 dark:text-gray-400 hover:border-brand-500 hover:text-brand-500 disabled:opacity-50"
+        className="h-9 w-9 rounded-md border border-gray-300 text-gray-600 dark:text-gray-400 hover:border-accent-500 hover:text-accent-500 disabled:opacity-50"
         aria-label="Previous page"
       >
         <ChevronLeft className="h-4 w-4" />
@@ -77,8 +77,8 @@ const Pagination: React.FC<PaginationControlProps> = ({
             aria-label={`Page ${item}`}
             className={`h-9 w-9 rounded-md text-sm font-medium transition-all duration-150
               ${currentPage === item
-                ? 'bg-brand-500 text-white'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#18181B] hover:text-brand-500'
+                ? 'bg-brand-500 text-accent-500'
+                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#18181B] hover:text-accent-500'
               }`}
           >
             {item}
@@ -92,7 +92,7 @@ const Pagination: React.FC<PaginationControlProps> = ({
         size="icon"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="h-9 w-9 rounded-md border border-gray-300 text-gray-600 dark:text-gray-400 hover:border-brand-500 hover:text-brand-500 disabled:opacity-50"
+        className="h-9 w-9 rounded-md border border-gray-300 text-gray-600 dark:text-gray-400 hover:border-accent-500 hover:text-accent-500 disabled:opacity-50"
         aria-label="Next page"
       >
         <ChevronRight className="h-4 w-4" />

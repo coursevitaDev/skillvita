@@ -61,7 +61,7 @@ const EventCard = ({ id, title, date, locationName, image, category }: EventCard
         </div>
         <Link
           href={`/events/${id}`}
-          className="block text-center bg-brand-500 text-white font-semibold py-2 rounded-md"
+          className="block text-center bg-brand-500 text-accent-500 hover:bg-brand-600 font-semibold py-2 rounded-md transition-colors"
         >
           Know more
         </Link>

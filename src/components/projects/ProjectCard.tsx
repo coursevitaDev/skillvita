@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     >
       {/* Header */}
       <div className="flex justify-between items-center mb-3">
-        <span className="text-xs sm:text-sm px-3 py-1 rounded-full font-poppins font-medium bg-brand-200/30 dark:bg-brand-700/[0.3] text-brand-500 dark:text-brand-200">
+        <span className="text-xs sm:text-sm px-3 py-1 rounded-full font-poppins font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-400">
           {project.category}
         </span>
         <div className="flex items-center gap-1">
@@ -127,7 +127,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Button */}
       <button
         onClick={handleViewProject}
-        className="w-full py-3 rounded-lg text-sm font-poppins border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white transition"
+        className="w-full py-3 rounded-lg text-sm font-poppins border border-accent-500 text-accent-600 hover:bg-brand-500 hover:text-accent-500 hover:border-brand-500 transition"
       >
         View Project
       </button>

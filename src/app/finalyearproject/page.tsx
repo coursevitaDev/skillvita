@@ -4,6 +4,9 @@ import { useEffect, useMemo, useState } from "react";
 import Preloader from "@/components/ui/PreLoader";
 import ProjectCard from "@/components/projects/ProjectCard";
 import { PROJECTS } from "@/data/projectsData";
+import WhyFinalYearProjects from "./_components/whyFinalYearProjects";
+import HowItWorks from "./_components/howItWorks";
+import FAQs from "@/components/course-overview/faqs";
 
 type Project = {
   _id: string;
@@ -15,12 +18,39 @@ type Project = {
   type?: string;
 };
 
+const finalYearFAQs = [
+  {
+    question: "What is a final year project?",
+    answer: "A major academic requirement where you build a comprehensive technical project that demonstrates your skills and becomes a key portfolio piece."
+  },
+  {
+    question: "Do you provide source code?",
+    answer: "Yes! We provide complete source code, documentation, and implementation guides. We encourage you to customize it to make it your own."
+  },
+  {
+    question: "Will I get help with documentation?",
+    answer: "Absolutely! We provide templates for reports, presentations, and documentation. Our mentors guide you through the entire process."
+  },
+  {
+    question: "How long does it take to complete?",
+    answer: "Most projects take 8-12 weeks depending on complexity. We recommend starting early for best results."
+  },
+  {
+    question: "Can I work in a team?",
+    answer: "Yes! Many projects are designed for team collaboration. Work with classmates and coordinate with our mentors."
+  },
+  {
+    question: "What technologies are covered?",
+    answer: "We offer projects across Web Development, Mobile Apps, ML, AI, Data Science, Blockchain, IoT, Cloud Computing, and more."
+  }
+];
+
 const FinalYearProjectsPage = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 6;
 
 
   useEffect(() => {
@@ -85,59 +115,66 @@ const FinalYearProjectsPage = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full py-3 px-6 pr-40 rounded-full bg-transparent bg-opacity-10 border border-white text-white placeholder-white focus:outline-none"
               />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-700 to-red-500 text-white px-5 py-2 rounded-full font-semibold">
+              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-brand-500 to-accent-500 text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
                 Find Projects
               </button>
             </div>
           </div>
         </div>
 
-        <div className="bg-white dark:bg-[#18181B] rounded-2xl p-5 border border-[#E4E4E7] dark:border-[#27272A] mb-6">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-semibold">All Projects</h2>
-          </div>
+        <WhyFinalYearProjects />
 
-          {displayedAll.length === 0 ? (
-            <div className="text-center text-gray-500 dark:text-gray-400 py-8">No projects found.</div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-              {displayedAll.map((project) => (
-                <ProjectCard key={project._id} project={project} />
-              ))}
+        <div className="max-w-6xl mx-auto mb-6 mt-16">
+          <div className="bg-white dark:bg-[#18181B] rounded-2xl p-6 border border-[#E4E4E7] dark:border-[#27272A]">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-[24px] md:text-[28px] font-semibold font-outfit">Our Collection of Projects</h2>
             </div>
-          )}
-          {allProjects.length > itemsPerPage && (
-            <div className="flex justify-center mt-6 gap-1 flex-wrap">
-              <button
-                className="mx-1 px-3 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 disabled:opacity-50"
-                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                disabled={currentPage === 1}
-              >
-                Prev
-              </button>
-              {[...Array(totalPages)].map((_, i) => (
+
+            {displayedAll.length === 0 ? (
+              <div className="text-center text-gray-500 dark:text-gray-400 py-8">No projects found.</div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {displayedAll.map((project) => (
+                  <ProjectCard key={project._id} project={project} />
+                ))}
+              </div>
+            )}
+            {allProjects.length > itemsPerPage && (
+              <div className="flex justify-center mt-8 gap-1 flex-wrap">
                 <button
-                  key={i}
-                  className={`mx-1 px-3 py-1 rounded ${
-                    currentPage === i + 1
-                      ? "bg-[#FE7465] text-white"
-                      : "bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
-                  }`}
-                  onClick={() => setCurrentPage(i + 1)}
+                  className="mx-1 px-3 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 disabled:opacity-50 font-outfit"
+                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
                 >
-                  {i + 1}
+                  Prev
                 </button>
-              ))}
-              <button
-                className="mx-1 px-3 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 disabled:opacity-50"
-                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                disabled={currentPage === totalPages}
-              >
-                Next
-              </button>
-            </div>
-          )}
+                {[...Array(totalPages)].map((_, i) => (
+                  <button
+                    key={i}
+                    className={`mx-1 px-3 py-1 rounded font-outfit ${
+                      currentPage === i + 1
+                        ? "bg-accent-500 text-brand-500 font-semibold"
+                        : "bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
+                    }`}
+                    onClick={() => setCurrentPage(i + 1)}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+                <button
+                  className="mx-1 px-3 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 disabled:opacity-50 font-outfit"
+                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </div>
         </div>
+
+        <HowItWorks />
+        <FAQs faqs={finalYearFAQs} />
       </div>
     </div>
   );

@@ -220,7 +220,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
                 course.tags.map((tag, index) => (
                   <Badge
                     key={index}
-                    className="h-[24px] xs:h-[27px] px-[8px] xs:px-[10px] text-xs xs:text-sm rounded-full bg-brand-200/30 dark:bg-brand-700/[0.3] text-brand-500 dark:text-brand-200 border-0 font-normal whitespace-nowrap"
+                    className="h-[24px] xs:h-[27px] px-[8px] xs:px-[10px] text-xs xs:text-sm rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-400 border-0 font-normal whitespace-nowrap"
                   >
                     {tag}
                   </Badge>
@@ -246,7 +246,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
               {/* Know more button */}
               <Link
                 href={`find-your-career/${course._id}`}
-                className="h-[32px] xs:h-[36px] px-4 xs:px-6 flex justify-center items-center rounded-md border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white transition-all text-xs xs:text-sm whitespace-nowrap"
+                className="h-[32px] xs:h-[36px] px-4 xs:px-6 flex justify-center items-center rounded-md border border-accent-500 text-accent-600 hover:bg-brand-500 hover:text-accent-500 hover:border-brand-500 transition-all text-xs xs:text-sm whitespace-nowrap"
               >
                 Know more
               </Link>

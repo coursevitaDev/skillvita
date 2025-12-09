@@ -23,7 +23,7 @@ const BoardOfMembers = () => {
     <section className="py-10 px-6 sm:px-10 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-semibold for_font1">
-          Our <span className="text-[#FE7465]">Board of Members</span>
+          Our <span className="text-accent-500">Board of Members</span>
         </h2>
         <div className="w-20 h-0.5 bg-black dark:bg-white mx-auto mb-10" />
 

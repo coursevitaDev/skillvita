@@ -36,9 +36,9 @@ const LearningJourney = () => {
       description:
         "AI Curated learning playlists from top open-source tutorials for fast, effective concept mastery.",
       image: "/images/grid_section/1.png",
-      gradient: "from-purple-600 via-pink-600 to-red-500",
+      gradient: "from-brand-500 via-brand-400 to-brand-300",
       bgGradient:
-        "bg-[linear-gradient(180deg,#7233F7_-50.79%,#000000_132.22%)]",
+        "bg-[linear-gradient(180deg,#014051_-50.79%,#000000_132.22%)]",
       link: "/studyvita",
     },
     {
@@ -47,9 +47,9 @@ const LearningJourney = () => {
       description:
         "Instant quizzes & flashcards to boost accuracy, speed, and exam confidence.",
       image: "/images/grid_section/2.png",
-      gradient: "from-green-400 via-blue-500 to-purple-600",
+      gradient: "from-accent-500 via-accent-400 to-accent-300",
       bgGradient:
-        "bg-gradient-to-b from-[#644DFF] to-[#D2D2FF]",
+        "bg-gradient-to-b from-accent-500 to-accent-50",
       link: "https://quizvita.in/",
     },
     {
@@ -58,9 +58,9 @@ const LearningJourney = () => {
       description:
         "Mentored internships on cross-domain projects to build your portfolio.",
       image: "/images/grid_section/3.png",
-      gradient: "from-yellow-400 via-orange-500 to-red-500",
+      gradient: "from-accent-400 via-brand-400 to-brand-500",
       bgGradient:
-        "bg-gradient-to-r from-[#FF7262] to-[#B1AEFF]",
+        "bg-gradient-to-r from-accent-500 to-brand-300",
       link: "https://skillvita.coursevita.com/",
     },
     {
@@ -69,9 +69,9 @@ const LearningJourney = () => {
       description:
         "Simulated job tasks, crafted by experts, for real-world experience before your first job.",
       image: "/images/grid_section/4.png",
-      gradient: "from-pink-400 via-purple-500 to-indigo-600",
+      gradient: "from-brand-400 via-brand-500 to-accent-500",
       bgGradient:
-        "bg-gradient-to-r from-[#FF650A] to-[#B1AEFF]",
+        "bg-gradient-to-r from-brand-500 to-accent-400",
       link: "https://simulation.coursevita.com/",
     },
     // {

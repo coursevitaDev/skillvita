@@ -23,25 +23,18 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const Footer = () => {
   // const typedCourseTracks = courseTracks as CourseTrack[];
   return (
-    <section id="contact" className="w-full bg-[#F3F5FC] dark:bg-[#18181B]">
-      <div className="py-8 mx-auto max-w-7xl px-6">
+    <section id="contact" className="w-full bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-950">
+      <div className="py-12 mx-auto max-w-7xl px-6">
         <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-2">
           {/* Logo and Social Media */}
           <div className="mb-6 md:mb-0">
             <Image
-              src="/images/new-logo.svg"
-              alt="Coursevita Logo"
-              width={135}
-              height={40}
-              className="h-10 dark:hidden"
+              src="/skillvita.svg"
+              alt="Skillvita Logo"
+              width={150}
+              height={37}
+              className="h-10"
             />
-            <Image
-                src="/images/new-logo-dark.svg"
-                alt="Coursevita Logo Dark"
-                width={135}
-                height={28}
-                className="h-10 hidden dark:block"
-              />
             <p className="pt-4 text-[16px] lg:text-[20px] font-light text-gray-700 dark:text-gray-300 max-w-xs">
               Learn Today, Lead Tomorrow.
             </p>
@@ -52,7 +45,7 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61556411741027"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500"
+                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500 hover:bg-brand-600 transition-colors"
               >
                 <FacebookIcon />
               </a>
@@ -60,10 +53,10 @@ const Footer = () => {
               {/* Instagram */}
               <a
                 target="_blank"
-                href="https://www.instagram.com/coursevita_official/"
+                href="https://www.instagram.com/skillvita_official/"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500"
+                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500 hover:bg-brand-600 transition-colors"
               >
                 <InstagramIcon />
               </a>
@@ -71,10 +64,10 @@ const Footer = () => {
               {/* LinkedIn */}
               <a
                 target="_blank"
-                href="https://www.linkedin.com/company/coursevita/"
+                href="https://www.linkedin.com/company/skillvita/"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500"
+                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500 hover:bg-brand-600 transition-colors"
               >
                 <LinkedinIcon />
               </a>
@@ -85,7 +78,7 @@ const Footer = () => {
                 href="http://wa.me/+917050004259"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500"
+                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500 hover:bg-brand-600 transition-colors"
               >
                 <WhatsappIcon />
               </a>
@@ -93,10 +86,10 @@ const Footer = () => {
               {/* Twitter */}
               <a
                 target="_blank"
-                href="https://x.com/coursevita"
+                href="https://x.com/skillvita"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
-                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500"
+                className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500 hover:bg-brand-600 transition-colors"
               >
                 <TwitterIcon />
               </a>
@@ -104,20 +97,20 @@ const Footer = () => {
             {/* Contact Details */}
             <div className="flex flex-col gap-4 pt-12 text-gray-700 dark:text-gray-300 font-normal text-[14px]">
               <div
-                className="flex items-center gap-2 cursor-pointer"
+                className="flex items-center gap-2 cursor-pointer group"
                 onClick={() =>
                   (window.location.href = "mailto:reachus@coursevita.com")
                 }
               >
-                <Mail size={23} className="text-brand-500" />
-                <span className="break-all">reachus@coursevita.com</span>
+                <Mail size={23} className="text-accent-500 group-hover:scale-110 transition-transform" />
+                <span className="break-all group-hover:text-accent-500 transition-colors">reachus@coursevita.com</span>
               </div>
               <div
-                className="flex items-center gap-2 cursor-pointer"
+                className="flex items-center gap-2 cursor-pointer group"
                 onClick={() => (window.location.href = "tel:+918019666972")}
               >
-                <Phone size={23} className="text-brand-500" />
-                <span>+91-8019666972</span>
+                <Phone size={23} className="text-accent-500 group-hover:scale-110 transition-transform" />
+                <span className="group-hover:text-accent-500 transition-colors">+91-8019666972</span>
               </div>
             </div>
           </div>
@@ -127,11 +120,11 @@ const Footer = () => {
             <h3 className="font-semibold text-[18px] lg:text-[20px] text-gray-700 dark:text-gray-300 pb-3">
               Company
             </h3>
-            <ul className="flex flex-col gap-3 font-normal text-[14px] lg:text-[16px] text-gray-500">
+            <ul className="flex flex-col gap-3 font-normal text-[14px] lg:text-[16px] text-gray-600 dark:text-gray-400">
               <li>
                 <Link
                   href="/about-us"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   About Us
                 </Link>
@@ -139,7 +132,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="https://coursevita.zohorecruit.in/jobs/Careers"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Careers
                 </Link>
@@ -152,11 +145,11 @@ const Footer = () => {
             <h3 className="font-semibold text-[18px] lg:text-[20px] text-gray-700 dark:text-gray-300 pb-3">
               Products
             </h3>
-            <ul className="flex flex-col gap-3 font-normal text-[14px] lg:text-[16px] text-gray-500">
+            <ul className="flex flex-col gap-3 font-normal text-[14px] lg:text-[16px] text-gray-600 dark:text-gray-400">
               <li>
                 <Link
                   href="https://simulation.coursevita.com"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Job Simulation
                 </Link>
@@ -164,7 +157,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="https://portfolio.coursevita.com"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Portfolio Builder
                 </Link>
@@ -172,7 +165,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="https://quizvita.in"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Quizvita
                 </Link>
@@ -180,7 +173,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/find-your-career"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Find your Career
                 </Link>
@@ -193,11 +186,11 @@ const Footer = () => {
             <h3 className="font-semibold text-[18px] lg:text-[20px] text-gray-700 dark:text-gray-300 pb-3">
               Upskill
             </h3>
-            <ul className="flex flex-col gap-3 font-normal text-[14px] lg:text-[16px] text-gray-500">
+            <ul className="flex flex-col gap-3 font-normal text-[14px] lg:text-[16px] text-gray-600 dark:text-gray-400">
               {/* <li>
                 <Link
                   href="/courses"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Courses
                 </Link>
@@ -205,7 +198,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/projects"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Projects
                 </Link>
@@ -213,7 +206,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/blogs"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Blogs
                 </Link>
@@ -221,7 +214,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/events"
-                  className="hover:text-black dark:hover:text-white transition-colors duration-150"
+                  className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Events
                 </Link>
@@ -235,8 +228,8 @@ const Footer = () => {
               Address
             </h3>
             <div className="flex items-start mb-3">
-              <MapPin size={23} className="text-gray-500 w-8 lg:w-10" />
-              <span className="pl-2 text-[14px] lg:text-[16px] text-gray-500">
+              <MapPin size={23} className="text-accent-500 w-8 lg:w-10 flex-shrink-0" />
+              <span className="pl-2 text-[14px] lg:text-[16px] text-gray-600 dark:text-gray-400">
                 Plot 118, 3rd floor, Spaces and more, Business park, Lumbini
                 Avenue, Gachibowli, Hyderabad, Telangana 500032
               </span>
@@ -257,22 +250,22 @@ const Footer = () => {
         <div className="w-full h-[0.5px] bg-gray-300 dark:bg-gray-700 my-6" />
 
         {/* Policy Links */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 lg:gap-12 text-[16px] text-gray-500 text-center">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 lg:gap-12 text-[16px] text-gray-600 dark:text-gray-400 text-center">
           <Link
             href="/privacy-policy"
-            className="hover:text-black hover:dark:text-white transition-colors duration-150"
+            className="hover:text-accent-500 dark:hover:text-accent-400 transition-colors duration-200 font-medium"
           >
             Privacy Policy
           </Link>
           <Link
             href="/refund-policy"
-            className="hover:text-black hover:dark:text-white transition-colors duration-150"
+            className="hover:text-accent-500 dark:hover:text-accent-400 transition-colors duration-200 font-medium"
           >
             Refund Policy
           </Link>
           <Link
             href="/terms-and-conditions"
-            className="hover:text-black hover:dark:text-white transition-colors duration-150"
+            className="hover:text-accent-500 dark:hover:text-accent-400 transition-colors duration-200 font-medium"
           >
             Terms & Conditions
           </Link>
@@ -322,7 +315,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-center text-xs gap-2">
           <p className="text-gray-500">
-            &copy; {new Date().getFullYear()} Coursevita (BHUVANA INFORMATION
+            &copy; {new Date().getFullYear()} Skillvita (BHUVANA INFORMATION
             TECHNOLOGIES PVT. LTD.). All Rights Reserved.
           </p>
         </div>

@@ -392,7 +392,7 @@ const FiltersSection: React.FC<FiltersProps> = ({
                 onClick={() => handleCategoryClick(category.id)}
                 className={`w-full flex items-center gap-3 px-4 py-4 text-left transition-colors ${
                   activeCategory === category.id
-                    ? "bg-[#F3F5FC] dark:bg-black text-brand-500 border-l-4 border-brand-500"
+                    ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400 border-l-4 border-accent-500"
                     : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-500/20"
                 }`}
               >
@@ -407,7 +407,7 @@ const FiltersSection: React.FC<FiltersProps> = ({
                 {selectedCount > 0 && (
                   <Badge
                     variant="secondary"
-                    className="ml-auto bg-violet-100 text-violet-800 text-xs"
+                    className="ml-auto bg-accent-100 text-accent-700 dark:bg-accent-900/30 dark:text-accent-400 text-xs"
                   >
                     {selectedCount}
                   </Badge>
@@ -439,7 +439,7 @@ const FiltersSection: React.FC<FiltersProps> = ({
             <div className="flex-1 overflow-y-auto px-4 pb-4">
               {loading ? (
                 <div className="flex justify-center items-center h-full">
-                  <div className="animate-spin h-5 w-5 border-2 border-violet-700 rounded-full border-t-transparent"></div>
+                  <div className="animate-spin h-5 w-5 border-2 border-accent-600 rounded-full border-t-transparent"></div>
                 </div>
               ) : filteredOptions.length > 0 ? (
                 <div className="space-y-2">
@@ -463,7 +463,7 @@ const FiltersSection: React.FC<FiltersProps> = ({
                             }
                             className={`${
                               isSelected
-                                ? "border-violet-600 bg-violet-600 text-white"
+                                ? "border-accent-500 bg-accent-500 text-white"
                                 : "border-gray-300"
                             }`}
                           />
@@ -504,7 +504,7 @@ const FiltersSection: React.FC<FiltersProps> = ({
           </Button>
           <Button
             onClick={handleApplyFilters}
-            className="flex-1 bg-brand-500 text-white rounded-full"
+            className="flex-1 bg-brand-500 text-accent-500 hover:bg-brand-600 rounded-full"
           >
             Apply Filters
           </Button>

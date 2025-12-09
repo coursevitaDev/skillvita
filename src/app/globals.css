@@ -86,19 +86,32 @@
   --color-white: #ffffff;
   --color-black: #0E0E11;
 
-  /* Brand color palette */
-  --color-brand-25: #f6f5ff;  /* Lightest shade */
-  --color-brand-50: #F2F2FF;
-  --color-brand-100: #E8E7FF;
-  --color-brand-200: #D2D2FF;
-  --color-brand-300: #B1AEFF;
-  --color-brand-400: #8A80FF;
-  --color-brand-500: #644DFF;  /* Main brand color */
-  --color-brand-600: #5028FF;
-  --color-brand-700: #4216EB;
-  --color-brand-800: #3712C5;
-  --color-brand-900: #2F11A1;
-  --color-brand-950: #18076E;  /* Darkest shade */
+  /* Brand color palette - Skillvita colors */
+  --color-brand-25: #e6f9fc;  /* Lightest teal */
+  --color-brand-50: #ccf3f9;
+  --color-brand-100: #99e7f3;
+  --color-brand-200: #66daed;
+  --color-brand-300: #33cee7;
+  --color-brand-400: #019aad;
+  --color-brand-500: #014051;  /* Main brand color - Skillvita teal (for backgrounds) */
+  --color-brand-600: #013340;
+  --color-brand-700: #012630;
+  --color-brand-800: #011a20;
+  --color-brand-900: #000d10;
+  --color-brand-950: #000000;
+
+  /* Accent color - Skillvita green (for text, borders, highlights) */
+  --color-accent-25: #e6fff2;
+  --color-accent-50: #ccffe5;
+  --color-accent-100: #99ffcc;
+  --color-accent-200: #66ffb3;
+  --color-accent-300: #4dff99;
+  --color-accent-400: #3fff80;
+  --color-accent-500: #32FE6B;  /* Skillvita green */
+  --color-accent-600: #28cc56;
+  --color-accent-700: #1f9940;
+  --color-accent-800: #16662b;
+  --color-accent-900: #0c3315;
 
   --color-blue-light-25: #f5fbff;
   --color-blue-light-50: #f0f9ff;

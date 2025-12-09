@@ -38,12 +38,23 @@ export default function Header({
                   key={idx}
                   className="flex items-center gap-2 text-black dark:text-gray-200"
                 >
-                  <Image
-                    src="/images/projects/smallcheckcircle.svg"
-                    alt="tick"
-                    width={16}
-                    height={16}
-                  />
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="flex-shrink-0"
+                  >
+                    <circle cx="10" cy="10" r="10" className="fill-accent-500" />
+                    <path
+                      d="M6 10L8.5 12.5L14 7"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                   {item}
                 </p>
               ))}
@@ -67,7 +78,7 @@ export default function Header({
               {mainRouteData.description}
             </p>
             <Button
-              className="btn-top-project mt-4 bg-[#7234F7] text-white text-base px-6 py-3 rounded-md hover:brightness-110"
+              className="btn-top-project mt-4 bg-brand-500 text-accent-500 hover:bg-brand-600 text-base px-6 py-3 rounded-md"
               onClick={() => {
                 const targetSection = document.getElementById("mid");
                 targetSection?.scrollIntoView({ behavior: "smooth" });
@@ -92,7 +103,7 @@ export default function Header({
 
           {/* Center Cards */}
           <div className="flex flex-col gap-6 w-full h-[355px]">
-            <div className="bg-[#dee1fd] dark:bg-[#2f2f44] rounded-xl p-4 h-1/2 flex flex-col justify-between">
+            <div className="bg-accent-100 dark:bg-accent-900/20 rounded-xl p-4 h-1/2 flex flex-col justify-between">
               <Image
                 src="/images/ProjectsPage/logov1.svg"
                 alt="logo1"
@@ -106,7 +117,7 @@ export default function Header({
                 Projects published in Portfolios.
               </p>
             </div>
-            <div className="bg-[rgba(218,96,82,0.16)] dark:bg-[#402d2d] rounded-xl p-4 h-1/2 flex flex-col justify-between">
+            <div className="bg-brand-100 dark:bg-brand-900/20 rounded-xl p-4 h-1/2 flex flex-col justify-between">
               <Image
                 src="/images/projects/logov2.svg"
                 alt="logo2"

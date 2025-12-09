@@ -17,7 +17,7 @@ export default function RefundPolicyPage() {
       <div className="px-6 md:px-20 py-12 text-gray-800 dark:text-gray-200 text-justify">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-6">
-            Refund and Deferral Policy: Coursevita
+            Refund and Deferral Policy: Skillvita
           </h1>
 
           <h2 className="text-xl font-semibold mt-8">Refund Policy</h2>

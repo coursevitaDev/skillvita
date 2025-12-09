@@ -16,9 +16,9 @@ export default function Career() {
               Confused about career
             </h2>
             <p className="text-md md:text-lg font-normal text-gray-600 dark:text-gray-300 mb-6">
-              Step into choosing the right path with Coursevita
+              Step into choosing the right path with Skillvita
             </p>
-            <button className="px-6 py-3 bg-[#7234F7] text-white font-semibold rounded-lg" onClick={handleButtonClick}>
+            <button className="px-6 py-3 bg-brand-500 text-accent-500 font-semibold rounded-lg hover:bg-brand-600 transition-colors duration-200" onClick={handleButtonClick}>
               Take Quiz
             </button>
           </div>

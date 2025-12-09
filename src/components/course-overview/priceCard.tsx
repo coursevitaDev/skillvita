@@ -210,10 +210,10 @@ const PriceCard: React.FC<PriceCardProps> = ({
           </div>
         </div>
 
-        <div className="text-center space-y-3 bg-brand-500/[0.03] dark:bg-brand-800/[0.15] p-3 md:p-4 rounded-lg">
+        <div className="text-center space-y-3 bg-accent-50 dark:bg-accent-900/20 p-3 md:p-4 rounded-lg">
           <div className="flex items-center justify-center gap-2">
-            <div className="bg-brand-500/[0.1] dark:bg-black px-3 py-1 rounded-full">
-              <span className="text-xs md:text-sm font-medium text-brand-500 dark:text-brand-300">
+            <div className="bg-accent-100 dark:bg-accent-900/40 px-3 py-1 rounded-full">
+              <span className="text-xs md:text-sm font-medium text-accent-700 dark:text-accent-400">
                 {Math.round(
                   ((parseInt(costPrice) - parseInt(sellingPrice)) /
                     parseInt(costPrice)) *
@@ -228,13 +228,13 @@ const PriceCard: React.FC<PriceCardProps> = ({
             <span className="text-sm md:text-base text-gray-400 line-through">
               ₹{costPrice}/-
             </span>
-            <span className="text-2xl md:text-3xl font-bold text-brand-500">
+            <span className="text-2xl md:text-3xl font-bold text-accent-600 dark:text-accent-500">
               ₹{sellingPrice}/-
             </span>
           </div>
         </div>
 
-        <button className="w-full bg-brand-500 text-white py-2.5 md:py-3 px-4 rounded-lg font-medium mt-4 text-sm md:text-base">
+        <button className="w-full bg-brand-500 text-accent-500 hover:bg-brand-600 py-2.5 md:py-3 px-4 rounded-lg font-medium mt-4 text-sm md:text-base transition-colors">
           Start Application
         </button>
         <p className="text-center text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-4">

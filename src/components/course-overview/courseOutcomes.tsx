@@ -32,7 +32,7 @@ const CourseOutcomes = () => {
     {
       image: resume,
       text1: "Support in building CV & Portfolio",
-      text2: "Coursevita's CV assistance program makes your profile stand out.",
+      text2: "Skillvita's CV assistance program makes your profile stand out.",
     },
   ];
 

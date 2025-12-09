@@ -6,11 +6,14 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Coursevita",
+  title: "Skillvita",
   description:
-    "Coursevita is here to guide you on your career transformation. Welcome to Coursevita, your gateway to a dynamic world of learning.",
+    "Skillvita is here to guide you on your career transformation. Welcome to Skillvita, your gateway to a dynamic world of learning.",
+  icons: {
+    icon: '/skillvita_icon.svg',
+  },
   keywords: [
-    "Coursevita",
+    "Skillvita",
     "Job Simulation",
     "Final Year Projects",
     "Portfolio Builder",
@@ -19,17 +22,17 @@ export const metadata: Metadata = {
     "Blogs",
   ],
   openGraph: {
-    title: "Coursevita - Transform Your Career",
+    title: "Skillvita - Transform Your Career",
     description:
       "Your gateway to a dynamic world of learning and career transformation.",
     url: "https://main-revitalize.vercel.app",
-    siteName: "Coursevita",
+    siteName: "Skillvita",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Coursevita preview",
+        alt: "Skillvita preview",
       },
     ],
     locale: "en_IN",
@@ -37,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coursevita - Transform Your Career",
+    title: "Skillvita - Transform Your Career",
     description:
-      "Join Coursevita to explore hands-on learning experiences and build your future.",
+      "Join Skillvita to explore hands-on learning experiences and build your future.",
     images: ["/og-image.jpg"],
   },
   robots: {

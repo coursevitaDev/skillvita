@@ -11,10 +11,10 @@ const Heroic = () => {
               About Us
             </h3>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Welcome to <span className="text-[#FE7465]">Coursevita</span>
+              Welcome to <span className="text-accent-500">Skillvita</span>
             </h1>
             <p className="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-400 max-w-xl">
-              {`At Coursevita, we believe in providing a "course for everyone." Founded in 2021, we are an innovative EdTech company dedicated to creating high-quality educational content that is accessible, engaging, and transformative. Join us on a journey of lifelong learning and professional growth.`}
+              {`At Skillvita, we believe in providing a "course for everyone." Founded in 2021, we are an innovative EdTech company dedicated to creating high-quality educational content that is accessible, engaging, and transformative. Join us on a journey of lifelong learning and professional growth.`}
             </p>
           </div>
 
@@ -23,7 +23,7 @@ const Heroic = () => {
             <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl">
               <Image
                 src="/images/about-us/group.jpg"
-                alt="Coursevita Team"
+                alt="Skillvita Team"
                 width={800}
                 height={500}
                 className="rounded-2xl w-full object-cover"

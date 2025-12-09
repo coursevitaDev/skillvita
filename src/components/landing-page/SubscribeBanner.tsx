@@ -8,12 +8,12 @@ const SubscribeBanner = () => {
     <div className="bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Newsletter Subscribe Section */}
-        <section className="bg-[#0F002E] dark:bg-[#18181B] border border-[#E4E4E7] dark:border-[#27272A] text-white rounded-3xl px-6 py-10 md:py-14 md:px-12 lg:px-32 flex flex-col md:flex-row items-center justify-between gap-6">
+        <section className="bg-brand-950 dark:bg-[#18181B] border border-[#E4E4E7] dark:border-[#27272A] text-white rounded-3xl px-6 py-10 md:py-14 md:px-12 lg:px-32 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex-1 w-full text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold leading-snug mb-6">
               Your passport to success <br className="md:hidden" />
-              subscribe to <span className="text-[#FE7465]">
-                coursevita
+              subscribe to <span className="text-accent-500">
+                skillvita
               </span>{" "}
               today!
             </h2>
@@ -25,7 +25,7 @@ const SubscribeBanner = () => {
               />
               <button
                 type="submit"
-                className="w-2/5 bg-[#FE7465] text-white font-normal text-[16px] px-4 py-2 rounded-md hover:opacity-90 transition whitespace-nowrap"
+                className="w-2/5 bg-accent-500 text-brand-950 font-normal text-[16px] px-4 py-2 rounded-md hover:bg-accent-600 transition whitespace-nowrap"
               >
                 Subscribe
               </button>
@@ -45,7 +45,7 @@ const SubscribeBanner = () => {
         {/* Demo Booking Section */}
         <div className="mt-16 text-center mx-auto mb-10">
           <h2 className="text-xl md:text-3xl font-bold text-black dark:text-white">
-            <span className="text-[#FE7465]">Try before you join!</span> Take up
+            <span className="text-accent-500">Try before you join!</span> Take up
             our free demo session today!
           </h2>
           <p className="text-gray-700 dark:text-gray-400 mt-3">
@@ -54,7 +54,7 @@ const SubscribeBanner = () => {
           </p>
         </div>
 
-        <section className="lg:bg-[#123644] rounded-3xl relative overflow-hidden">
+        <section className="lg:bg-brand-900 rounded-3xl relative overflow-hidden">
           <div className="relative w-full max-w-7xl mx-auto flex flex-col lg:block">
             {/* Image (always on top on small, side-by-side on md+) */}
             <div className="relative lg:w-3/5 w-full">
@@ -67,7 +67,7 @@ const SubscribeBanner = () => {
               />
 
               {/* Right-edge blur effect */}
-              <div className="hidden lg:block absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-[#123644] via-[#123644]/60 to-transparent dark:bg-gradient-to-l dark:from-[#123644] dark:via-[#123644]/60 dark:to-transparent z-10 pointer-events-none" />
+              <div className="hidden lg:block absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-brand-900 via-brand-900/60 to-transparent dark:bg-gradient-to-l dark:from-brand-900 dark:via-brand-900/60 dark:to-transparent z-10 pointer-events-none" />
             </div>
 
             {/* Form - stacked below on small, overlaid on tablet and up */}
@@ -112,7 +112,7 @@ const SubscribeBanner = () => {
                 </select>
                 <button
                   type="submit"
-                  className="w-full bg-brand-500 text-white py-3 rounded-md font-semibold hover:opacity-90 transition"
+                  className="w-full bg-brand-500 text-accent-500 hover:bg-brand-600 py-3 rounded-md font-semibold transition"
                 >
                   Contact now
                 </button>

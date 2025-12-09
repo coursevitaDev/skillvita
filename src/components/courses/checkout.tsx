@@ -190,7 +190,7 @@ const handlePayment = async () => {
           key_secret: process.env.NEXT_PUBLIC_RAZOR_PAY_SECRET_KEY,
           amount: parseInt(finalAmount.toString()) * 100,
           currency: "INR",
-          name: "Coursevita",
+          name: "Skillvita",
           description: `Payment for ${courseContent?.courseTitle} Program`,
           handler: function (response: { razorpay_payment_id: string }) {
             console.log("payment id", response.razorpay_payment_id);

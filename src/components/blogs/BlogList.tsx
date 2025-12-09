@@ -151,7 +151,7 @@ export default function BlogList() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute top-2 sm:top-4 left-2 sm:left-4">
-                      <span className="bg-gradient-to-r from-[#5028FF] to-[#FF4B00] text-white px-4 py-1.5 rounded-md text-sm">
+                      <span className="bg-brand-500 text-accent-500 border border-accent-500 px-4 py-1.5 rounded-md text-sm font-semibold">
                         Trending
                       </span>
                     </div>
@@ -218,7 +218,7 @@ export default function BlogList() {
         {/* All Blogs Section */}
         <section>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-[400] text-center px-4 text-black dark:text-white">
-            <span className="text-[#FF7262] font-[700]">Explore</span> advanced
+            <span className="text-accent-500 font-[700]">Explore</span> advanced
             concepts with our blogs
           </h2>
 
@@ -283,8 +283,8 @@ export default function BlogList() {
                       </svg>
                     </div>
                   </div>
-                  <div className="relative h-40 sm:h-48 md:h-auto md:w-1/3 order-1 md:order-2 bg-[#000924] overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#18076e]/3 to-transparent z-10"></div>
+                  <div className="relative h-40 sm:h-48 md:h-auto md:w-1/3 order-1 md:order-2 bg-brand-950 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-900/30 to-transparent z-10"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-full h-full relative">
                         <Image
@@ -293,8 +293,8 @@ export default function BlogList() {
                           fill
                           className="object-cover mix-blend-luminosity opacity-80"
                         />
-                        <div className="absolute inset-0 bg-[#000924]/40"></div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#000924]/60 to-transparent"></div>
+                        <div className="absolute inset-0 bg-brand-950/40"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-brand-950/60 to-transparent"></div>
                       </div>
                     </div>
                   </div>

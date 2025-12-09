@@ -113,7 +113,7 @@ const ProgramsList: React.FC = () => {
             placeholder="Search simulations..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#7234F7] dark:focus:ring-[#B57BEE] text-gray-900 dark:text-white bg-white dark:bg-[#212121]"
+            className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 dark:focus:ring-accent-400 text-gray-900 dark:text-white bg-white dark:bg-[#212121]"
           />
         </div>
 
@@ -121,7 +121,7 @@ const ProgramsList: React.FC = () => {
           <select
             value={category || ""}
             onChange={(e) => setCategory(e.target.value || null)}
-            className="w-full px-4 py-3 pr-10 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#212121] text-gray-900 dark:text-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#7234F7] dark:focus:ring-[#B57BEE]"
+            className="w-full px-4 py-3 pr-10 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#212121] text-gray-900 dark:text-white appearance-none focus:outline-none focus:ring-2 focus:ring-accent-500 dark:focus:ring-accent-400"
           >
             <option value="">All Companies</option>
             {programs && (Array.from(
@@ -139,7 +139,7 @@ const ProgramsList: React.FC = () => {
           <select
             value={domain || ""}
             onChange={(e) => setDomain(e.target.value || null)}
-            className="w-full px-4 py-3 pr-10 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#212121] text-gray-900 dark:text-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#7234F7] dark:focus:ring-[#B57BEE]"
+            className="w-full px-4 py-3 pr-10 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#212121] text-gray-900 dark:text-white appearance-none focus:outline-none focus:ring-2 focus:ring-accent-500 dark:focus:ring-accent-400"
           >
             <option value="">All Domains</option>
             {programs && Array.from(
@@ -155,7 +155,7 @@ const ProgramsList: React.FC = () => {
 
         <button
           onClick={clearFilters}
-          className="w-full md:w-auto px-6 py-3 text-[#7234F7] dark:text-[#B57BEE] border border-[#7234F7] dark:border-[#B57BEE] bg-white dark:bg-transparent rounded-md hover:bg-[#f4f0ff] dark:hover:bg-[#1a1433] transition-all duration-200"
+          className="w-full md:w-auto px-6 py-3 text-accent-500 dark:text-accent-400 border border-accent-500 dark:border-accent-400 bg-white dark:bg-transparent rounded-md hover:bg-accent-50 dark:hover:bg-accent-900/20 transition-all duration-200"
         >
           Clear Filters
         </button>
@@ -211,7 +211,7 @@ const ProgramsList: React.FC = () => {
                 </p>
                 <div className="grow" />
                 <Link href={`https://simulation.coursevita.com/course/${program._id}`} target="_blank" rel="noopener noreferrer" className="w-full">
-                  <button className="w-full px-3 py-2 sm:px-4 sm:py-3 text-[#7234F7] dark:text-[#B57BEE] border border-[#7234F7] dark:border-[#B57BEE] hover:bg-[#7234F7] hover:text-white dark:hover:bg-[#7234F7] dark:hover:text-white transition ease-in-out duration-300 text-xs font-bold rounded-md mt-3 sm:mt-4 text-center">
+                  <button className="w-full px-3 py-2 sm:px-4 sm:py-3 text-accent-500 dark:text-accent-400 border border-accent-500 dark:border-accent-400 hover:bg-brand-500 hover:text-accent-500 dark:hover:bg-brand-500 dark:hover:text-accent-500 transition ease-in-out duration-300 text-xs font-bold rounded-md mt-3 sm:mt-4 text-center">
                     Know More
                   </button>
                 </Link>
@@ -235,7 +235,7 @@ const ProgramsList: React.FC = () => {
               key={i}
               className={`mx-1 px-3 py-1 rounded ${
                 currentPage === i + 1
-                  ? "bg-[#FE7465] text-white"
+                  ? "bg-accent-500 text-brand-500"
                   : "bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
               }`}
               onClick={() => setCurrentPage(i + 1)}

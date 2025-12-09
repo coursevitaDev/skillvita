@@ -16,7 +16,7 @@ export default function Landing({ setIsLanding }: Props) {
           Step into choosing right path with
         </h1>
         <h2 className="text-2xl sm:text-4xl font-medium bg-gradient-to-r from-[#7234F7] to-[#FF4B00] text-transparent bg-clip-text mt-2">
-          Coursevita
+          Skillvita
         </h2>
 
         <p className="text-black dark:text-white text-base sm:text-xl mt-6">
@@ -44,7 +44,7 @@ export default function Landing({ setIsLanding }: Props) {
 
       {/* Footer Always at Bottom Center */}
       <p className="absolute bottom-4 left-1/2 -translate-x-1/2 mb-4 text-black dark:text-white text-xs">
-        Powered by <span className="font-light">Coursevita</span>
+        Powered by <span className="font-light">Skillvita</span>
       </p>
     </div>
   );

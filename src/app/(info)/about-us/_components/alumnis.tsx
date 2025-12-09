@@ -20,7 +20,7 @@ const AlumniSection = () => {
   return (
     <div className="py-16 px-4 text-center bg-white dark:bg-black">
       <h2 className="pb-5 text-2xl font-semibold">
-        <span className="text-[#FE7465] font-bold">Alumni</span>{' '}
+        <span className="text-accent-500 font-bold">Alumni</span>{' '}
         <span className="font-semibold">from</span>
       </h2>
 

@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
           {/* Left Column */}
           <div className="flex flex-col gap-4 md:gap-6 px-2 md:pl-5 flex-1 z-10 w-full lg:max-w-[45%]">
             <h1 className="text-[28px] md:text-[40px] font-[500] leading-tight md:leading-normal text-black dark:text-white">
-              Coursevita
+              Skillvita
               <br />
               <span className="bg-gradient-to-r from-[#7234F7] to-[#FE7465] bg-clip-text text-transparent md:text-[40px] font-[600] leading-tight md:leading-normal">
 
@@ -81,7 +81,7 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
                   className="flex-shrink-0 mt-1"
                 />
                 <p className="text-[14px] leading-tight">
-                  Get the chance to become a <strong>coursevita</strong> live 6-Months course mentor and grow in the <strong>Edtech industry</strong>
+                  Get the chance to become a <strong>skillvita</strong> live 6-Months course mentor and grow in the <strong>Edtech industry</strong>
                 </p>
               </div>
 

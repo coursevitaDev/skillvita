@@ -13,7 +13,7 @@ const data = [
     date: "January - March 2023",
     title: "Starting Strong",
     description:
-      "In early 2023, Coursevita started offering courses in data science, machine learning, and software development, marking the beginning of our growth journey.",
+      "In early 2023, Skillvita started offering courses in data science, machine learning, and software development, marking the beginning of our growth journey.",
     color: "bg-[#F4F7F5] dark:bg-[#F4F7F5]/[0.1]",
     icon: "/images/about-us/icon1.svg",
   },
@@ -53,7 +53,7 @@ const data = [
     date: "April - June 2024",
     title: "Reaching New Heights",
     description:
-      "By mid-2024, Coursevita hosted its first online summit and reached 50,000 learners.",
+      "By mid-2024, Skillvita hosted its first online summit and reached 50,000 learners.",
     color: "bg-[#F9FFF6] dark:bg-[#F9FFF6]/[0.1]",
     icon: "/images/about-us/icon6.svg",
   },
@@ -127,7 +127,7 @@ const Timeline = () => {
     <div className="bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto py-10 px-4">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-12">
-          How <span className="text-[#FE7465]">We Started</span>
+          How <span className="text-accent-500">We Started</span>
         </h2>
 
         <div ref={containerRef} className="relative">
@@ -147,7 +147,7 @@ const Timeline = () => {
               top: 0,
               left: isMobile ? "24px" : "50%",
               width: "2px",
-              background: "#644DFF",
+              background: "#32FE6B",
               transform: isMobile ? "none" : "translateX(-50%)",
               zIndex: 20,
               height: progressHeight,
@@ -172,7 +172,7 @@ const Timeline = () => {
                         }}
                         className={`w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md z-30 transition-colors duration-300 ${
                           reached
-                            ? "border-2 border-[#644DFF]"
+                            ? "border-2 border-accent-500"
                             : "border-2 border-gray-300"
                         }`}
                       >
@@ -231,7 +231,7 @@ const Timeline = () => {
                         }}
                         className={`w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md z-30 transition-colors duration-300 ${
                           reached
-                            ? "border-2 border-[#644DFF]"
+                            ? "border-2 border-accent-500"
                             : "border-2 border-gray-300"
                         }`}
                       >

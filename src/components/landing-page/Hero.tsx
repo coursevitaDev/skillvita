@@ -99,7 +99,7 @@ export function Hero() {
                   {phrases.map((text, i) => (
                     <div
                       key={i}
-                      className="h-[44px] flex items-center justify-center md:justify-end pb-1 w-full font-medium bg-gradient-to-r from-[#7234F7] to-[#FF4B00] bg-clip-text text-transparent"
+                      className="h-[44px] flex items-center justify-center md:justify-end pb-1 w-full font-medium bg-gradient-to-r from-accent-600 to-accent-500 bg-clip-text text-transparent"
                     >
                       {text}
                     </div>
@@ -115,7 +115,7 @@ export function Hero() {
           {/* CTA Button */}
           <button
             onClick={scrollToCourses}
-            className="flex items-center gap-2 bg-brand-500 hover:opacity-90 transition-all duration-300 px-6 py-3 rounded-lg text-white text-base md:text-lg font-normal shadow-lg"
+            className="flex items-center gap-2 bg-brand-500 hover:bg-brand-600 transition-all duration-300 px-6 py-3 rounded-lg text-accent-500 text-base md:text-lg font-normal shadow-lg"
           >
             Start Learning
             {!isMobile ? (

@@ -19,10 +19,10 @@ export default function FAQs({ faqs }: FAQsProps) {
 
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-[24px] sm:text-[30px] lg:text-[36px] font-[400] mb-16 sm:mb-24 text-center">
           <span>Frequently Asked {" "}</span>
-          <span className="text-[#FF7262]">Questions</span>
+          <span className="text-accent-500">Questions</span>
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (

@@ -40,7 +40,7 @@ export default function HiringMenu({
   }, [isMobile]);
 
   const cardClasses =
-    "min-w-[300px] md:max-w-none h-[200px] bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-6 flex flex-col items-start justify-start flex-shrink-0 hover:cursor-pointer border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300";
+    "min-w-[300px] md:max-w-none h-[200px] bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-6 flex flex-col items-start justify-start flex-shrink-0 hover:cursor-pointer border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300";
 
   return (
     <div className="flex flex-col gap-4">
@@ -53,7 +53,7 @@ export default function HiringMenu({
         <Link href="/#courses" onClick={onItemClick}>
           <motion.div {...cardAnimation} className={`group ${cardClasses}`}>
             <h3 className="text-lg font-medium">
-              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Get Hired
               </span>
             </h3>
@@ -96,7 +96,7 @@ export default function HiringMenu({
             className={`group ${cardClasses} relative`}
           >
             <h3 className="text-lg font-medium">
-              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Hire for your company
               </span>
             </h3>
@@ -111,7 +111,7 @@ export default function HiringMenu({
           </motion.div>
         </Link>
 
-        {/* Card 3 - Work with Coursevita */}
+        {/* Card 3 - Work with Skillvita */}
         <Link
           href="https://coursevita.zohorecruit.in/jobs/Careers"
           onClick={onItemClick}
@@ -122,8 +122,8 @@ export default function HiringMenu({
           >
             <div className="pr-4">
               <h3 className="text-lg font-medium">
-                <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
-                  Work with Coursevita
+                <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
+                  Work with Skillvita
                 </span>
               </h3>
               <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
@@ -135,7 +135,7 @@ export default function HiringMenu({
             <div className="absolute bottom-0 right-4">
               <Image
                 src="/images/navbar/work.svg"
-                alt="Coursevita Team"
+                alt="Skillvita Team"
                 width={200}
                 height={60}
                 className=""
@@ -153,7 +153,7 @@ export default function HiringMenu({
               <div
                 key={i}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === activeIndex ? "bg-[#BD89FF] w-4" : "bg-white w-1.5"
+                  i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
                 }`}
               />
             ))}
@@ -164,11 +164,11 @@ export default function HiringMenu({
       {/* Card 4 - Always Full Width */}
       <motion.div
         {...cardAnimation}
-        className="group bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-4 w-full flex flex-col md:flex-row items-center justify-between gap-4 mb-4 md:mb-0 border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+        className="group bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-4 w-full flex flex-col md:flex-row items-center justify-between gap-4 mb-4 md:mb-0 border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
       >
         <div className="hidden md:flex flex-row items-center gap-6 text-left">
           <h4 className="text-xs lg:text-[16px] font-medium text-black dark:text-white">
-            <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+            <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
               Flexible Mentorship, Big Earnings!
             </span>
           </h4>

@@ -111,7 +111,7 @@ const EventsPage = () => {
 
             <div className="relative z-10 text-white max-w-3xl">
               <h1 className="text-5xl md:text-7xl font-bold">
-                Coursevita Events
+                Skillvita Events
               </h1>
               <h2 className="text-4xl md:text-6xl font-medium mt-1 mb-1">
                 Learn, Network, Succeed.
@@ -147,7 +147,7 @@ const EventsPage = () => {
                     e.preventDefault();
                     setShowAllUpcoming(!showAllUpcoming);
                   }}
-                  className="text-brand-500 hover:underline font-medium"
+                  className="text-accent-500 hover:underline font-medium"
                 >
                   {showAllUpcoming ? "View less" : "View more"}
                 </Link>
@@ -189,7 +189,7 @@ const EventsPage = () => {
                     e.preventDefault();
                     setShowAllCompleted(!showAllCompleted);
                   }}
-                  className="text-brand-500 hover:underline font-medium"
+                  className="text-accent-500 hover:underline font-medium"
                 >
                   {showAllCompleted ? "View less" : "View more"}
                 </Link>

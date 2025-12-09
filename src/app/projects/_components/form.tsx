@@ -94,7 +94,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
         <button
           onClick={() => handleTabChange(0)}
           className={`px-4 py-2 text-sm font-medium border-b-2 ${
-            activeTab === 0 ? "border-[#7234F7] text-[#7234F7]" : "border-transparent text-gray-500"
+            activeTab === 0 ? "border-accent-500 text-accent-500" : "border-transparent text-gray-500"
           }`}
         >
           Individual
@@ -102,7 +102,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
         <button
           onClick={() => handleTabChange(1)}
           className={`px-4 py-2 text-sm font-medium border-b-2 ${
-            activeTab === 1 ? "border-[#7234F7] text-[#7234F7]" : "border-transparent text-gray-500"
+            activeTab === 1 ? "border-accent-500 text-accent-500" : "border-transparent text-gray-500"
           }`}
         >
           Team
@@ -118,7 +118,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500"
           />
         </div>
 
@@ -128,7 +128,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
             type="email"
             value={emailId}
             onChange={(e) => setEmailId(e.target.value)}
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500"
           />
         </div>
 
@@ -138,7 +138,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
             type="tel"
             value={mobileNum}
             onChange={(e) => setMobileNum(e.target.value)}
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500"
           />
         </div>
 
@@ -150,7 +150,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
                 type="text"
                 value={teamname}
                 onChange={(e) => setTeamname(e.target.value)}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500"
               />
             </div>
             <div>
@@ -158,7 +158,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
               <select
                 value={teamsize}
                 onChange={(e) => setTeamsize(Number(e.target.value))}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500"
               >
                 {[2, 3, 4, 5, 6].map((size) => (
                   <option key={size} value={size}>
@@ -176,7 +176,7 @@ export default function Projectsform({ handleCloseDialog, title }: ProjectsFormP
         <button
           onClick={validation}
           disabled={loading}
-          className="bg-[#7234F7] text-white font-medium text-sm py-2 rounded mt-2 hover:bg-[#7234F7] transition disabled:opacity-50"
+          className="bg-brand-500 text-accent-500 hover:bg-brand-600 font-medium text-sm py-2 rounded mt-2 transition disabled:opacity-50"
         >
           {loading ? "Processing..." : "Join Now"}
         </button>

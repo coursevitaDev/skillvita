@@ -19,15 +19,15 @@ export async function generateMetadata({
     name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
   return {
-    title: `${capitalizedName}'s Profile - Coursevita`,
-    description: `Welcome to ${capitalizedName}'s personalized profile on Coursevita.`,
+    title: `${capitalizedName}'s Profile - Skillvita`,
+    description: `Welcome to ${capitalizedName}'s personalized profile on Skillvita.`,
     openGraph: {
-      title: `${capitalizedName}'s Profile - Coursevita`,
-      description: `Welcome to ${capitalizedName}'s personalized profile on Coursevita.`,
+      title: `${capitalizedName}'s Profile - Skillvita`,
+      description: `Welcome to ${capitalizedName}'s personalized profile on Skillvita.`,
     },
     twitter: {
-      title: `${capitalizedName}'s Profile - Coursevita`,
-      description: `Welcome to ${capitalizedName}'s personalized profile on Coursevita.`,
+      title: `${capitalizedName}'s Profile - Skillvita`,
+      description: `Welcome to ${capitalizedName}'s personalized profile on Skillvita.`,
     },
   };
 }

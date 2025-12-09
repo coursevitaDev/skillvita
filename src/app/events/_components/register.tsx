@@ -85,7 +85,7 @@ export const RegistrationForm = ({ event, isWaitlist, onClose }: RegistrationFor
                 ? "You've been added to the waitlist."
                 : "Your registration was successful."}
             </p>
-            <button className="bg-brand-500 text-white px-4 py-2 rounded" onClick={onClose}>
+            <button className="bg-brand-500 text-accent-500 hover:bg-brand-600 px-4 py-2 rounded transition-colors" onClick={onClose}>
               Close
             </button>
           </div>
@@ -148,7 +148,7 @@ export const RegistrationForm = ({ event, isWaitlist, onClose }: RegistrationFor
             <div className="flex justify-end gap-2 mt-4">
               <button
                 type="button"
-                className="border px-4 py-2 rounded text-brand-500"
+                className="border border-accent-500 px-4 py-2 rounded text-accent-500 hover:bg-accent-500 hover:text-white transition-colors"
                 onClick={onClose}
               >
                 Cancel
@@ -156,7 +156,7 @@ export const RegistrationForm = ({ event, isWaitlist, onClose }: RegistrationFor
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-brand-500 text-white px-4 py-2 rounded"
+                className="bg-brand-500 text-accent-500 hover:bg-brand-600 px-4 py-2 rounded transition-colors disabled:opacity-50"
               >
                 {loading ? "Processing..." : isWaitlist ? "Join Waitlist" : "Register Now"}
               </button>

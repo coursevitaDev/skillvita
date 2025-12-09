@@ -20,7 +20,7 @@ export default function EventSidebarCard({ event }: EventSidebarCardProps) {
       {/* Top Header */}
       <div className="bg-[#0d1442] dark:bg-[#18181B] px-5 py-4">
         <p className="text-xs text-white mb-2">Hosted By</p>
-        <Image src="/images/events/cv1.svg" alt="Coursevita" width={120} height={50} />
+        <Image src="/images/events/cv1.svg" alt="Skillvita" width={120} height={50} />
       </div>
 
       {/* Event Info */}

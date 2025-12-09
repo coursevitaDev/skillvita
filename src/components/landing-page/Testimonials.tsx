@@ -17,21 +17,21 @@ const testimonials = [
     name: "Sai Kiran",
     title: "Final Year Undergrad Student - Data Analytics Course",
     message:
-      "Taking Coursevita's Data Analytics course was a smart move for me. It helped me understand data better, which is important for many jobs. The teachers were helpful, and the course fit well with my studies. Now, I feel ready to work as a data analyst.",
+      "Taking Skillvita's Data Analytics course was a smart move for me. It helped me understand data better, which is important for many jobs. The teachers were helpful, and the course fit well with my studies. Now, I feel ready to work as a data analyst.",
     avatar: "/images/landing/testimonials/saikiran.png",
   },
   {
     name: "Aparna Ch",
     title: "Early Career Professional - Data Science Course",
     message:
-      "After completing Coursevita's Data Science course, I feel well-prepared and knowledgeable. The curriculum was practical and engaging, tailored to real-world scenarios. Thanks to Coursevita, I'm now proficient in data analysis and advanced techniques.",
+      "After completing Skillvita's Data Science course, I feel well-prepared and knowledgeable. The curriculum was practical and engaging, tailored to real-world scenarios. Thanks to Skillvita, I'm now proficient in data analysis and advanced techniques.",
     avatar: "/images/landing/testimonials/aparna.jpg",
   },
   {
     name: "Sheetal S",
     title: "Early Career Professional - Python Course",
     message:
-      "I learned a lot about artificial intelligence in Coursevita's Gen AI course. The mentors were smart, and the course was interesting. The projects helped me understand things better. Coursevita is great for anyone who wants to learn about AI and stay ahead in their job.",
+      "I learned a lot about artificial intelligence in Skillvita's Gen AI course. The mentors were smart, and the course was interesting. The projects helped me understand things better. Skillvita is great for anyone who wants to learn about AI and stay ahead in their job.",
     avatar: "/images/landing/testimonials/sheetal.png",
   },
 ];
@@ -110,7 +110,7 @@ const TestimonialSection = () => {
         {/* Heading */}
         <div className="max-w-3xl mx-auto text-center relative z-10 mb-8">
           <h2 className="text-xl md:text-3xl text-black dark:text-white font-normal">
-            Learners adore Coursevita,
+            Learners adore Skillvita,
             <br />
             <span className="font-medium text-xl md:text-3xl">
               <span className="text-black dark:text-white">And </span>we cherish
@@ -127,7 +127,7 @@ const TestimonialSection = () => {
                 key={index}
                 className="min-w-sm md:min-w-3xl lg:min-w-4xl xl:min-w-6xl px-4 md:px-8 box-border"
               >
-                <div className="bg-brand-50 dark:bg-[#18181B] border border-[#E4E4E7] dark:border-[#27272A] p-6 md:p-8 rounded-2xl
+                <div className="bg-accent-50 dark:bg-[#18181B] border border-accent-200 dark:border-[#27272A] p-6 md:p-8 rounded-2xl
                 text-gray-800 dark:text-gray-100">
                   <div className="flex items-start gap-4">
                     <Image
@@ -171,7 +171,7 @@ const TestimonialSection = () => {
 
           <div className="w-20 md:w-40 h-2 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden relative">
             <div
-              className="h-full bg-[#0F002E] dark:bg-white rounded-full transition-all duration-300"
+              className="h-full bg-brand-500 dark:bg-accent-500 rounded-full transition-all duration-300"
               style={{
                 width: `${100 / testimonials.length}%`,
                 left: `${(100 / testimonials.length) * selectedIndex}%`,

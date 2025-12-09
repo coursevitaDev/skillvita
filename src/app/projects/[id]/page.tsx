@@ -63,7 +63,7 @@ export default function ProjectDetailPage() {
         <div className="grid grid-cols-1 md:grid-cols-7 gap-y-12 gap-x-8">
           {/* Left Panel */}
           <div className="md:col-span-4">
-            <div className="inline-block bg-brand-200/30 dark:bg-brand-700/[0.3] text-brand-500 dark:text-brand-200 font-medium px-3 py-1 text-xs md:text-sm rounded-full mb-2">
+            <div className="inline-block bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-400 font-medium px-3 py-1 text-xs md:text-sm rounded-full mb-2">
               {projectData.category}
             </div>
             <h1 className="text-lg md:text-4xl font-bold mb-3 text-black dark:text-white">
@@ -156,7 +156,7 @@ export default function ProjectDetailPage() {
           {/* Right Panel */}
           <div className="md:col-span-3">
             <button
-              className="w-full bg-brand-500 text-white text-lg py-3 rounded-lg mb-8"
+              className="w-full bg-brand-500 text-accent-500 hover:bg-brand-600 text-lg py-3 rounded-lg mb-8 transition-colors"
               onClick={() => setOpen(true)}
             >
               Start Project
@@ -194,7 +194,7 @@ export default function ProjectDetailPage() {
               <div>
                 <p className="text-xs md:text-sm font-semibold text-gray-600 dark:text-gray-300">Atharv Bhute</p>
                 <p className="text-xs md:text-sm text-gray-500">
-                  Software Engineer @Coursevita
+                  Software Engineer @Skillvita
                 </p>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function ProjectDetailPage() {
           </h2>
           <div className="flex justify-center">
             <button
-              className="w-100 h-15 bg-brand-500 text-white text-[16px] py-3 rounded-lg mb-8"
+              className="w-100 h-15 bg-brand-500 text-accent-500 hover:bg-brand-600 text-[16px] py-3 rounded-lg mb-8"
               onClick={() => setOpen(true)}
             >
               Start Project

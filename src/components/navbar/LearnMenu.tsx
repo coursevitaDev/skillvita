@@ -87,7 +87,7 @@ export default function LearnMenu({ onItemClick }: LearnMenuProps) {
           href="/"
           className={`flex items-center px-4 py-4 rounded-lg transition ${
             pathname === "/"
-              ? "bg-brand-100 text-brand-500 dark:bg-brand-800/[0.5] dark:text-brand-200 font-medium"
+              ? "bg-brand-50 text-accent-500 dark:bg-brand-700/[0.3] dark:text-accent-400 font-medium"
               : "text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#18181B]"
           }`}
         >
@@ -105,7 +105,7 @@ export default function LearnMenu({ onItemClick }: LearnMenuProps) {
               onClick={onItemClick}
               className={`group flex items-center justify-between px-4 py-4 rounded-lg transition ${
                 isActive
-                  ? "bg-brand-100 text-brand-500 dark:bg-brand-800/[0.5] dark:text-brand-200 font-medium"
+                  ? "bg-brand-50 text-accent-500 dark:bg-brand-700/[0.3] dark:text-accent-400 font-medium"
                   : "text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#18181B]"
               }`}
             >
@@ -117,7 +117,7 @@ export default function LearnMenu({ onItemClick }: LearnMenuProps) {
                 size={16}
                 className={`transition-opacity ${
                   isActive
-                    ? "opacity-100 text-brand-500"
+                    ? "opacity-100 text-accent-500"
                     : "opacity-0 group-hover:opacity-100"
                 }`}
               />

@@ -38,11 +38,11 @@ const Button: React.FC<ButtonProps> = ({
 
   // Variant Classes
   const variantClasses = {
-    primary: "bg-brand-500 text-white shadow-theme-xs disabled:bg-brand-300",
+    primary: "bg-brand-500 text-accent-500 shadow-theme-xs disabled:bg-brand-300 disabled:text-accent-300 hover:bg-brand-600",
     outline:
-      "bg-white text-brand-500 border border-brand-500 hover:bg-brand-500 hover:text-white dark:bg-black dark:hover:bg-brand-500",
+      "bg-white text-accent-500 border border-accent-500 hover:bg-brand-500 hover:text-accent-500 hover:border-brand-500 dark:bg-black dark:hover:bg-brand-500",
     secondary:
-      "bg-brand-100 text-brand-400 dark:bg-brand-800 dark:text-brand-200",
+      "bg-brand-100 text-accent-500 dark:bg-brand-800 dark:text-accent-400",
   };
 
   // Ripple state
@@ -85,11 +85,11 @@ const Button: React.FC<ButtonProps> = ({
   // Determine ripple color based on button variant
   const getRippleClass = () => {
     if (variant === "primary") {
-      return "bg-brand-400 bg-opacity-50"; // Brand-400 color for primary buttons
+      return "bg-accent-400 bg-opacity-50";
     } else if (variant === "secondary") {
-      return "bg-brand-400 bg-opacity-40";
+      return "bg-accent-400 bg-opacity-40";
     } else {
-      return "bg-brand-400 bg-opacity-30"; // Brand-400 color with lower opacity for outline buttons
+      return "bg-accent-400 bg-opacity-30";
     }
   };
 

@@ -50,7 +50,7 @@ export default function JobPrepMenu({
       title: "Play Learn Earn",
       desc: "Practice quizzes daily and get ready for any competitive exam.",
       image: "/images/navbar/quizvita.svg",
-      href: "https://play.google.com/store/apps/details?id=com.coursevita.quizvita",
+      href: "https://play.google.com/store/apps/details?id=com.skillvita.quizvita",
     },
     {
       title: "Prepare Group Discussion",
@@ -159,7 +159,7 @@ export default function JobPrepMenu({
             <div
               key={i}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === activeIndex ? "bg-[#BD89FF] w-4" : "bg-white w-1.5"
+                i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
               }`}
             />
           ))}
@@ -173,10 +173,10 @@ export default function JobPrepMenu({
         <Link href="https://simulation.coursevita.com/" onClick={onItemClick} passHref>
           <motion.div
             {...cardAnimation}
-            className="group min-h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden cursor-pointer border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+            className="group min-h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden cursor-pointer border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
           >
             <h3 className="text-lg font-medium">
-              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Job simulation
               </span>
             </h3>
@@ -196,11 +196,11 @@ export default function JobPrepMenu({
         
         <motion.div
           {...cardAnimation}
-          className="group h-2/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden group cursor-pointer border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+          className="group h-2/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden group cursor-pointer border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
         >
           <Link href="https://portfolio.coursevita.com/" onClick={onItemClick} passHref>
           <h3 className="text-lg font-medium text-black dark:text-white">
-            <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+            <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
               Build your Portfolio
             </span>
           </h3>
@@ -235,10 +235,10 @@ export default function JobPrepMenu({
         <Link href="/skill-assessment" onClick={onItemClick} passHref>
           <motion.div
             {...cardAnimation}
-            className="group min-h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden cursor-pointer border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+            className="group min-h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden cursor-pointer border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
           >
             <h3 className="text-lg font-medium text-black dark:text-white">
-              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Skill Assessment
               </span>
             </h3>
@@ -257,7 +257,7 @@ export default function JobPrepMenu({
 
         <motion.div
           {...cardAnimation}
-          className="group h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden cursor-pointer border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+          className="group h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden cursor-pointer border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
         >
           <Link href="/projects" onClick={onItemClick} passHref>
           <Image
@@ -268,7 +268,7 @@ export default function JobPrepMenu({
             className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           />
           <h3 className="text-lg font-medium relative z-10 text-black dark:text-white">
-            <span className="inline-block text-black md:w-1/2  dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+            <span className="inline-block text-black md:w-1/2  dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
               Build Interesting Projects
             </span>
           </h3>
@@ -306,13 +306,13 @@ export default function JobPrepMenu({
 
         <motion.div
           {...cardAnimation}
-          className="group h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 cursor-pointer relative overflow-hidden flex items-start border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+          className="group h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 cursor-pointer relative overflow-hidden flex items-start border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
         >
          <Link href="/mock-interviews" onClick={onItemClick} passHref>
           <div className="flex-1">
              
             <h3 className="text-lg font-medium text-black dark:text-white">
-              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Mock Interview
               </span>
             </h3>
@@ -340,12 +340,12 @@ export default function JobPrepMenu({
         
         <motion.div
           {...cardAnimation}
-          className="group min-h-2/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 cursor-pointer relative overflow-hidden flex flex-col justify-between border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+          className="group min-h-2/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 cursor-pointer relative overflow-hidden flex flex-col justify-between border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
         >
           
           <div>
             <h3 className="text-lg font-medium text-black dark:text-white">
-              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Play Learn Earn
               </span>
             </h3>
@@ -362,7 +362,7 @@ export default function JobPrepMenu({
               Available at Play Store
             </p>
             <a
-              href="https://play.google.com/store/apps/details?id=com.coursevita.quizvita"
+              href="https://play.google.com/store/apps/details?id=com.skillvita.quizvita"
               target="_blank"
               className="block"
               aria-label="Get the CourseVita app on Google Play (opens in a new tab)"
@@ -390,12 +390,12 @@ export default function JobPrepMenu({
 
         <motion.div
           {...cardAnimation}
-          className="group h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 cursor-pointer relative overflow-hidden border border-white dark:border-black hover:border-[#8A80FF4a] dark:hover:border-[#8A80FF4a] transition-all duration-300"
+          className="group h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 cursor-pointer relative overflow-hidden border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
         >
            <Link href="/mock-Group-Discussion" onClick={onItemClick} passHref>
           <div>
             <h3 className="text-lg font-medium text-black dark:text-white">
-              <span className="inline-block text-black dark:text-white md:w-1/2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#7234F7] group-hover:to-[#FF4B00] dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-[#7234F7] dark:group-hover:to-[#FF4B00]">
+              <span className="inline-block text-black dark:text-white md:w-1/2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Group Discussion
               </span>
             </h3>

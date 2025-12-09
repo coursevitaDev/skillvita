@@ -14,7 +14,7 @@ const founders = [
     name: "Hemanth Guthala",
     title: "Ex Data Scientist, Deloitte. ISB Alumni",
     description:
-      "A former Data Scientist from Deloitte and an alumnus of ISB, Hemanth brings his expertise to Coursevita. With a strong background in data science and business strategy, he is dedicated to developing innovative learning solutions that bridge the gap between academia and industry.",
+      "A former Data Scientist from Deloitte and an alumnus of ISB, Hemanth brings his expertise to Skillvita. With a strong background in data science and business strategy, he is dedicated to developing innovative learning solutions that bridge the gap between academia and industry.",
     image: "/images/about-us/Hemanth.jpg",
     linkedin: "https://www.linkedin.com/in/hemanth-guthala-92430956/",
   },
@@ -22,7 +22,7 @@ const founders = [
     name: "Arjun Vinay Kandukuri",
     title: "Entrepreneur, Oxford Alumni",
     description:
-      "An Oxford alumnus with exceptional leadership skills, Arjun is committed to guiding Coursevita towards excellence. His experience in strategic planning and educational leadership ensures that Coursevita stays at the forefront of educational innovation.",
+      "An Oxford alumnus with exceptional leadership skills, Arjun is committed to guiding Skillvita towards excellence. His experience in strategic planning and educational leadership ensures that Skillvita stays at the forefront of educational innovation.",
     image: "/images/about-us/arjun_edited.jpg",
     linkedin: "https://www.linkedin.com/in/arjun-vinay-1350a2307/",
   },
@@ -34,7 +34,7 @@ const Founders = () => {
       {/* Section Heading */}
       <div className="text-center pb-16">
         <h2 className="text-2xl font-semibold">
-          Meet <span className="text-[#FE7465]">our Founders</span>
+          Meet <span className="text-accent-500">our Founders</span>
         </h2>
       </div>
 
