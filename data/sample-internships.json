@@ -1,0 +1,135 @@
+[
+  {
+    "id": "1",
+    "title": "Frontend Intern",
+    "company": "TechNova",
+    "duration": "12 weeks",
+    "skills": ["React", "TypeScript", "CSS"],
+    "stipend": "₹15,000/month",
+    "location": "Bengaluru",
+    "type": "hybrid",
+    "domain": "Technology"
+  },
+  {
+    "id": "2",
+    "title": "Product Analyst Intern",
+    "company": "ProductIQ",
+    "duration": "10 weeks",
+    "skills": ["SQL", "A/B Testing", "Dashboards"],
+    "stipend": "₹18,000/month",
+    "location": "Remote",
+    "type": "remote",
+    "domain": "Product"
+  },
+  {
+    "id": "3",
+    "title": "Business Operations Intern",
+    "company": "GrowthWorks",
+    "duration": "8 weeks",
+    "skills": ["Excel", "Presentation", "Communication"],
+    "stipend": "₹12,000/month",
+    "location": "Hyderabad",
+    "type": "on-site",
+    "domain": "Business"
+  },
+  {
+    "id": "4",
+    "title": "Marketing Intern",
+    "company": "AdSpark",
+    "duration": "14 weeks",
+    "skills": ["Social Media", "Content", "Analytics"],
+    "stipend": "₹10,000/month",
+    "location": "Remote",
+    "type": "remote",
+    "domain": "Marketing"
+  },
+  {
+    "id": "5",
+    "title": "UI/UX Design Intern",
+    "company": "CreateLab",
+    "duration": "12 weeks",
+    "skills": ["Figma", "Prototyping", "User Research"],
+    "stipend": "₹16,000/month",
+    "location": "Pune",
+    "type": "hybrid",
+    "domain": "Creative"
+  },
+  {
+    "id": "6",
+    "title": "Research Intern (AI)",
+    "company": "DataSense",
+    "duration": "16 weeks",
+    "skills": ["Python", "ML", "Paper Review"],
+    "stipend": "₹20,000/month",
+    "location": "Chennai",
+    "type": "on-site",
+    "domain": "Research"
+  },
+  {
+    "id": "7",
+    "title": "Startup Operations Intern",
+    "company": "SeedSprint",
+    "duration": "10 weeks",
+    "skills": ["Customer Support", "CRM", "Docs"],
+    "stipend": "₹12,000/month",
+    "location": "Remote",
+    "type": "remote",
+    "domain": "Startup"
+  },
+  {
+    "id": "8",
+    "title": "Operations Intern",
+    "company": "FlowOps",
+    "duration": "8 weeks",
+    "skills": ["Process", "Reporting", "Teamwork"],
+    "stipend": "₹11,000/month",
+    "location": "Delhi",
+    "type": "on-site",
+    "domain": "Operations"
+  },
+  {
+    "id": "9",
+    "title": "Finance Intern",
+    "company": "Ledgerly",
+    "duration": "12 weeks",
+    "skills": ["Accounting", "Finance", "Excel"],
+    "stipend": "₹14,000/month",
+    "location": "Mumbai",
+    "type": "hybrid",
+    "domain": "Finance"
+  },
+  {
+    "id": "10",
+    "title": "Backend Intern",
+    "company": "CloudForge",
+    "duration": "12 weeks",
+    "skills": ["Node.js", "APIs", "Databases"],
+    "stipend": "₹17,000/month",
+    "location": "Remote",
+    "type": "remote",
+    "domain": "Technology"
+  },
+  {
+    "id": "11",
+    "title": "Product Design Intern",
+    "company": "Craftly",
+    "duration": "10 weeks",
+    "skills": ["Wireframes", "Handoff", "Design Systems"],
+    "stipend": "₹15,000/month",
+    "location": "Bengaluru",
+    "type": "on-site",
+    "domain": "Product"
+  },
+  {
+    "id": "12",
+    "title": "Data Analyst Intern",
+    "company": "InsightHub",
+    "duration": "12 weeks",
+    "skills": ["Python", "SQL", "Visualization"],
+    "stipend": "₹18,000/month",
+    "location": "Remote",
+    "type": "remote",
+    "domain": "Technology"
+  }
+]
+

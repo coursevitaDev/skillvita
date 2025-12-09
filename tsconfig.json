@@ -20,6 +20,9 @@
         "name": "next"
       }
     ],
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "types": ["vitest", "node"],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
