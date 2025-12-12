@@ -1,25 +1,107 @@
+"use client";
+import { useRef } from "react";
 import { PartnershipHero } from "@/components/CollegePartnership/PartnershipHero";
-import { PartnershipOverview } from "@/components/CollegePartnership/PartnershipOverview";
-import { ModernCollegeNeeds } from "@/components/CollegePartnership/ModernCollegeNeeds";
-import { NewStandard } from "@/components/CollegePartnership/NewStandard";
-import { WhyShiftMatters } from "@/components/CollegePartnership/WhyShiftMatters";
-import { CRTProgram } from "@/components/CollegePartnership/CRTProgram";
-import { StudentJourney } from "@/components/CollegePartnership/StudentJourney";
-import { PartnershipWorkflow } from "@/components/CollegePartnership/PartnershipWorkflow";
-import { PartnershipCta } from "@/components/CollegePartnership/PartnershipCta";
+import WhyPlacementSection from "../student-placements/(components)/WhyPlacementSection";
+import StudentOpportunities from "../student-placements/(components)/StudentOpportunities";
+import SkillingJourney from "../student-placements/(components)/SkillingJourney";
+import StudentOutcomes from "../student-placements/(components)/StudentOutcomes";
+import UpskillDomains from "../student-placements/(components)/UpskillDomains";
+import PortfolioSection from "../student-placements/(components)/PortfolioSection";
+import Testimonials from "@/components/landing-page/Testimonials";
+import Last from "@/app/mock-interviews/(components)/Last";
+import FAQs from "@/components/course-overview/faqs";
+
+// Content for student-placements components
+const whyContent = {
+  earlyUpskilling: {
+    title: "What Modern Colleges Need",
+    description: "Recruiters now look for students who can demonstrate capability—not just clear exams. Colleges are expected to provide: Role clarity, Execution capability, Real project experience, Communication readiness, and Portfolios with proof-of-work. SkillVita helps institutions upgrade their placement ecosystem with structured, execution-driven learning."
+  },
+  whySkillvita: {
+    title: "The New Standard of Campus Training",
+    description: "SkillVita delivers a complete learning + doing + hiring system: Launch Job Simulations, Boost Simulations (industry workflows), Project-Based Learning Tracks, Project Certificates, Verified Proof-of-Work Portfolios, Full CRT Program, and Hiring Pathways & Recruiter Visibility. Students leave with documented capability—not just theoretical preparation."
+  }
+};
+
+const opportunitiesContent = {
+  title: "CRT That Actually Works",
+  description: "CRT becomes more powerful when combined with real execution. Includes:",
+  opportunities: [
+    { title: "Aptitude (Quant, LR, DI)", icon: "📊", gradient: "from-blue-500 to-cyan-500" },
+    { title: "Communication Training", icon: "💬", gradient: "from-purple-500 to-pink-500" },
+    { title: "Technical Foundations", icon: "💻", gradient: "from-orange-500 to-red-500" },
+    { title: "Mock Interviews", icon: "🎤", gradient: "from-green-500 to-emerald-500" },
+    { title: "Resume & Portfolio Structuring", icon: "📝", gradient: "from-indigo-500 to-purple-500" },
+    { title: "Simulation-Based Practice", icon: "🎯", gradient: "from-pink-500 to-rose-500" }
+  ],
+  footerText: "Students practice skills through real tasks—building confidence and readiness."
+};
+
+const partnershipFAQs = [
+  {
+    question: "What is SkillVita's College Partnership Program?",
+    answer: "A comprehensive partnership that brings industry-aligned simulations, project-based learning, CRT training, and proof-of-work portfolios directly into your campus ecosystem to strengthen placement outcomes."
+  },
+  {
+    question: "Why should our college partner with SkillVita now?",
+    answer: "Recruiters now shortlist students who show execution, clarity, and real projects—not marks. Early adopters gain higher placement conversions, strong recruiter confidence, repeat hiring cycles, and stronger institutional reputation."
+  },
+  {
+    question: "What does the partnership workflow look like?",
+    answer: "We follow a 6-step process: Onboarding & Setup, CRT + Simulations Launch, Project Execution & Certifications, Portfolio Development, Recruiter Engagement, and Insights & Performance Reports."
+  },
+  {
+    question: "How does the CRT program work?",
+    answer: "Our CRT program includes Aptitude (Quant, LR, DI), Communication Training, Technical Foundations, Mock Interviews, Resume & Portfolio Structuring, and Simulation-Based Practice—all combined with real execution."
+  },
+  {
+    question: "What outcomes can our institution expect?",
+    answer: "Higher placement & internship conversions, stronger recruiter engagement, measurable skill improvement, consistent hiring cycles, improved institutional reputation, and data-driven dashboards for tracking progress."
+  },
+  {
+    question: "How do students build their portfolios?",
+    answer: "Every project, simulation, and certification students complete becomes verified proof-of-work in their growing portfolio, making them discoverable to recruiters who evaluate portfolios, not just marks."
+  }
+];
 
 export default function CollegePartnership() {
+  const joinRef = useRef<HTMLElement>(null!);
+
   return (
-    <div className="min-h-screen bg-white dark:bg-black -mt-5">
+    <div className="bg-white dark:bg-black -mt-5">
       <PartnershipHero />
-      <PartnershipOverview />
-      <ModernCollegeNeeds />
-      <NewStandard />
-      <WhyShiftMatters />
-      <CRTProgram />
-      <StudentJourney />
-      <PartnershipWorkflow />
-      <PartnershipCta />
+      
+      {/* Why Modern Colleges Need This & New Standard */}
+      <WhyPlacementSection 
+        earlyUpskilling={whyContent.earlyUpskilling}
+        whySkillvita={whyContent.whySkillvita}
+      />
+
+      {/* CRT Program Components */}
+      <StudentOpportunities 
+        {...opportunitiesContent}
+      />
+
+      {/* How Students Become Job-Ready */}
+      <SkillingJourney />
+
+      {/* Student Outcomes */}
+      <StudentOutcomes />
+
+      {/* Upskill Domains */}
+      <UpskillDomains />
+
+      {/* Portfolio Section */}
+      <PortfolioSection />
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* CTA Section */}
+      <Last targetJoinNow={joinRef} />
+
+      {/* FAQs */}
+      <FAQs faqs={partnershipFAQs} />
     </div>
   );
 }
