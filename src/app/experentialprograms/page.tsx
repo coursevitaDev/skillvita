@@ -8,6 +8,26 @@ import ExperienceFlow from "@/components/experentialprograms/ExperienceFlow";
 import ValueProposition from "@/components/experentialprograms/ValueProposition";
 import Audience from "@/components/experentialprograms/Audience";
 import FinalCTA from "@/components/experentialprograms/FinalCTA";
+import ExperientialQA from "@/components/experentialprograms/ExperientialQA";
+
+const experientialFAQs = [
+  {
+    question: "How is this different from an internship?",
+    answer: "Experiential programs focus on specific skill acquisition through guided projects and mentorship, whereas internships are role-based work experiences. These programs are designed to build your portfolio before you apply for internships."
+  },
+  {
+    question: "Do I get a certificate?",
+    answer: "Yes, you receive a certificate of completion that validates the specific skills and projects you've mastered during the program."
+  },
+  {
+    question: "What is the duration?",
+    answer: "Programs typically run for 4-8 weeks, with flexible schedules designed for students and working professionals."
+  },
+  {
+    question: "Is mentorship included?",
+    answer: "Absolutely. You get 1:1 mentorship from industry experts who review your code and guide your project implementation."
+  }
+];
 
 export default function ExperentialProgramsPage() {
   useEffect(() => {
@@ -80,6 +100,51 @@ export default function ExperentialProgramsPage() {
       <ExperienceFlow />
       <ValueProposition />
       <Audience />
+      <ExperientialQA faqs={experientialFAQs}/>
+
+
+      
+
+
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": experientialFAQs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "QAPage",
+            "mainEntity": {
+              "@type": "Question",
+              "name": "How does Redis help JWT authentication?",
+              "text": "Why is Redis used with JWT tokens?",
+              "answerCount": 1,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Redis helps by storing token blacklists and session metadata."
+              }
+            }
+          })
+        }}
+      />
+
       <FinalCTA />
       <style jsx global>{`
         .bg-grid-pattern { background-image: linear-gradient(to right, #18181b 1px, transparent 1px), linear-gradient(to bottom, #18181b 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle at center, black, transparent 80%); }

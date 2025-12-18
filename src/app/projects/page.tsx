@@ -9,7 +9,7 @@ import { PROJECTS } from "@/data/projectsData";
 import ProjectsLowerSection from "@/app/projects/_components/lower";
 import Preend from "./_components/preend";
 import End from "./_components/end";
-import FAQs from "@/components/course-overview/faqs";
+import ProjectQA from "@/components/projects/ProjectQA";
 
 type Project = {
   _id: string;
@@ -219,7 +219,51 @@ export default function Projects() {
 
         <ProjectsLowerSection />
         <Preend />
-        <FAQs faqs={projectFAQs} />
+
+       
+
+        {/* Helper Scripts for FAQ and QAPage */}
+        <Script
+          id="faq-structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": projectFAQs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            })
+          }}
+        />
+        <Script
+          id="qa-structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "QAPage",
+              "mainEntity": {
+                "@type": "Question",
+                "name": "How does Redis help JWT authentication?",
+                "text": "Why is Redis used with JWT tokens?",
+                "answerCount": 1,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Redis helps by storing token blacklists and session metadata."
+                }
+              }
+            })
+          }}
+        />
+        <ProjectQA faqs={projectFAQs} />
         <End />
       </div>
     </>
