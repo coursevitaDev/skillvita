@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/landing-page/Footer";
 import ScrollToTopButton from "@/components/common/ScrollToTopButton";
 import { ThemeProvider } from "@/context/ThemeContext";
+import Preloader from "@/components/ui/PreLoader";
+import AppLoaderWrapper from "@/components/common/AppLoaderWrapper";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -64,15 +67,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
-        <ThemeProvider>
-          <Navbar />
-          <div className=" mt-20"></div>
-          {children}
-          <Footer />
-          <ScrollToTopButton />
-        </ThemeProvider>
+        <Suspense fallback={<Preloader />}>
+          <ThemeProvider>
+            <AppLoaderWrapper>
+              <Navbar />
+              <div className="mt-16 md:mt-18"></div>
+              {children}
+              <Footer />
+              <ScrollToTopButton />
+            </AppLoaderWrapper>
+          </ThemeProvider>
+        </Suspense>
       </body>
     </html>
   );
