@@ -25,12 +25,12 @@ const projectFAQs = [
   {
     question: "What types of projects are available?",
     answer:
-      "We offer a diverse range of projects including web development, mobile apps, data science, machine learning, blockchain, IoT, and cross-domain projects. All projects are designed to give you hands-on experience with real-world applications and emerging technologies.",
+      "We offer a diverse range of projects including web development, mobile apps, data science, machine learning, blockchain, IoT, and cross domain projects. All projects are designed to give you hands on experience with real world applications and emerging technologies.",
   },
   {
     question: "Do I need prior experience to start a project?",
     answer:
-      "No prior experience is required for beginner-level projects. We offer projects categorized by difficulty levels - Beginner, Intermediate, and Hard.",
+      "No specific prerequisites are required. SkillVita is open to all learners whether you’re a beginner or already have some experience.You’ll be placed in the right track Launch, Boost, or Pro based on your skill level, and guided step by step by mentors throughout the program.",
   },
   {
     question: "Will I receive mentorship during the project?",
@@ -193,11 +193,11 @@ export default function Projects() {
         <div id="mid" className="px-4 max-w-6xl mx-auto">
           <h2 className="text-center text-2xl font-bold mt-10 mb-2">
             <span className="text-black dark:text-white">All </span>
-            <span className="text-accent-500">Projects</span>
+            <span className="text-[#32fe6b]">Projects</span>
           </h2>
 
           <p className="text-center text-gray-500 dark:text-gray-400 mb-6">
-            Browse all projects and get started with an execution plan
+            Browse all <span className="text-[#32fe6b]">projects</span> and get started with an execution journey
           </p>
 
           <div className="max-w-xl mx-auto mb-6 relative">
@@ -215,7 +215,7 @@ export default function Projects() {
 
           {displayedProjects.length === 0 ? (
             <div className="text-center text-gray-500 py-8">
-              No projects found.
+              No <span className="text-[#32fe6b]">projects</span> found.
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

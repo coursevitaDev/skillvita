@@ -14,9 +14,9 @@ export default function Header({
   const project_type = params?.project_type;
 
   const mainRouteData = {
-    title: "Are you ready to build next-level projects?",
+    title: "Are you ready to build next level projects?",
     description:
-      "Yes! You are in the right place! Tackle real-world challenges, boost your portfolio, and gain hands-on experience with emerging tech.",
+      "Yes! You are in the right place! Tackle real world challenges, boost your portfolio, and gain hands on experience with emerging tech.",
   };
 
   return (
@@ -26,11 +26,11 @@ export default function Header({
         <div className="w-full flex flex-col md:flex-row justify-between items-start gap-4">
           <div className="md:w-3/5 text-center md:text-left">
             <h1 className="text-[24px] md:text-[36px] font-semibold font-poppins text-black dark:text-white">
-              {mainRouteData.title}
+              Are you ready to build next level <span className="text-[#32fe6b]">projects</span>?
             </h1>
             <div className="mt-5 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start text-sm gap-2">
               {[
-                "Real-Time Project Experience",
+                "Real Time <span className='text-[#32fe6b]'>Project</span> Experience",
                 "Expert Guidance",
                 "Collaborative Environment",
               ].map((item, idx) => (
@@ -55,7 +55,7 @@ export default function Header({
                       strokeLinejoin="round"
                     />
                   </svg>
-                  {item}
+                  <span dangerouslySetInnerHTML={{ __html: item }} />
                 </p>
               ))}
             </div>
@@ -67,7 +67,7 @@ export default function Header({
                 height={80}
               />
               <p className="text-xs md:text-sm text-gray-700 dark:text-gray-300 ml-3">
-                More than 2,000 people successfully completed their projects.
+                More than 2,000 people successfully completed their <span className="text-[#32fe6b]">projects</span>.
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function Header({
           {/* Description + Button */}
           <div className="md:w-2/5 flex flex-col items-center md:items-start">
             <p className="text-sm md:text-lg font-outfit text-center md:text-left text-black dark:text-gray-200">
-              {mainRouteData.description}
+              Yes! You are in the right place! Tackle real world challenges, boost your portfolio, and gain hands on experience with emerging tech.
             </p>
             <Button
               className="btn-top-project mt-4 bg-brand-500 text-accent-500 hover:bg-brand-600 text-base px-6 py-3 rounded-md"
@@ -84,7 +84,7 @@ export default function Header({
                 targetSection?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Start your project
+              Start your <span className="text-[#32fe6b]">project</span>
             </Button>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function Header({
 
           {/* Center Cards */}
           <div className="flex flex-col gap-6 w-full h-[355px]">
-            <div className="bg-accent-100 dark:bg-accent-900/20 rounded-xl p-4 h-1/2 flex flex-col justify-between">
+            <div className="bg-[#014051]  rounded-xl p-4 h-1/2 flex flex-col justify-between">
               <Image
                 src="/images/ProjectsPage/logov1.svg"
                 alt="logo1"
@@ -113,11 +113,11 @@ export default function Header({
               <p className="text-xl font-bold text-[#414141] dark:text-white">
                 75%
               </p>
-              <p className="text-sm text-black dark:text-gray-300 w-[200px]">
-                Projects published in Portfolios.
+              <p className="text-sm text-black dark:text-gray-300 w-[400px]">
+                Learners successfully publish at least one <span className="text-[#32fe6b]">project</span> to their portfolio
               </p>
             </div>
-            <div className="bg-brand-100 dark:bg-brand-900/20 rounded-xl p-4 h-1/2 flex flex-col justify-between">
+            <div className="bg-[#014051] rounded-xl p-4 h-1/2 flex flex-col justify-between">
               <Image
                 src="/images/projects/logov2.svg"
                 alt="logo2"
@@ -127,8 +127,8 @@ export default function Header({
               <p className="text-xl font-bold text-[#414141] dark:text-white">
                 80%
               </p>
-              <p className="text-sm text-black dark:text-gray-300 w-[200px]">
-                Learners report increased Confidence.
+              <p className="text-sm text-black dark:text-gray-300 w-[350px]">
+                Learners report higher confidence after completing a <span className="text-[#32fe6b]">project</span>
               </p>
             </div>
           </div>

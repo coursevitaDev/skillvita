@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { highlightKeywords } from "@/components/FresherPlacement/utils";
 
 const fadeIn: Variants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } };
 
@@ -11,13 +10,13 @@ export default function PortfolioAdvantage() {
       <motion.div animate={{ opacity: [0.1, 0.2, 0.1], scale: [1, 1.1, 1] }} transition={{ duration: 8, repeat: Infinity }} className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-600 rounded-full blur-[150px] pointer-events-none opacity-20"></motion.div>
       <div className="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 relative z-10">
         <motion.div className="lg:w-1/2" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">The Portfolio Advantage</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Your <span className="text-[#32fe6b]">Portfolio</span> Becomes Your Advantage</h2>
           <div className="prose prose-lg prose-invert text-zinc-400">
             <p className="mb-6">
-              {highlightKeywords("SkillVita’s portfolio builder helps freshers present a structured, verified record of their capability. Skills, projects, assessments, and task outcomes combine to form a professional identity that recruiters trust.")}
+              SkillVita’s portfolio builder helps freshers present a structured, verified record of their capability. Skills, projects, assessments, and task outcomes combine to form a professional identity that recruiters trust.
             </p>
             <p className="text-[#22c55e] font-semibold text-xl">
-              {highlightKeywords("Every experience you complete contributes to a living portfolio that grows with you and strengthens your visibility.")}
+              Every experience you complete contributes to a living portfolio that grows with you and strengthens your visibility.
             </p>
           </div>
         </motion.div>

@@ -60,7 +60,7 @@ const AnimatedMenuIcon = ({ isOpen }: { isOpen: boolean }) => (
 );
 
 export default function Navbar() {
-  const Lottie = dynamic(() => import("lottie-react"), { 
+  const Lottie = dynamic(() => import("lottie-react"), {
     ssr: false,
     loading: () => <div className="w-12 h-12" />
   });
@@ -153,8 +153,8 @@ export default function Navbar() {
                 ? "36px"
                 : "0px 0px 36px 36px"
               : isScrolled
-              ? "50px"
-              : "0px",
+                ? "50px"
+                : "0px",
             boxShadow:
               isScrolled || isMegaMenuOpen
                 ? "0 4px 20px rgba(0, 0, 0, 0.12)"
@@ -162,20 +162,16 @@ export default function Navbar() {
             top: isScrolled ? "20px" : "0px",
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className={`fixed z-50 mx-auto left-0 right-0 overflow-hidden ${
-            isScrolled ? "border-[0.8] border-white/[0.2]" : "border-none"
-          }`}
+          className={`fixed z-50 mx-auto left-0 right-0 overflow-hidden ${isScrolled ? "border-[0.8] border-white/[0.2]" : "border-none"
+            }`}
         >
           <div
-            className={`${
-              isMegaMenuOpen
-                ? "bg-black"
-                : `bg-black/60 ${
-                    isScrolled ? "backdrop-blur-sm" : ""
-                  }`
-            } ${
-              isScrolled ? "px-4" : "px-4.5 md:px-10"
-            } py-3 md:py-3.5 flex items-center justify-between transition duration-300`}
+            className={`${isMegaMenuOpen
+              ? "bg-black"
+              : `bg-black/60 ${isScrolled ? "backdrop-blur-sm" : ""
+              }`
+              } ${isScrolled ? "px-4" : "px-4.5 md:px-10"
+              } py-3 md:py-3.5 flex items-center justify-between transition duration-300`}
           >
             {/* Logo */}
             <Link href="/">
@@ -204,12 +200,11 @@ export default function Navbar() {
                       setIsMegaMenuOpen(true);
                     }
                   }}
-                  className={`${
-                    pathname === "/" ||
+                  className={`${pathname === "/" ||
                     (isMegaMenuOpen && activeMegaMenu === "learn")
-                      ? "text-accent-500"
-                      : "text-white"
-                  } flex items-center space-x-1 relative z-50 transition duration-200`}
+                    ? "text-accent-500"
+                    : "text-white"
+                    } flex items-center space-x-1 relative z-50 transition duration-200`}
                 >
                   <span>Learn</span>
                   <motion.div
@@ -236,11 +231,10 @@ export default function Navbar() {
                       setIsMegaMenuOpen(true);
                     }
                   }}
-                  className={`${
-                    isMegaMenuOpen && activeMegaMenu === "jobprep"
-                      ? "text-accent-500"
-                      : "text-white"
-                  } flex items-center space-x-1 relative z-50 transition duration-200`}
+                  className={`${isMegaMenuOpen && activeMegaMenu === "jobprep"
+                    ? "text-accent-500"
+                    : "text-white"
+                    } flex items-center space-x-1 relative z-50 transition duration-200`}
                 >
                   <span>Job Prep</span>
                   <motion.div
@@ -265,11 +259,10 @@ export default function Navbar() {
                       setIsMegaMenuOpen(true);
                     }
                   }}
-                  className={`${
-                    isMegaMenuOpen && activeMegaMenu === "hiring"
-                      ? "text-accent-500"
-                      : "text-white"
-                  } flex items-center space-x-1 relative z-50 transition duration-200`}
+                  className={`${isMegaMenuOpen && activeMegaMenu === "hiring"
+                    ? "text-accent-500"
+                    : "text-white"
+                    } flex items-center space-x-1 relative z-50 transition duration-200`}
                 >
                   <span>For Employers</span>
                 </button>
@@ -280,11 +273,10 @@ export default function Navbar() {
                 onMouseEnter={() => {
                   if (!isMobile) setIsMegaMenuOpen(false);
                 }}
-                className={`transition duration-300 ${
-                  pathname === "/events"
-                    ? "text-accent-500"
-                    : "text-white hover:text-accent-500"
-                }`}
+                className={`transition duration-300 ${pathname === "/events"
+                  ? "text-accent-500"
+                  : "text-white hover:text-accent-500"
+                  }`}
               >
                 Events
               </Link>
@@ -294,11 +286,10 @@ export default function Navbar() {
                 onMouseEnter={() => {
                   if (!isMobile) setIsMegaMenuOpen(false);
                 }}
-                className={`transition duration-300 ${
-                  pathname === "/about-us"
-                    ? "text-accent-500"
-                    : "text-white hover:text-accent-500"
-                }`}
+                className={`transition duration-300 ${pathname === "/about-us"
+                  ? "text-accent-500"
+                  : "text-white hover:text-accent-500"
+                  }`}
               >
                 About Us
               </Link>
@@ -339,7 +330,7 @@ export default function Navbar() {
 
               {/* CTA Button - Desktop Only */}
               <Link
-                href="https://dashboard.coursevita.com/"
+                href="https://dashboard.skillvita.com/"
                 className="hidden md:block bg-brand-500 hover:bg-brand-600 text-accent-500 text-sm px-5 py-3 rounded-full font-medium transition-colors"
               >
                 Get Started
@@ -367,9 +358,8 @@ export default function Navbar() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-                className={`bg-black transition duration-300 ${
-                  isMobile ? "h-auto" : ""
-                }`}
+                className={`bg-black transition duration-300 ${isMobile ? "h-auto" : ""
+                  }`}
                 style={{
                   borderBottomLeftRadius: isScrolled ? "36px" : "0",
                   borderBottomRightRadius: isScrolled ? "36px" : "0",
@@ -398,11 +388,10 @@ export default function Navbar() {
                             >
                               <ChevronRight
                                 size={18}
-                                className={`transition-transform ${
-                                  showUpskill
-                                    ? "text-black dark:text-white"
-                                    : "text-gray-400"
-                                }`}
+                                className={`transition-transform ${showUpskill
+                                  ? "text-black dark:text-white"
+                                  : "text-gray-400"
+                                  }`}
                               />
                             </motion.div>
                           </button>
@@ -423,11 +412,10 @@ export default function Navbar() {
                                   key={item.title}
                                   href={item.path}
                                   onClick={() => setIsMegaMenuOpen(false)}
-                                  className={`flex items-center justify-between rounded-lg px-4 py-3 ${
-                                    pathname === item.path
+                                  className={`flex items-center justify-between rounded-lg px-4 py-3 ${pathname === item.path
                                     ? "bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400"
                                     : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                  }`}
+                                    }`}
                                 >
                                   <div className="flex items-center space-x-2">
                                     {item.icon}
@@ -465,11 +453,10 @@ export default function Navbar() {
                               >
                                 <ChevronRight
                                   size={18}
-                                  className={`transition-transform ${
-                                    showJobPrep
-                                      ? "text-black dark:text-white"
-                                      : "text-gray-400"
-                                  }`}
+                                  className={`transition-transform ${showJobPrep
+                                    ? "text-black dark:text-white"
+                                    : "text-gray-400"
+                                    }`}
                                 />
                               </motion.div>
                             </button>
@@ -505,11 +492,10 @@ export default function Navbar() {
                               >
                                 <ChevronRight
                                   size={18}
-                                  className={`transition-transform ${
-                                    showHiring
-                                      ? "text-black dark:text-white"
-                                      : "text-gray-400"
-                                  }`}
+                                  className={`transition-transform ${showHiring
+                                    ? "text-black dark:text-white"
+                                    : "text-gray-400"
+                                    }`}
                                 />
                               </motion.div>
                             </button>
@@ -554,7 +540,7 @@ export default function Navbar() {
                         </div>
                         <div className="sticky bottom-0 left-0 right-0 bg-white dark:bg-black pb-4 pt-2">
                           <Link
-                            href="https://dashboard.coursevita.com/"
+                            href="https://dashboard.skillvita.com/"
                             className="w-full block text-center bg-brand-500 hover:bg-brand-600 text-white font-medium py-3 rounded-full shadow-md"
                           >
                             Get Started
@@ -572,19 +558,17 @@ export default function Navbar() {
                       <motion.div
                         layout
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className={`absolute top-1 bottom-1 w-[calc(50%-0.25rem)] rounded-lg ${
-                          activeTab === "experts" ? "left-1" : "right-1"
-                        } bg-gray-900 dark:bg-white z-0`}
+                        className={`absolute top-1 bottom-1 w-[calc(50%-0.25rem)] rounded-lg ${activeTab === "experts" ? "left-1" : "right-1"
+                          } bg-gray-900 dark:bg-white z-0`}
                       />
 
                       {/* Expert Tab */}
                       <button
                         onClick={() => setActiveTab("experts")}
-                        className={`relative z-10 w-1/2 px-3.5 py-2 md:text-sm text-[10px] font-medium text-center rounded-lg transition-colors duration-300 ${
-                          activeTab === "experts"
-                            ? "text-white dark:text-black"
-                            : "text-gray-700 dark:text-gray-300"
-                        }`}
+                        className={`relative z-10 w-1/2 px-3.5 py-2 md:text-sm text-[10px] font-medium text-center rounded-lg transition-colors duration-300 ${activeTab === "experts"
+                          ? "text-white dark:text-black"
+                          : "text-gray-700 dark:text-gray-300"
+                          }`}
                       >
                         Learn with the Experts
                       </button>
@@ -592,11 +576,10 @@ export default function Navbar() {
                       {/* Self-paced Tab */}
                       <button
                         onClick={() => setActiveTab("selfpaced")}
-                        className={`relative z-10 w-1/2 px-3.5 py-2 md:text-sm text-[10px] font-medium text-center rounded-lg transition-colors duration-300 ${
-                          activeTab === "selfpaced"
-                            ? "text-white dark:text-black"
-                            : "text-gray-700 dark:text-gray-300"
-                        }`}
+                        className={`relative z-10 w-1/2 px-3.5 py-2 md:text-sm text-[10px] font-medium text-center rounded-lg transition-colors duration-300 ${activeTab === "selfpaced"
+                          ? "text-white dark:text-black"
+                          : "text-gray-700 dark:text-gray-300"
+                          }`}
                       >
                         Learn at Your Own Speed
                       </button>
@@ -640,15 +623,14 @@ export default function Navbar() {
                                 className="w-12 h-12 mr-1"
                               />
                               <span
-                                className={`${
-                                  activeTab === "experts"
-                                    ? "text-[#14C63C]"
-                                    : "text-[#E23744]"
-                                }`}
+                                className={`${activeTab === "experts"
+                                  ? "text-[#14C63C]"
+                                  : "text-[#E23744]"
+                                  }`}
                               >
                                 {activeTab === "experts"
                                   ? "Live course"
-                                  : "Self-paced"}
+                                  : "Self paced"}
                               </span>
                             </span>
                           </Link>

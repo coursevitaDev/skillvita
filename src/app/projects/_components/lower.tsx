@@ -22,7 +22,7 @@ const logos = [
     id: 3,
     src: "/images/ProjectsPage/menu.svg",
     hover: "/images/ProjectsPage/menu_white.svg",
-    text: "Real-World Applications",
+    text: "Real World Applications",
     image: "/images/ProjectsPage/meet3.png",
   },
   {
@@ -44,10 +44,11 @@ export default function ProjectsLowerSection() {
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h2 className="text-[24px] md:text-[32px] font-semibold font-outfit text-black dark:text-white">
           Why Choose{" "}
-          <span className="text-accent-500">CourseVita for Your Projects</span>
+          <span className="text-[#32fe6b]">Skillvita for Your Projects</span>
+
         </h2>
         <p className="text-sm md:text-lg text-gray-700 dark:text-gray-300 font-outfit mt-2">
-          Find interesting projects and get started with an execution plan
+          Find interesting <span className="text-[#32fe6b]">projects</span> and get started with an execution journey
         </p>
       </div>
 
@@ -59,15 +60,13 @@ export default function ProjectsLowerSection() {
             <div
               key={logo.id}
               onClick={() => setActiveId(logo.id)}
-              className={`flex items-center gap-4 px-5 py-4 h-full rounded-xl cursor-pointer transition-all duration-300 ${
-                activeId === logo.id
-                  ? "bg-brand-500 shadow-lg shadow-brand-500/30"
-                  : "bg-white dark:bg-[#1E1E1E] hover:bg-gray-50 dark:hover:bg-[#252525] border border-gray-200 dark:border-gray-700"
-              }`}
+              className={`flex items-center gap-4 px-5 py-4 h-full rounded-xl cursor-pointer transition-all duration-300 ${activeId === logo.id
+                ? "bg-brand-500 shadow-lg shadow-brand-500/30"
+                : "bg-white dark:bg-[#1E1E1E] hover:bg-gray-50 dark:hover:bg-[#252525] border border-gray-200 dark:border-gray-700"
+                }`}
             >
-              <div className={`w-[30px] h-[30px] flex items-center justify-center ${
-                activeId === logo.id ? "" : "[&>img]:dark:brightness-200 [&>img]:dark:contrast-125"
-              }`}>
+              <div className={`w-[30px] h-[30px] flex items-center justify-center ${activeId === logo.id ? "" : "[&>img]:dark:brightness-200 [&>img]:dark:contrast-125"
+                }`}>
                 <Image
                   src={activeId === logo.id ? logo.hover : logo.src}
                   alt={logo.text}
@@ -77,11 +76,10 @@ export default function ProjectsLowerSection() {
                 />
               </div>
               <span
-                className={`font-outfit text-base font-medium transition-colors ${
-                  activeId === logo.id
-                    ? "text-accent-500"
-                    : "text-black dark:text-gray-200"
-                }`}
+                className={`font-outfit text-base font-medium transition-colors ${activeId === logo.id
+                  ? "text-accent-500"
+                  : "text-black dark:text-gray-200"
+                  }`}
               >
                 {logo.text}
               </span>

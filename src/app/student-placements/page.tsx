@@ -14,7 +14,7 @@ import FAQs from "@/components/course-overview/faqs";
 
 // Page Content
 const heroContent = {
-  badge: "SkillVita — Upskill & Placements for Students",
+  badge: "SkillVita - Upskill & Placements for Students",
   headline: {
     line1: "Grow Faster.",
     highlight: "Stand Taller",
@@ -22,17 +22,17 @@ const heroContent = {
   },
   subheadline: "Create a portfolio that moves you closer to your first job.",
   ctaPrimary: "Start Learning",
-  ctaSecondary: "View Demo"
+  // ctaSecondary: "View Demo"
 };
 
 const whyContent = {
   earlyUpskilling: {
-    title: "Why Early Upskilling",
-    description: "Starting early helps students understand their strengths, gain practical exposure, and build confidence. Upskilling creates long-term advantages and helps students stay ahead in a competitive placement environment. Students who begin building skills earlier develop sharper clarity, stronger portfolios, and better interview readiness."
+    title: "Why Early Upskilling?",
+    description: "Starting early helps students understand their strengths, gain practical exposure, and build confidence. Upskilling creates long term advantages and helps students stay ahead in a competitive placement environment. Students who begin building skills earlier develop sharper clarity, stronger portfolios, and better interview readiness."
   },
   whySkillvita: {
-    title: "Why SkillVita",
-    description: "SkillVita turns your preparation into real capability with experienced mentors, simulated job roles, and team-based execution that feels like actual work. Demo Days make your progress visible, skill-journey tracking shows how fast you're growing, and top performers may unlock paid internship opportunities. With a focus on doing over theory, every task you complete becomes tangible proof of what you can achieve."
+    title: "Why SkillVita?",
+    description: "SkillVita turns your preparation into real capability with experienced mentors, simulated job roles, and team based execution that feels like actual work. Demo Days make your progress visible, skill journey tracking shows how fast you're growing, and top performers may unlock paid internship opportunities. With a focus on doing over theory, every task you complete becomes tangible proof of what you can achieve."
   }
 };
 
@@ -40,7 +40,7 @@ const opportunitiesContent = {
   title: "Student Opportunities",
   description: "SkillVita provides structured opportunities that help students build, demonstrate, and present capability:",
   opportunities: [
-    { title: "Skill-Based Projects", icon: "💼", gradient: "from-blue-500 to-cyan-500" },
+    { title: "Skill Based Projects", icon: "💼", gradient: "from-blue-500 to-cyan-500" },
     { title: "Certification Challenges", icon: "🎓", gradient: "from-purple-500 to-pink-500" },
     { title: "Industry Tasks", icon: "🎯", gradient: "from-orange-500 to-red-500" },
     { title: "Team workflows & simulations", icon: "👥", gradient: "from-green-500 to-emerald-500" },
@@ -54,7 +54,7 @@ const opportunitiesContent = {
 const studentPlacementFAQs = [
   {
     question: "What is SkillVita's Student Placement Program?",
-    answer: "A structured upskilling journey that helps students build placement-ready portfolios through real projects, simulations, and mentor-backed feedback."
+    answer: "A structured upskilling journey that helps students build placement ready portfolios through real projects, simulations, and mentor backed feedback."
   },
   {
     question: "When should I start preparing for placements?",
@@ -62,7 +62,7 @@ const studentPlacementFAQs = [
   },
   {
     question: "What kind of projects will I work on?",
-    answer: "You'll work on skill-based projects, certification challenges, industry tasks, and team simulations that mirror real job scenarios."
+    answer: "You'll work on skill based projects, certification challenges, industry tasks, and team simulations that mirror real job scenarios."
   },
   {
     question: "Do I get mentorship support?",
@@ -70,7 +70,7 @@ const studentPlacementFAQs = [
   },
   {
     question: "How does the portfolio builder work?",
-    answer: "Every project, task, and learning outcome you complete on SkillVita is automatically added to your portfolio as verified proof-of-work, creating a growing record of your capabilities."
+    answer: "Every project, task, and learning outcome you complete on SkillVita is automatically added to your portfolio as verified proof of work, creating a growing record of your capabilities."
   },
   {
     question: "Are there opportunities for paid internships?",
@@ -88,7 +88,7 @@ function StudentPlacementsPage() {
   };
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-black">
       {/* Hero Section with Placement-specific content */}
       <PlacementHero
         {...heroContent}

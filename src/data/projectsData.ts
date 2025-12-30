@@ -15,7 +15,7 @@ export const PROJECTS: RawProject[] = [
     id: "CV-P01",
     name: "Video Shopping Mobile Application",
     description:
-      "Develop a mobile-first app enabling users to shop by watching short-form product videos, integrating e-commerce capabilities.",
+      "Develop a mobile first app enabling users to shop by watching short form product videos, integrating e commerce capabilities.",
     tools: ["Figma", "Postman", "GitHub", "VS Code"],
     skills: [
       "Mobile development",
@@ -31,7 +31,7 @@ export const PROJECTS: RawProject[] = [
     stack: ["React Native", "Node.js", "MongoDB"],
     resources: [
       "Sample product videos",
-      "E-commerce API access",
+      "E commerce API access",
       "User personas",
     ],
     status: "Empty",
@@ -52,7 +52,7 @@ export const PROJECTS: RawProject[] = [
   },
   {
     id: "CV-P03",
-    name: "On-demand Location-based Gig Matching Application for Creators",
+    name: "On demand Location based Gig Matching Application for Creators",
     description:
       "A creator-focused gig platform connecting talent with short-term local opportunities using real-time location.",
     tools: ["Figma", "Google Maps API", "GitHub"],
@@ -87,7 +87,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["Jupyter Notebook", "HuggingFace", "VS Code"],
     skills: ["NLP", "Classification models", "REST APIs"],
     outcomes: [
-      "API-based service that predicts ICD codes for clinical diagnoses",
+      "API based service that predicts ICD codes for clinical diagnoses",
     ],
     stack: ["Python", "Scikit-learn", "SpaCy", "Flask"],
     resources: ["ICD dataset", "Annotated medical records", "Domain glossary"],
@@ -96,16 +96,16 @@ export const PROJECTS: RawProject[] = [
   {
     id: "CV-P06",
     name:
-      "Vehicle Network Tracking in Low-network Zones using Meshatastic",
+      "Vehicle Network Tracking in Low network Zones using Meshatastic",
     description:
       "Develop a communication and tracking system for vehicles in remote areas using the Meshatastic LoRa mesh network.",
     tools: ["VS Code", "GPS modules", "Mesh devices", "Serial Monitor"],
     skills: ["Embedded systems", "Network protocols", "GPS data parsing"],
     outcomes: [
-      "Mesh-based tracker prototype with real-time location sharing in no-network zones",
+      "Mesh-based tracker prototype with real time location sharing in no network zones",
     ],
     stack: ["Python", "Arduino", "Meshatastic API"],
-    resources: ["LoRa-compatible devices", "Sample GPS data", "Routing algorithms"],
+    resources: ["LoRa compatible devices", "Sample GPS data", "Routing algorithms"],
     status: "Empty",
   },
   {
@@ -130,7 +130,7 @@ export const PROJECTS: RawProject[] = [
   {
     id: "CV-P08",
     name:
-      "Wearable Pendant for Emergency-response Ambulance Staff for Triage",
+      "Wearable Pendant for Emergency response Ambulance Staff for Triage",
     description:
       "Design a pendant device that helps staff scan and transmit basic triage data during emergencies.",
     tools: ["Arduino IDE", "ESP32 boards", "Bluetooth sensors"],
@@ -144,7 +144,7 @@ export const PROJECTS: RawProject[] = [
   },
   {
     id: "CV-P09",
-    name: "On-demand Waste Collection App for Restaurant Waste",
+    name: "On demand Waste Collection App for Restaurant Waste",
     description:
       "Mobile platform that connects restaurants with waste recyclers or composters on demand.",
     tools: ["Figma", "Firebase", "Google Maps API"],
@@ -164,7 +164,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["Unity Hub", "Blender (for 3D models)", "Android Studio/Xcode"],
     skills: ["AR development", "3D modeling", "Camera overlays"],
     outcomes: [
-      "AR-enabled try-on feature for real-time virtual accessory fitting",
+      "AR enabled try-on feature for real time virtual accessory fitting",
     ],
     stack: ["Unity", "ARCore/ARKit", "C#"],
     resources: ["Accessory 3D models", "Phone camera APIs"],
@@ -178,7 +178,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["Raspberry Pi", "USB Cameras", "Scikit-image"],
     skills: ["Computer vision", "Embedded ML", "Edge deployment"],
     outcomes: [
-      "Field-ready tool that gives digital quality score during procurement",
+      "Field ready tool that gives digital quality score during procurement",
     ],
     stack: ["Python", "OpenCV", "TensorFlow Lite"],
     resources: ["Grain quality datasets", "Inspection hardware"],
@@ -188,7 +188,7 @@ export const PROJECTS: RawProject[] = [
     id: "CV-P12",
     name: "RFID Based Product Tracking on Assembly Line",
     description:
-      "Design a real-time tracking system using RFID to monitor production stages on a manufacturing line.",
+      "Design a real time tracking system using RFID to monitor production stages on a manufacturing line.",
     tools: ["RFID Readers", "VS Code", "Flask"],
     skills: ["Hardware integration", "IoT protocols", "Dashboarding"],
     outcomes: [
@@ -200,7 +200,7 @@ export const PROJECTS: RawProject[] = [
   },
   {
     id: "CV-P13",
-    name: "Shoot-in-a-box: Product Photography and Styling",
+    name: "Shoot in a box: Product Photography and Styling",
     description:
       "Set up an automated studio kit that assists with fast, styled product photography with AI composition suggestions.",
     tools: ["Camera kit", "Lighting setup", "AI image tools"],
@@ -214,7 +214,7 @@ export const PROJECTS: RawProject[] = [
   },
   {
     id: "CV-P14",
-    name: "Student Proof-of-Work Portfolio Generator",
+    name: "Student Proof of Work Portfolio Generator",
     description:
       "Develop a tool that allows students to auto-generate an online portfolio using LinkedIn, GitHub, and project uploads, showcasing their skills and proof of work.",
     tools: ["Figma", "GitHub", "Firebase Console", "Resume Parser"],
@@ -234,7 +234,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["Blender/3D asset library", "Unity Hub", "Android Studio/Xcode"],
     skills: ["AR development", "3D modeling basics", "Mobile app development"],
     outcomes: [
-      "A prototype app showcasing real-time 3D food items on a user's table through their smartphone.",
+      "A prototype app showcasing real time 3D food items on a user's table through their smartphone.",
     ],
     stack: ["Unity 3D", "ARCore/ARKit", "Firebase"],
     resources: ["Sample 3D food models", "Restaurant menus"],
@@ -248,7 +248,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["Figma", "Google Maps API", "Firebase Console"],
     skills: ["Mobile development", "Geolocation APIs", "Backend services"],
     outcomes: [
-      "A functional MVP for real-time content creator booking with user ratings, location-based filtering, and booking history.",
+      "A functional MVP for real time content creator booking with user ratings, location-based filtering, and booking history.",
     ],
     stack: ["Flutter", "Node.js", "MongoDB"],
     resources: ["Creator profiles", "Location datasets", "Booking workflows"],
@@ -258,14 +258,14 @@ export const PROJECTS: RawProject[] = [
     id: "CV-P17",
     name: "Parking Slot Availability App",
     description:
-      "Design an app that allows users to check real-time availability of parking slots in nearby areas using sensor or crowd-sourced data.",
+      "Design an app that allows users to check real time availability of parking slots in nearby areas using sensor or crowd-sourced data.",
     tools: ["Firebase Console", "Google Maps API", "Figma"],
     skills: ["Mobile development", "Real-time data handling", "Map integration"],
     outcomes: [
       "A working prototype that shows users live parking slot availability on a map interface.",
     ],
     stack: ["React Native", "Node.js", "Firebase"],
-    resources: ["Real-time parking data (open API or dummy)", "GPS logs"],
+    resources: ["Real time parking data (open API or dummy)", "GPS logs"],
     status: "Empty",
   },
   {
@@ -276,7 +276,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["Jupyter Notebook", "VS Code", "HuggingFace Models"],
     skills: ["Computer vision", "ML", "Backend APIs"],
     outcomes: [
-      "An AI-powered analytics engine that gives performance and engagement insights for reels and video content.",
+      "An AI powered analytics engine that gives performance and engagement insights for reels and video content.",
     ],
     stack: ["Python", "OpenCV", "Flask", "TensorFlow"],
     resources: ["Video datasets", "Pre-trained ML models", "Analytics framework"],
@@ -290,7 +290,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["VS Code", "Postman", "GitHub"],
     skills: ["NLP", "REST API development", "Classification"],
     outcomes: [
-      "API-based resume-to-job matching engine that can serve as a backend for hiring platforms.",
+      "API based resume to job matching engine that can serve as a backend for hiring platforms.",
     ],
     stack: ["Python", "Flask", "SpaCy", "Scikit-learn"],
     resources: ["Resume samples", "Job descriptions", "Skills database"],
@@ -304,7 +304,7 @@ export const PROJECTS: RawProject[] = [
     tools: ["VS Code", "Tesseract", "Postman", "GitHub"],
     skills: ["Python programming", "Working with OCR libraries", "Frontend-backend integration"],
     outcomes: [
-      "A working prototype where users can upload or scan forms and receive pre-filled digital versions with editable fields.",
+      "A working prototype where users can upload or scan forms and receive pre filled digital versions with editable fields.",
     ],
     stack: ["Python", "Tesseract OCR", "Flask", "React"],
     resources: [
@@ -318,7 +318,7 @@ export const PROJECTS: RawProject[] = [
     id: "CV-P21",
     name: "Auto Feedback Generator for Teachers/Trainers",
     description:
-      "Design an AI-powered tool where educators can input student performance rubrics and generate personalized written feedback using NLP. Saves time and ensures consistency in evaluations.",
+      "Design an AI powered tool where educators can input student performance rubrics and generate personalized written feedback using NLP. Saves time and ensures consistency in evaluations.",
     tools: ["Jupyter Notebook", "OpenAI Playground", "VS Code", "React"],
     skills: ["Natural Language Processing", "Prompt engineering", "API integration", "Basic frontend skills"],
     outcomes: [
@@ -342,7 +342,7 @@ export const PROJECTS: RawProject[] = [
     outcomes: [
       "Design and document actor-verb-learning object (AVO) structures for all core activities (e.g., 'learner completed quiz').",
       "Link each AVO with Vitacoin triggers (e.g., completion +5 coins) and map them to user progression.",
-      "Build the skill-mapping layer: for every learning object, assign skill tags with level identifiers (Skill ID → Level 1, 2, 3).",
+      "Build the skill mapping layer: for every learning object, assign skill tags with level identifiers (Skill ID → Level 1, 2, 3).",
       "Implement sample LRS events and simulate them via sandbox tools for validation.",
       "Final output: a comprehensive AVO + skill mapping schema and Vitacoin trigger table.",
     ],
@@ -363,7 +363,7 @@ export const PROJECTS: RawProject[] = [
       "Integrate event emitters into each product's frontend/backend.",
       "Build APIs to receive and process activity logs in a consistent LRS schema.",
       "Perform unit and integration tests to ensure accuracy and completeness of logging.",
-      "Final output: a working cross-platform activity tracking and testing framework.",
+      "Final output: a working cross platform activity tracking and testing framework.",
     ],
     stack: ["Empty"],
     resources: ["Empty"],
@@ -410,7 +410,7 @@ export const PROJECTS: RawProject[] = [
     id: "CV-P26",
     name: "Project (Internvitas) on CV Panel",
     description:
-      "Add project creation and tracking within CourseVita. Support portfolios and team collaboration.",
+      "Add project creation and tracking within SkillVita. Support portfolios and team collaboration.",
     tools: ["React", "MongoDB REST API", "Tailwind CSS"],
     skills: ["Project management logic", "Frontend integration"],
     outcomes: [
@@ -434,7 +434,7 @@ export const PROJECTS: RawProject[] = [
     skills: ["Taxonomy design", "NLP/AI basics"],
     outcomes: [
       "Build a pipeline to extract skills from job descriptions using NLP.",
-      "Create a multi-level skill ID structure (Primary skill → Sub-skill → Level indicator).",
+      "Create a multi level skill ID structure (Primary skill → Sub skill → Level indicator).",
       "Tag learning objects, tasks, and simulations with appropriate skill IDs.",
       "Store mappings in a queryable database with export options.",
       "Final output: an API skill mapping engine that tags any input (JD, quiz, task) with hierarchical skills.",
@@ -466,7 +466,7 @@ export const PROJECTS: RawProject[] = [
     id: "CV-P29",
     name: "Simulation Generation from JD",
     description:
-      "Parse job descriptions to generate skill-based simulation tasks. Automate for scale.",
+      "Parse job descriptions to generate skill based simulation tasks. Automate for scale.",
     tools: ["Python", "OpenAI/Gemini API", "LangChain", "PDF parsers"],
     skills: ["NLP", "Prompt engineering", "JD analysis"],
     outcomes: [
@@ -475,7 +475,7 @@ export const PROJECTS: RawProject[] = [
       "Create quizzes to assess extracted skills.",
       "Deploy in SimVita: a platform module for learners to experience and solve generated job simulations.",
       "Include evaluation logic for simulations and track Vitacoin skill outcomes.",
-      "Final output: JD-to-simulation generator integrated with SimVita.",
+      "Final output: JD to simulation generator integrated with SimVita.",
     ],
     stack: ["Empty"],
     resources: ["Empty"],
@@ -490,7 +490,7 @@ export const PROJECTS: RawProject[] = [
     skills: ["Social UX", "Feed algorithms"],
     outcomes: [
       "Build a social layer with an activity feed linked to LRS events.",
-      "Enable 1-on-1 friend messaging with screener (e.g. match skill/study domain).",
+      "Enable 1 on 1 friend messaging with screener (e.g. match skill/study domain).",
       "Implement friend suggestions based on shared learning objects and group overlaps.",
       "Support Apaar ID integration for identity management (if available).",
       "Create study buddy recommendations based on performance and interest overlap.",
@@ -527,11 +527,11 @@ export const PROJECTS: RawProject[] = [
     skills: ["Event system logic", "Scheduling"],
     outcomes: [
       "Add registration and onboarding via Vitacoins or payments.",
-      "Implement student profiles for event check-in/check-out.",
+      "Implement student profiles for event check in/check out.",
       "Enable bulk email invites and WhatsApp notification sender.",
       "Support group matching/finder (e.g., random team generator).",
       "Provide polls and live feedback forms.",
-      "Final output: a complete event lifecycle system from creation to feedback with multi-channel outreach.",
+      "Final output: a complete event lifecycle system from creation to feedback with multi channel outreach.",
     ],
     stack: ["Empty"],
     resources: ["Empty"],

@@ -90,7 +90,7 @@ export default function HiringMenu({
         </Link>
 
         {/* Card 2 - Hire for your company */}
-        <Link href="https://simulation.coursevita.com/recruiter" onClick={onItemClick}>
+        <Link href="https://simulation.skillvita.com/recruiter" onClick={onItemClick}>
           <motion.div
             {...cardAnimation}
             className={`group ${cardClasses} relative`}
@@ -101,7 +101,7 @@ export default function HiringMenu({
               </span>
             </h3>
             <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
-              India&apos;s 1st Skill-Based Hiring Platform
+              India&apos;s 1st Skill Based Hiring Platform
             </p>
 
             {/* Lottie Animation pinned to bottom-right */}
@@ -113,7 +113,7 @@ export default function HiringMenu({
 
         {/* Card 3 - Work with Skillvita */}
         <Link
-          href="https://coursevita.zohorecruit.in/jobs/Careers"
+          href="https://skillvita.zohorecruit.in/jobs/Careers"
           onClick={onItemClick}
         >
           <motion.div
@@ -152,9 +152,8 @@ export default function HiringMenu({
             {cards.map((_, i) => (
               <div
                 key={i}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
-                }`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
+                  }`}
               />
             ))}
           </div>

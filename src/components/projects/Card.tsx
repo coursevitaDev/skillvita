@@ -101,83 +101,81 @@ export default function Card({
   };
 
   return (
-  <div className="px-4 max-w-6xl mx-auto">
-    <h2
-      ref={targetFeaturedProjects}
-      className="text-center text-2xl font-bold mt-10 mb-2"
-    >
-      <span className="text-black dark:text-white">Featured </span>
-      <span className="text-[#FE7465]">Projects</span>
-    </h2>
-    <p className="text-center text-gray-500 dark:text-gray-400 mb-6">
-      Find interesting projects and get started with an execution plan
-    </p>
-
-    {/* Tabs */}
-    <div className="flex gap-4 mb-4 border-b border-gray-200 dark:border-gray-700 ml-1">
-      {labels.map((label, i) => (
-        <button
-          key={i}
-          onClick={() => handleTabChange(i)}
-          className={`py-2 px-4 text-sm font-medium rounded-t-lg ${
-            selectedTab === i
-              ? "text-[#FE7465] border-b-2 border-[#FE7465]"
-              : "text-gray-500 dark:text-gray-400 hover:text-[#FE7465]"
-          }`}
-        >
-          {label}
-        </button>
-      ))}
-    </div>
-
-    {/* Filters */}
-    <ProjectFilters onFilterChange={handleFilterChange} />
-
-    {/* Project Grid */}
-    {loading ? (
-      <div className="flex justify-center items-center min-h-[738px]">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[...Array(itemsPerPage)].map((_, i) => (
-            <div
-              key={i}
-              className="bg-gray-200 dark:bg-gray-700 h-96 w-full rounded animate-pulse"
-            ></div>
-          ))}
-        </div>
-      </div>
-    ) : error ? (
-      <p className="text-[#FE7465] text-center my-4">
-        Error fetching projects: {error.message}
+    <div className="px-4 max-w-6xl mx-auto">
+      <h2
+        ref={targetFeaturedProjects}
+        className="text-center text-2xl font-bold mt-10 mb-2"
+      >
+        <span className="text-black dark:text-white">Featured </span>
+        <span className="text-[#FE7465]">Projects</span>
+      </h2>
+      <p className="text-center text-gray-500 dark:text-gray-400 mb-6">
+        Find interesting projects and get started with an execution journey
       </p>
-    ) : currentProjects.length === 0 ? (
-      <p className="text-center text-gray-500 dark:text-gray-400 my-4">No Projects Found</p>
-    ) : (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {currentProjects.map((project: any) => (
-          <ProjectCard key={project._id} project={project} />
-        ))}
-      </div>
-    )}
 
-    {/* Pagination */}
-    {noofpages > 1 && (
-      <div className="flex justify-center mt-6">
-        {[...Array(noofpages)].map((_, i) => (
+      {/* Tabs */}
+      <div className="flex gap-4 mb-4 border-b border-gray-200 dark:border-gray-700 ml-1">
+        {labels.map((label, i) => (
           <button
             key={i}
-            className={`mx-1 px-3 py-1 rounded ${
-              currentPage === i + 1
-                ? "bg-[#FE7465] text-white"
-                : "bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
-            }`}
-            onClick={() => setCurrentPage(i + 1)}
+            onClick={() => handleTabChange(i)}
+            className={`py-2 px-4 text-sm font-medium rounded-t-lg ${selectedTab === i
+                ? "text-[#FE7465] border-b-2 border-[#FE7465]"
+                : "text-gray-500 dark:text-gray-400 hover:text-[#FE7465]"
+              }`}
           >
-            {i + 1}
+            {label}
           </button>
         ))}
       </div>
-    )}
-  </div>
-);
+
+      {/* Filters */}
+      <ProjectFilters onFilterChange={handleFilterChange} />
+
+      {/* Project Grid */}
+      {loading ? (
+        <div className="flex justify-center items-center min-h-[738px]">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[...Array(itemsPerPage)].map((_, i) => (
+              <div
+                key={i}
+                className="bg-gray-200 dark:bg-gray-700 h-96 w-full rounded animate-pulse"
+              ></div>
+            ))}
+          </div>
+        </div>
+      ) : error ? (
+        <p className="text-[#FE7465] text-center my-4">
+          Error fetching projects: {error.message}
+        </p>
+      ) : currentProjects.length === 0 ? (
+        <p className="text-center text-gray-500 dark:text-gray-400 my-4">No Projects Found</p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {currentProjects.map((project: any) => (
+            <ProjectCard key={project._id} project={project} />
+          ))}
+        </div>
+      )}
+
+      {/* Pagination */}
+      {noofpages > 1 && (
+        <div className="flex justify-center mt-6">
+          {[...Array(noofpages)].map((_, i) => (
+            <button
+              key={i}
+              className={`mx-1 px-3 py-1 rounded ${currentPage === i + 1
+                  ? "bg-[#FE7465] text-white"
+                  : "bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
+                }`}
+              onClick={() => setCurrentPage(i + 1)}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 
 }

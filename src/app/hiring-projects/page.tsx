@@ -20,7 +20,6 @@ const heroContent = {
   },
   subheadline: "Explore student projects, track progress, and post your own problem statements to evaluate candidates through meaningful, real-world work.",
   ctaPrimary: "View Hiring Projects",
-  ctaSecondary: "Post a Problem Statement"
 };
 
 const whyContent = {

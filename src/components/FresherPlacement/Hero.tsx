@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { highlightKeywords } from "@/components/FresherPlacement/utils";
 
 const fadeIn: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -30,7 +29,7 @@ export default function Hero() {
           <motion.div className="lg:w-1/2 text-center lg:text-left" initial="hidden" animate="visible" variants={staggerContainer}>
             <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 backdrop-blur-sm mb-8 hover:border-[#22c55e]/50 transition-colors">
               <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse shadow-[0_0_10px_#22c55e]"></span>
-              <span className="text-xs font-bold tracking-wider uppercase text-zinc-300">{highlightKeywords("SkillVita — Upskill & Placements")}</span>
+              <span className="text-xs font-bold tracking-wider uppercase text-zinc-300">SkillVita Upskill & Placements</span>
             </motion.div>
             <motion.h1 variants={fadeIn} className="text-5xl lg:text-7xl font-display font-bold leading-[1.1] mb-6 text-white">
               Start Strong.
@@ -38,7 +37,7 @@ export default function Hero() {
               Step <span className="text-[#22c55e] drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]">Confidently</span> Into Your Career.
             </motion.h1>
             <motion.p variants={fadeIn} className="text-lg lg:text-xl text-zinc-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              {highlightKeywords("Build job-ready skills, real proof-of-work, and a portfolio that helps you stand out before placement season even begins.")}
+              Build job ready skills, real proof of work, and a portfolio that helps you stand out before placement season even begins.
             </motion.p>
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <motion.button whileHover={{ scale: 1.05, boxShadow: "0 0 30px -5px rgba(34, 197, 94, 0.6)" }} whileTap={{ scale: 0.95 }} className="group relative px-8 py-4 rounded-full bg-[#22c55e] text-black font-bold text-lg overflow-hidden shadow-[0_0_20px_rgba(34,197,94,0.4)]">
@@ -49,9 +48,6 @@ export default function Hero() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                   </motion.svg>
                 </span>
-              </motion.button>
-              <motion.button whileHover={{ scale: 1.05, borderColor: "#22c55e", color: "#22c55e", backgroundColor: "rgba(34, 197, 94, 0.1)" }} whileTap={{ scale: 0.95 }} className="px-8 py-4 rounded-full bg-transparent border border-zinc-700 text-zinc-300 font-semibold text-lg transition-all">
-                Learn More
               </motion.button>
             </motion.div>
           </motion.div>
@@ -68,7 +64,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-zinc-400 uppercase">Status</p>
-                    <p className="text-sm font-bold text-white">{highlightKeywords("Placement Ready")}</p>
+                    <p className="text-sm font-bold text-white">Placement Ready</p>
                   </div>
                 </div>
               </motion.div>

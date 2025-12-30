@@ -57,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       "CV-P33",
     ]);
     if (externalIds.has(project._id)) {
-      window.location.href = `https://skillvita.coursevita.com/projects/${project._id}`;
+      window.location.href = `https://skillvita.com/projects/${project._id}`;
       return;
     }
     router.push(`/projects/${project._id}`);
@@ -79,8 +79,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               project.difficulty === "begineer"
                 ? "/images/projectsPage/beginner.svg"
                 : project.difficulty === "Intermediate"
-                ? "/images/projectsPage/intermediate.svg"
-                : "/images/projectsPage/hard.svg"
+                  ? "/images/projectsPage/intermediate.svg"
+                  : "/images/projectsPage/hard.svg"
             }
             alt={project.difficulty}
             width={14}
@@ -127,9 +127,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Button */}
       <button
         onClick={handleViewProject}
-        className="w-full py-3 rounded-lg text-sm font-poppins border border-accent-500 text-accent-600 hover:bg-brand-500 hover:text-accent-500 hover:border-brand-500 transition"
+        className="w-full py-3 rounded-lg text-sm font-poppins border border-[#32fe6b] text-accent-600 hover:bg-brand-500 hover:text-accent-500 hover:border-brand-500 transition"
       >
-        View Project
+        <span className="text-[#32fe6b]"> View Project</span>
       </button>
     </div>
   );
