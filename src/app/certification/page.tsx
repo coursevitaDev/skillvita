@@ -12,11 +12,11 @@ import FAQs from "@/components/course-overview/faqs";
 const certificationFAQs = [
   {
     question: "What is a job simulation certification?",
-    answer: "A credential earned by completing real-world project simulations that mirror actual workplace scenarios, validating your practical skills and professional capabilities."
+    answer: "A credential earned by completing real world project simulations that mirror actual workplace scenarios, validating your practical skills and professional capabilities."
   },
   {
     question: "Are these certifications recognized by employers?",
-    answer: "Yes! Our certifications are industry-recognized and demonstrate your hands-on experience, problem-solving abilities, and readiness to contribute professionally."
+    answer: "Yes! Our certifications are industry recognized and demonstrate your hands on experience, problem solving abilities, and readiness to contribute professionally."
   },
   {
     question: "How long does it take to complete?",
@@ -56,7 +56,7 @@ export default function CertificationPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Job Simulation Certification | SkillVita",
-            "description": "Gain hands-on experience through job simulations and earn industry-recognized credentials. Validated by real-world projects and expert mentorship.",
+            "description": "Gain hands on experience through job simulations and earn industry recognized credentials. Validated by real world projects and expert mentorship.",
             "url": "https://main-revitalize.vercel.app/certification",
             "isPartOf": {
               "@type": "Website",
@@ -73,14 +73,14 @@ export default function CertificationPage() {
             "@context": "https://schema.org",
             "@type": "EducationalOccupationalProgram",
             "name": "Job Simulation Certification",
-            "description": "A comprehensive certification program where students complete real-world project simulations to build practical skills and professional capabilities.",
+            "description": "A comprehensive certification program where students complete real world project simulations to build practical skills and professional capabilities.",
             "provider": {
               "@type": "Organization",
               "name": "SkillVita",
               "url": "https://main-revitalize.vercel.app"
             },
             "timeToComplete": "P8W",
-            "educationalCredentialAwarded": "Industry-Recognized Certificate",
+            "educationalCredentialAwarded": "Industry Recognized Certificate",
             "programPrerequisites": "No prior professional experience required",
             "occupationalCategory": "Professional Certification",
             "offers": {

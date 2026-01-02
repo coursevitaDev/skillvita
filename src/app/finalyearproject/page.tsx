@@ -104,7 +104,7 @@ const FinalYearProjectsPage = () => {
             <h1 className="text-5xl md:text-7xl font-bold">Final Year Projects</h1>
             <h2 className="text-4xl md:text-6xl font-medium mt-1 mb-1">Learn, Build, Showcase.</h2>
             <p className="text-lg mt-2 mb-6">
-              Explore real-world projects to elevate your portfolio. Get hands-on with
+              Explore real world projects to elevate your portfolio. Get hands-on with
               modern tools and ship outcomes you’re proud of.
             </p>
             <div className="relative max-w-lg">

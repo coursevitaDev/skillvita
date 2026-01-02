@@ -1,5 +1,8 @@
-import React from "react";
-import FAQs from "@/components/course-overview/faqs";
+"use client";
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
 
 interface FAQItem {
     question: string;
@@ -11,69 +14,69 @@ interface InternshipQAProps {
 }
 
 const InternshipQA: React.FC<InternshipQAProps> = ({ faqs }) => {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+    const toggleFAQ = (index: number) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
     return (
-        <>
-            {/* Community Q&A Section */}
-            <section className="py-16 bg-black relative z-10 transition-colors duration-300">
-                <div className="max-w-4xl mx-auto px-6">
-                    <div className="text-center mb-10">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-outfit text-white">
-                            Community Q&A
-                        </h2>
-                        <p className="text-lg text-gray-400">
-                            Common technical questions discussed by our community
-                        </p>
-                    </div>
-
-                    <div className="bg-[#18181B] rounded-2xl p-8 border border-[#27272A] shadow-lg">
-                        <div className="flex items-start gap-4">
-                            <div className="flex-shrink-0 mt-1">
-                                <div className="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 font-bold text-xl">
-                                    Q
-                                </div>
-                            </div>
-                            <div className="flex-grow">
-                                <h3 className="text-xl font-semibold mb-2 text-white">
-                                    How does Redis help JWT authentication?
-                                </h3>
-                                <p className="text-gray-400 mb-6">
-                                    Why is Redis used with JWT tokens?
-                                </p>
-
-                                <div className="bg-black/40 rounded-xl p-6 border border-gray-800">
-                                    <div className="flex items-start gap-4">
-                                        <div className="flex-shrink-0 mt-1">
-                                            <div className="w-8 h-8 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 font-bold text-sm">
-                                                A
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-300">
-                                                Redis helps by storing token blacklists and session metadata.
-                                                <span className="block mt-2 text-sm text-blue-400 font-medium">
-                                                    ✓ Accepted Answer
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="mt-6 pt-6 border-t border-gray-800 flex justify-between items-center text-sm text-gray-400">
-                            <span>Asked by Community Member</span>
-                            <span>1 Answer</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div className="relative z-10 bg-black pb-12">
-                <div className="max-w-7xl mx-auto px-4">
-                    <FAQs faqs={faqs} />
-                </div>
+        <div className="max-w-3xl mx-auto px-6">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 font-outfit text-white">
+                    Frequently Asked <span className="text-[#32fe6b]">Questions</span> (FAQs)
+                </h2>
             </div>
-        </>
+
+            <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                    <div
+                        key={index}
+                        className={`rounded-2xl border transition-all duration-300 ${activeIndex === index
+                            ? "border-[#32fe6b] bg-neutral-900"
+                            : "border-neutral-800 bg-neutral-900/50 hover:border-[#32fe6b]/30"
+                            }`}
+                    >
+                        <button
+                            onClick={() => toggleFAQ(index)}
+                            className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                        >
+                            <span className={`text-lg font-bold transition-colors ${activeIndex === index ? "text-[#32fe6b]" : "text-white"
+                                }`}>
+                                {faq.question}
+                            </span>
+                            <span className={`ml-4 flex-shrink-0 text-[#32fe6b]`}>
+                                {activeIndex === index ? (
+                                    <Minus className="w-6 h-6" />
+                                ) : (
+                                    <Plus className="w-6 h-6" />
+                                )}
+                            </span>
+                        </button>
+
+                        <AnimatePresence>
+                            {activeIndex === index && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="overflow-hidden"
+                                >
+                                    <div className="p-6 pt-0 text-neutral-400 leading-relaxed font-medium">
+                                        {faq.answer.split('\n').map((line, i) => (
+                                            <span key={i} className="block mb-2 last:mb-0">
+                                                {line}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 
