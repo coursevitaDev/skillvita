@@ -1,11 +1,11 @@
 "use client";
 import Hero from "../../components/hiringportal/Hero";
 import Overview from "../../components/hiringportal/Overview";
+import HiringWorkflowSection from "../../components/hiringportal/HiringWorkflowSection";
 import WhySkillVita from "../../components/hiringportal/WhySkillVita";
-import PortfolioDetail from "../../components/hiringportal/PortfolioDetail";
 import Steps from "../../components/hiringportal/Steps";
-import TalentPerformance from "../../components/hiringportal/TalentPerformance";
 import Categories from "../../components/hiringportal/Categories";
+import RecruiterFAQ from "../../components/hiringportal/RecruiterFAQ";
 
 export default function HiringPortalPage() {
   return (
@@ -18,7 +18,7 @@ export default function HiringPortalPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Hiring Portal | SkillVita",
-            "description": "Access a curated pipeline of job-ready students with portfolios built through real simulations, projects, team workflows, and capability assessments.",
+            "description": "Access a curated pipeline of job ready students with portfolios built through real simulations, projects, team workflows, and capability assessments.",
             "url": "https://main-revitalize.vercel.app/hiringportal",
             "isPartOf": {
               "@type": "Website",
@@ -37,7 +37,7 @@ export default function HiringPortalPage() {
             "name": "SkillVita Hiring Portal",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
-            "description": "A hiring platform based on execution and verified proof-of-work rather than resumes. Discover candidates through real projects and role-based simulations.",
+            "description": "A hiring platform based on execution and verified proof of work rather than resumes. Discover candidates through real projects and role based simulations.",
             "offers": {
               "@type": "Offer",
               "price": "0",
@@ -101,29 +101,32 @@ export default function HiringPortalPage() {
         title={(
           <>
             Hire <span className="text-green-500 relative inline-block">
-              Better
+              Job
               <span className="absolute bottom-0 left-0 w-full h-1 bg-green-500/20 rounded-full blur-sm"></span>
-            </span>. <span className="text-green-500 relative inline-block">
-              Faster
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-green-500/20 rounded-full blur-sm"></span>
-            </span>. <br className="hidden lg:block" />
-            With <span className="text-white relative inline-block">Verified</span>{" "}
+            </span>{" "}
+            Ready{" "}
             <span className="text-green-500 relative inline-block">
-              Proof-of-Work
+              Talent
               <span className="absolute bottom-0 left-0 w-full h-1 bg-green-500/20 rounded-full blur-sm"></span>
-            </span>.
+            </span>{" "}
+            <br className="hidden lg:block" />
+            With <span className="text-green-500 relative inline-block">
+              Verified
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-green-500/20 rounded-full blur-sm"></span>
+            </span>{" "}
+            Execution
           </>
         )}
-        subtitle="Access a curated pipeline of job-ready students with portfolios built through real simulations, projects, team workflows, and capability assessments."
-        ctaLabel="Start Hiring"
+        subtitle="Access job ready talent with verified proof of work so you can shortlist confidently and reduce hiring risk."
+        ctaLabel="View Profiles"
         ctaHref="#"
       />
+      <HiringWorkflowSection />
       <Overview />
       <WhySkillVita />
-      <PortfolioDetail />
       <Steps />
-      <TalentPerformance />
       <Categories />
+      <RecruiterFAQ />
 
     </main>
   );

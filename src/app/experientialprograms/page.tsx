@@ -2,32 +2,10 @@
 import React, { useEffect } from "react";
 import HeroSection from "@/components/experientialprograms/HeroSection";
 import OverviewSection from "@/components/experientialprograms/OverviewSection";
-import WhyExperiential from "@/components/experientialprograms/WhyExperiential";
 import Highlights from "@/components/experientialprograms/Highlights";
 import ExperienceFlow from "@/components/experientialprograms/ExperienceFlow";
-import ValueProposition from "@/components/experientialprograms/ValueProposition";
-import Audience from "@/components/experientialprograms/Audience";
+import ProgramsAcrossDomains from "@/components/experientialprograms/BuildOutcome";
 import FinalCTA from "@/components/experientialprograms/FinalCTA";
-import ExperientialQA from "@/components/experientialprograms/ExperientialQA";
-
-const experientialFAQs = [
-  {
-    question: "How is this different from an internship?",
-    answer: "Experiential programs focus on specific skill acquisition through guided projects and mentorship, whereas internships are role-based work experiences. These programs are designed to build your portfolio before you apply for internships."
-  },
-  {
-    question: "Do I get a certificate?",
-    answer: "Yes, you receive a certificate of completion that validates the specific skills and projects you've mastered during the program."
-  },
-  {
-    question: "What is the duration?",
-    answer: "Programs typically run for 4-8 weeks, with flexible schedules designed for students and working professionals."
-  },
-  {
-    question: "Is mentorship included?",
-    answer: "Absolutely. You get 1:1 mentorship from industry experts who review your code and guide your project implementation."
-  }
-];
 
 export default function ExperentialProgramsPage() {
   useEffect(() => {
@@ -50,12 +28,12 @@ export default function ExperentialProgramsPage() {
       const windowHeight = window.innerHeight;
       if (rect.top < windowHeight && rect.bottom > 0) {
         const totalHeight = rect.height;
-        const visibleHeight = Math.min(totalHeight, Math.max(0, windowHeight - rect.top - windowHeight / 2 + 200));
+        const visibleHeight = Math.min(totalHeight, Math.max(0, windowHeight - rect.top - windowHeight / 2 + 100)); // Adjusted for better visual alignment
         const percentage = (visibleHeight / totalHeight) * 100;
         timelineProgress.style.height = `${Math.min(100, Math.max(0, percentage))}%`;
         timelineSteps.forEach((step) => {
           const stepRect = step.getBoundingClientRect();
-          if (stepRect.top < windowHeight / 2 + 100) step.classList.add("active");
+          if (stepRect.top < windowHeight / 2 + 150) step.classList.add("active");
           else step.classList.remove("active");
         });
       }
@@ -69,9 +47,9 @@ export default function ExperentialProgramsPage() {
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -10;
-      const rotateY = ((x - centerX) / centerX) * 10;
-      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
+      const rotateX = ((y - centerY) / centerY) * -15; // Slightly deeper tilt
+      const rotateY = ((x - centerX) / centerX) * 15;
+      el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05,1.05,1.05)`;
     };
     const handleLeave = (el: HTMLElement) => {
       el.style.transform = "perspective(1000px) rotateX(0) rotateY(0) scale3d(1,1,1)";
@@ -92,15 +70,13 @@ export default function ExperentialProgramsPage() {
   }, []);
 
   return (
-    <main className="antialiased text-white bg-black selection:bg-[#22c55e] selection:text-black">
+    <main className="antialiased text-white bg-black selection:bg-[#32FE6B] selection:text-[#014051]">
       <HeroSection />
       <OverviewSection />
-      <WhyExperiential />
       <Highlights />
       <ExperienceFlow />
-      <ValueProposition />
-      <Audience />
-      <ExperientialQA faqs={experientialFAQs} />
+      <ProgramsAcrossDomains />
+      <FinalCTA />
 
 
 
@@ -115,7 +91,7 @@ export default function ExperentialProgramsPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Experiential Programs | SkillVita",
-            "description": "Hands-on experiential programs that simulate real job workflows, bridging the gap between learning and internships.",
+            "description": "Hands on experiential programs that simulate real job workflows, bridging the gap between learning and internships.",
             "url": "https://main-revitalize.vercel.app/experientialprograms",
             "isPartOf": {
               "@type": "Website",
@@ -132,7 +108,7 @@ export default function ExperentialProgramsPage() {
             "@context": "https://schema.org",
             "@type": "EducationalOccupationalProgram",
             "name": "Experiential Programs",
-            "description": "Structured experiential learning programs designed to build portfolio-ready proof of work through role-based simulations and guided projects.",
+            "description": "Structured experiential learning programs designed to build portfolio ready proof of work through role based simulations and guided projects.",
             "provider": {
               "@type": "Organization",
               "name": "SkillVita",
@@ -149,42 +125,6 @@ export default function ExperentialProgramsPage() {
             "offers": {
               "@type": "Offer",
               "category": "Educational Program"
-            }
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": experientialFAQs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "QAPage",
-            "mainEntity": {
-              "@type": "Question",
-              "name": "How does Redis help JWT authentication?",
-              "text": "Why is Redis used with JWT tokens?",
-              "answerCount": 1,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Redis helps by storing token blacklists and session metadata."
-              }
             }
           })
         }}
@@ -228,7 +168,6 @@ export default function ExperentialProgramsPage() {
         }}
       />
 
-      <FinalCTA />
       <style jsx global>{`
         .bg-grid-pattern { background-image: linear-gradient(to right, #18181b 1px, transparent 1px), linear-gradient(to bottom, #18181b 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(circle at center, black, transparent 80%); }
         .perspective-1000 { perspective: 1000px; }
@@ -262,6 +201,14 @@ export default function ExperentialProgramsPage() {
         @keyframes pulseNeon { 0%,100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.2), 0 0 10px rgba(34, 197, 94, 0.1) } 50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.6), 0 0 30px rgba(34, 197, 94, 0.3) } }
         .animate-float { animation: float 6s ease-in-out infinite; }
         .animate-pulse-neon { animation: pulseNeon 3s infinite; }
+        .delay-100 { animation-delay: 100ms !important; transition-delay: 100ms !important; }
+        .delay-200 { animation-delay: 200ms !important; transition-delay: 200ms !important; }
+        .delay-300 { animation-delay: 300ms !important; transition-delay: 300ms !important; }
+        .delay-400 { animation-delay: 400ms !important; transition-delay: 400ms !important; }
+        .delay-500 { animation-delay: 500ms !important; transition-delay: 500ms !important; }
+        .delay-600 { animation-delay: 600ms !important; transition-delay: 600ms !important; }
+        .delay-700 { animation-delay: 700ms !important; transition-delay: 700ms !important; }
+        .delay-800 { animation-delay: 800ms !important; transition-delay: 800ms !important; }
       `}</style>
     </main>
   );

@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils";
 
 export default function WhySkillVita() {
   const features = [
-    { icon: Monitor, title: "Simulated Experience", description: "Job-ready candidates trained through real-world simulations and role-aligned execution samples." },
+    { icon: Monitor, title: "Simulated Experience", description: "Job ready candidates trained through real world simulations and role aligned execution samples." },
     { icon: FileCheck, title: "Verified Portfolios", description: "Demonstrable work with real evidence, not just claimed skills on a resume." },
-    { icon: BarChart, title: "Capability Scores", description: "Assessments mapped to industry expectations with mentor-reviewed outcomes." },
-    { icon: TrendingUp, title: "Faster Shortlisting", description: "Use proof-of-work to filter talent quickly, reducing uncertainty in early-career hiring." },
-    { icon: Users, title: "Pre-filtered Pools", description: "Access a curated pipeline of candidates who have already proven their capabilities." },
-    { icon: Briefcase, title: "Role-Aligned", description: "Candidates evaluated on execution, problem-solving, and communication clarity." }
+    { icon: BarChart, title: "Capability Scores", description: "Assessments mapped to industry expectations with mentor reviewed outcomes." },
+    { icon: TrendingUp, title: "Faster Shortlisting", description: "Use proof of work to filter talent quickly, reducing uncertainty in early career hiring." },
+    { icon: Users, title: "Pre filtered Pools", description: "Access a curated pipeline of candidates who have already proven their capabilities." },
+    { icon: Briefcase, title: "Role Aligned", description: "Candidates evaluated on execution, problem solving, and communication clarity." }
   ];
 
   return (
@@ -20,11 +20,11 @@ export default function WhySkillVita() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block mb-4 px-3 py-1 bg-green-900/30 border border-green-500/20 rounded-full text-green-400 text-xs font-semibold tracking-wider uppercase">
-            Recruiter Benefits
+            Why SkillVita
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Why Hire Through SkillVita</h2>
-          <p className="text-lg text-zinc-400">
-            SkillVita reduces uncertainty in early-career hiring by providing recruiters with a 360° view of job-readiness.
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Why <span className="text-green-500 relative inline-block">Hire<span className="absolute bottom-0 left-0 w-full h-1 bg-green-500/20 rounded-full blur-sm"></span></span> Through SkillVita</h2>
+          <p className="text-lg text-zinc-400 leading-relaxed">
+            SkillVita enables recruiters to run role specific hiring simulations that mirror real job work. Instead of relying only on resumes or interviews, teams evaluate how candidates plan, execute, communicate, and deliver. This creates a predictable hiring signal, reduces false positives, lowers onboarding risk, and enables confident shortlisting before interviews.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">

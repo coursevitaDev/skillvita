@@ -23,7 +23,7 @@ export default function FresherPlacementPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Fresher Placement Program | SkillVita",
-            "description": "Build job-ready skills, real proof-of-work, and a portfolio that helps you stand out before placement season even begins.",
+            "description": "Build job ready skills, real proof of work, and a portfolio that helps you stand out before placement season even begins.",
             "url": "https://main-revitalize.vercel.app/fresher-placement",
             "isPartOf": {
               "@type": "Website",
@@ -40,7 +40,7 @@ export default function FresherPlacementPage() {
             "@context": "https://schema.org",
             "@type": "EducationalOccupationalProgram",
             "name": "Fresher Placement Program",
-            "description": "A structured program providing clarity, guided execution, and mentor-reviewed outcomes to build a professional identity and portfolio for placement success.",
+            "description": "A structured program providing clarity, guided execution, and mentor reviewed outcomes to build a professional identity and portfolio for placement success.",
             "provider": {
               "@type": "Organization",
               "name": "SkillVita",

@@ -1,52 +1,68 @@
 "use client";
-import React, { Suspense } from "react";
-import ExploreHero from "./explore";
-import ProgramsList from "@/app/certification/programs";
-import Career from "./career";
-import CertificationBenefits from "./_components/benefits";
-import HowItWorks from "./_components/howItWorks";
-import FAQs from "@/components/course-overview/faqs";
 
-// metadata must be exported from a server component; using global layout metadata
+import React, { Suspense } from "react";
+import CertificationHero from "@/components/Certification/CertificationHero";
+import HowToGetCertified from "@/components/Certification/HowToGetCertified";
+import WhyCertification from "@/components/Certification/WhyCertification";
+import CertificationProcess from "@/components/Certification/CertificationProcess";
+import CertificationsListing from "@/components/Certification/CertificationsListing";
+import WhatIsSimulation from "@/components/Certification/WhatIsSimulation";
+import MentorSupport from "@/components/Certification/MentorSupport";
+import CertificationOutcomes from "@/components/Certification/CertificationOutcomes";
+import CertificationFAQ from "@/components/Certification/CertificationFAQ";
+import CertificationCTA from "@/components/Certification/CertificationCTA";
 
 const certificationFAQs = [
   {
-    question: "What is a job simulation certification?",
-    answer: "A credential earned by completing real world project simulations that mirror actual workplace scenarios, validating your practical skills and professional capabilities."
-  },
-  {
-    question: "Are these certifications recognized by employers?",
-    answer: "Yes! Our certifications are industry recognized and demonstrate your hands on experience, problem solving abilities, and readiness to contribute professionally."
-  },
-  {
-    question: "How long does it take to complete?",
-    answer: "Most certifications can be completed in 4-8 weeks with 10-15 hours per week. You can learn at your own pace."
+    question: "Are Skillvita certifications real and valid?",
+    answer: "Yes. Issued only after verified simulations and mentor reviews."
   },
   {
     question: "Do I need prior experience?",
-    answer: "No prior professional experience required! We offer certifications at various skill levels with all necessary learning materials and mentorship."
+    answer: "No. Beginner to advanced progression supported."
   },
   {
-    question: "Will I get mentorship?",
-    answer: "Yes! Every program includes expert mentorship from industry professionals who guide you through the simulation and provide feedback."
+    question: "When will I receive my certificate?",
+    answer: "After successful completion and mentor review."
   },
   {
-    question: "Can I add this to my LinkedIn?",
-    answer: "Absolutely! You'll receive a verifiable digital certificate with a unique ID that can be added to LinkedIn, your resume, and portfolio."
+    question: "Are these certifications useful for jobs or internships?",
+    answer: "Yes. Recruiters value proof-of-work over theory certificates."
+  },
+  {
+    question: "Is mentor support included?",
+    answer: "Yes. Mentors guide and review throughout."
+  },
+  {
+    question: "Can I add this to LinkedIn and my resume?",
+    answer: "Absolutely. Designed to be resume- and LinkedIn-ready."
   }
 ];
 
 export default function CertificationPage() {
   return (
-    <div>
-      <ExploreHero />
-      <CertificationBenefits />
-      <Suspense fallback={<div className="text-center py-10">Loading programs...</div>}>
-        <ProgramsList />
+    <main className="bg-black min-h-screen selection:bg-[#32fe6b] selection:text-black">
+      <CertificationHero />
+
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <HowToGetCertified />
+
+        <div className="py-16">
+          <WhyCertification />
+        </div>
+      </div>
+
+      <CertificationProcess />
+
+      <Suspense fallback={<div className="text-center py-20 text-neutral-500">Loading simulations...</div>}>
+        <CertificationsListing />
       </Suspense>
-      <HowItWorks />
-      <FAQs faqs={certificationFAQs} />
-      <Career />
+
+      <WhatIsSimulation />
+      <MentorSupport />
+      <CertificationOutcomes />
+      <CertificationFAQ />
+      <CertificationCTA />
 
       {/* Structured Data */}
       <script
@@ -56,7 +72,7 @@ export default function CertificationPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "name": "Job Simulation Certification | SkillVita",
-            "description": "Gain hands on experience through job simulations and earn industry recognized credentials. Validated by real world projects and expert mentorship.",
+            "description": "Earn industry-aligned certifications by completing hands-on job simulations, not theory exams. Validated by real-world projects and expert mentorship.",
             "url": "https://main-revitalize.vercel.app/certification",
             "isPartOf": {
               "@type": "Website",
@@ -73,14 +89,13 @@ export default function CertificationPage() {
             "@context": "https://schema.org",
             "@type": "EducationalOccupationalProgram",
             "name": "Job Simulation Certification",
-            "description": "A comprehensive certification program where students complete real world project simulations to build practical skills and professional capabilities.",
+            "description": "Skillvita certifications are earned by completing real simulations that mirror industry work, reviewed and validated by mentors.",
             "provider": {
               "@type": "Organization",
               "name": "SkillVita",
               "url": "https://main-revitalize.vercel.app"
             },
-            "timeToComplete": "P8W",
-            "educationalCredentialAwarded": "Industry Recognized Certificate",
+            "educationalCredentialAwarded": "Industry Recognized Skill Certification",
             "programPrerequisites": "No prior professional experience required",
             "occupationalCategory": "Professional Certification",
             "offers": {
@@ -145,6 +160,7 @@ export default function CertificationPage() {
           })
         }}
       />
-    </div>
+    </main>
   );
 }
+

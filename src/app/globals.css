@@ -636,6 +636,14 @@ img {
 .dark .contact-scope a {
   color: #f3f4f6 !important;            /* gray-100 */
 }
-.dark .contact-scope a:hover {
-  color: #ffffff !important;
+
+/* Shimmer animation for glif effect */
+@keyframes shimmer {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
 }
+
