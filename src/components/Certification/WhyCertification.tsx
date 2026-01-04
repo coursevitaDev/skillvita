@@ -26,7 +26,7 @@ export default function WhyCertification() {
                 y: -15,
                 transition: { duration: 0.2 }
             }}
-            className="relative h-full rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 hover:bg-neutral-900 hover:border-[#32fe6b] transition-all duration-300 group overflow-hidden"
+            className="relative h-full rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 md:p-8 hover:bg-neutral-900 hover:border-[#32fe6b] transition-all duration-300 group overflow-hidden"
         >
             <div className="absolute inset-0 bg-gradient-to-br from-[#32fe6b]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 

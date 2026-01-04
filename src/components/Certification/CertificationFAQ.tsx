@@ -45,9 +45,9 @@ export default function CertificationFAQ() {
 
     return (
         <section className="py-20 bg-black">
-            <div className="max-w-3xl mx-auto px-6">
+            <div className="max-w-3xl mx-auto px-4 md:px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">
                         Frequently Asked <span className="text-[#32fe6b]">Questions</span> (FAQs)
                     </h2>
                 </div>
@@ -63,7 +63,7 @@ export default function CertificationFAQ() {
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                                className="w-full flex items-center justify-between p-4 md:p-6 text-left focus:outline-none"
                             >
                                 <span className={`text-lg font-bold transition-colors ${activeIndex === index ? "text-[#32fe6b]" : "text-white"
                                     }`}>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { RegistrationForm } from "@/app/events/_components/register";
 
 interface EventTime {
@@ -50,7 +51,7 @@ export default function EventMainContent({
         </h2>
 
         <div className="flex items-start gap-3 mb-3 text-sm text-gray-700 dark:text-gray-300">
-          <img src="/images/events/cal2.svg" alt="calendar" className="w-6 h-6 mt-1" />
+          <Image src="/images/events/cal2.svg" alt="calendar" width={24} height={24} className="mt-1" />
           <div>
             <p className="font-medium">{event.date}</p>
             {event.time?.from && event.time?.upto && (
@@ -63,7 +64,7 @@ export default function EventMainContent({
 
         {event.locationName && (
           <div className="flex items-start gap-3 mb-4 text-sm">
-            <img src="/images/events/loc2.svg" alt="location" className="w-5 h-5 mt-1" />
+            <Image src="/images/events/loc2.svg" alt="location" width={20} height={20} className="mt-1" />
             <div>
               <p className="font-medium text-gray-800 dark:text-white">
                 {event.locationName}
@@ -174,21 +175,21 @@ export default function EventMainContent({
 
       {/* Location Map */}
       {event.locationlink && (
-  <div className="mt-6">
-    <h4 className="text-xl font-semibold text-brand-500 mb-2">Location</h4>
-    <h3 className="mb-1">WeWork at Gachibowli</h3>
-    <p className="text-sm font-medium text-brand-500 mb-4">
-      Plot 118, 3rd floor, Spaces and more, Business Park, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032
-    </p>
+        <div className="mt-6">
+          <h4 className="text-xl font-semibold text-brand-500 mb-2">Location</h4>
+          <h3 className="mb-1">WeWork at Gachibowli</h3>
+          <p className="text-sm font-medium text-brand-500 mb-4">
+            Plot 118, 3rd floor, Spaces and more, Business Park, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032
+          </p>
 
-    <div className="rounded overflow-hidden w-full">
-      <div
-        className="w-full h-[200px] sm:h-[240px] md:h-[300px] lg:h-[340px]"
-        dangerouslySetInnerHTML={{ __html: event.locationlink }}
-      />
-    </div>
-  </div>
-)}
+          <div className="rounded overflow-hidden w-full">
+            <div
+              className="w-full h-[200px] sm:h-[240px] md:h-[300px] lg:h-[340px]"
+              dangerouslySetInnerHTML={{ __html: event.locationlink }}
+            />
+          </div>
+        </div>
+      )}
 
     </main>
   );

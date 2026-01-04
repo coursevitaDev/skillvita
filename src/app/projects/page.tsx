@@ -227,12 +227,13 @@ export default function Projects() {
 
           {filteredProjects.length > itemsPerPage && (
             <div
-              className="flex justify-center mt-8 gap-2 flex-wrap"
+              className="flex justify-center mt-8 px-4"
               role="navigation"
               aria-label="Pagination"
             >
-              <button
-                className="px-4 py-2 rounded-md bg-gray-800 text-white hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              <div className="flex flex-wrap justify-center items-center gap-2 rounded-2xl md:rounded-full bg-white dark:bg-[#18181B] border border-[#E4E4E7] dark:border-[#27272A] p-2">
+                <button
+                  className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={currentPage === 1}
                 onClick={() => {
                   setCurrentPage((p) => Math.max(1, p - 1));
@@ -269,7 +270,7 @@ export default function Projects() {
                 );
               })}
               <button
-                className="px-4 py-2 rounded-md bg-gray-800 text-white hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={currentPage === totalPages}
                 onClick={() => {
                   setCurrentPage((p) => Math.min(totalPages, p + 1));
@@ -282,13 +283,12 @@ export default function Projects() {
                 Next
               </button>
             </div>
+          </div>
           )}
         </div>
 
         <ProjectsLowerSection />
         <Preend />
-
-
 
         {/* Helper Scripts for FAQ and QAPage */}
         {/* Helper Scripts for FAQ */}

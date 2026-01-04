@@ -1,5 +1,5 @@
-"use client";
 import React, { useMemo, useState } from "react";
+import Image from "next/image";
 
 export type Item = {
   category: "tech" | "design" | "business";
@@ -85,7 +85,12 @@ export default function PortfolioWall({ onOpenModal }: { onOpenModal: () => void
             <article key={idx} className="group rounded-xl">
               <div className="bg-zinc-950 rounded-xl border border-zinc-800 overflow-hidden shadow-xl h-full flex flex-col">
                 <div className="relative h-56 overflow-hidden bg-zinc-900">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale contrast-95 brightness-90 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 transition-all duration-700" />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover grayscale contrast-95 brightness-90 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 transition-all duration-700"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from.black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-6 flex-grow flex flex-col relative">

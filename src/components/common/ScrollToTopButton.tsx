@@ -9,7 +9,7 @@ export default function ScrollToTopButton() {
 
   useEffect(() => {
     const onScroll = () => {
-      setVisible(window.scrollY > 300);
+      setVisible(window.scrollY > 10);
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,7 +27,7 @@ export default function ScrollToTopButton() {
       className="fixed bottom-3 right-3 md:bottom-6 md:right-6 p-2 md:p-3 rounded-full bg-white/[0.9] dark:bg-black/[0.9] border-[0.8] border-black/[0.2] dark:border-white/[0.2] hover:bg-black/[0.1] dark:hover:bg-white/[0.1] transition z-50"
       aria-label="Scroll to top"
     >
-      <ChevronUp size={24} className="text-black dark:text-white"/>
+      <ChevronUp size={24} className="text-black dark:text-white" />
     </button>
   );
 }

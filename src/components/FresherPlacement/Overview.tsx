@@ -10,8 +10,8 @@ const cardVariants: Variants = { hidden: { opacity: 0, y: 50 }, visible: { opaci
 export default function Overview() {
   return (
     <section className="py-24 bg-black relative border-t border-zinc-900">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
             <motion.h2 variants={fadeIn} className="text-sm font-bold uppercase tracking-widest mb-3 flex items-center gap-2 text-[#22c55e]">
 
@@ -28,7 +28,7 @@ export default function Overview() {
               </motion.p>
             </div>
           </motion.div>
-          <motion.div className="grid grid-cols-2 gap-6" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
             <motion.div variants={cardVariants} whileHover="hover" className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 h-full group cursor-default shadow-lg">
               <div className="w-12 h-12 bg-zinc-800 text-[#22c55e] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#22c55e] group-hover:text-black transition-colors border border-zinc-700 group-hover:border-[#22c55e] shadow-[0_0_10px_rgba(0,0,0,0.5)]">
                 <Map className="w-6 h-6" />

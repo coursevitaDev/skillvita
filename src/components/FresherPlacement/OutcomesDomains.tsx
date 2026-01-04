@@ -8,8 +8,8 @@ const staggerContainer: Variants = { hidden: { opacity: 0 }, visible: { opacity:
 export default function OutcomesDomains() {
   return (
     <section className="py-24 bg-black border-t border-zinc-900">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-20">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
             <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
               Key <span className="text-[#32fe6b]">Outcomes</span>

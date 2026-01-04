@@ -9,8 +9,10 @@ import FinalCTA from "@/components/experientialprograms/FinalCTA";
 
 export default function ExperentialProgramsPage() {
   useEffect(() => {
+    if (typeof window === "undefined" || typeof document === "undefined") return;
+
     const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new window.IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add("active");
       });

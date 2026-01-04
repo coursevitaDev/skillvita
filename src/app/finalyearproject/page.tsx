@@ -6,7 +6,7 @@ import ProjectCard from "@/components/projects/ProjectCard";
 import { PROJECTS } from "@/data/projectsData";
 import WhyFinalYearProjects from "./_components/whyFinalYearProjects";
 import HowItWorks from "./_components/howItWorks";
-import FinalYearQA from "@/components/FinalYearProject/FinalYearQA";
+import FinalYearQA from "@/components/finalyearproject/FinalYearQA";
 
 type Project = {
   _id: string;
@@ -86,9 +86,9 @@ const FinalYearProjectsPage = () => {
   if (loading) return <Preloader />;
 
   return (
-    <div className="bg-white dark:bg-black p-6 -mt-5">
+    <div className="bg-white dark:bg-black p-2 md:p-6 -mt-5">
       <div className="max-w-7xl mx-auto">
-        <div className="relative rounded-2xl overflow-hidden mt-6 mb-6 px-6 py-28 md:px-20">
+        <div className="relative rounded-2xl overflow-hidden mt-6 mb-6 px-4 py-28 md:px-20">
           <video
             autoPlay
             muted
@@ -113,9 +113,9 @@ const FinalYearProjectsPage = () => {
                 placeholder="Search Projects..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full py-3 px-6 pr-40 rounded-full bg-transparent bg-opacity-10 border border-white text-white placeholder-white focus:outline-none"
+                className="w-full py-3 px-6 pr-4 md:pr-40 rounded-full bg-transparent bg-opacity-10 border border-white text-white placeholder-white focus:outline-none mb-4 md:mb-0"
               />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-brand-500 to-accent-500 text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
+              <button className="w-full md:w-auto md:absolute md:right-2 md:top-1/2 md:transform md:-translate-y-1/2 bg-gradient-to-r from-brand-500 to-accent-500 text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity">
                 Find Projects
               </button>
             </div>
@@ -125,7 +125,7 @@ const FinalYearProjectsPage = () => {
         <WhyFinalYearProjects />
 
         <div className="max-w-6xl mx-auto mb-6 mt-16">
-          <div className="bg-white dark:bg-[#18181B] rounded-2xl p-6 border border-[#E4E4E7] dark:border-[#27272A]">
+          <div className="bg-white dark:bg-[#18181B] rounded-2xl p-4 md:p-6 border border-[#E4E4E7] dark:border-[#27272A]">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-[24px] md:text-[28px] font-semibold font-outfit">Our Collection of Projects</h2>
             </div>

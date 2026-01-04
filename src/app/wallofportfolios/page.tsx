@@ -33,7 +33,7 @@ export default function WallOfPortfoliosPage() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <main className="antialiased text-white bg-black selection:bg-[#22c55e] selection:text-black">
+    <main className="antialiased text-white bg-black selection:bg-[#22c55e] selection:text-black overflow-x-hidden">
       <Hero />
       <WhyMatter />
       <WhatShow />

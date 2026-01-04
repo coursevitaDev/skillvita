@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 const fadeIn: Variants = {
@@ -51,7 +52,12 @@ export default function Hero() {
           <motion.div className="lg:w-1/2 w-full relative" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.2, delay: 0.2, type: "spring" }}>
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-900">
               <div className="aspect-[4/3] relative bg-zinc-900 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2670&auto=format&fit=crop" alt="Team reviewing projects" className="w-full h-full object-cover opacity-80" />
+                <Image
+                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2670&auto=format&fit=crop"
+                  alt="Team reviewing projects"
+                  fill
+                  className="object-cover opacity-80"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
               </div>
               <div className="absolute bottom-6 left-6 bg-black/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-zinc-800 max-w-xs">

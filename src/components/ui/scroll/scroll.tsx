@@ -1,12 +1,12 @@
-"use client";
 import React, { useRef } from 'react';
+import Image from 'next/image';
 
 interface ScrollProps {
   images: string[];
   direction: 'vertical' | 'horizontal';
-  speed?: string; 
-  imageClassName?: string; 
-  containerClassName?: string; 
+  speed?: string;
+  imageClassName?: string;
+  containerClassName?: string;
   imageBgColors?: string[]; // New prop for background colors
 }
 
@@ -50,10 +50,12 @@ const Scroll: React.FC<ScrollProps> = ({
                 style={{ backgroundColor: getBgColor(src) }}
                 className={`rounded-lg flex-shrink-0 flex items-center justify-center px-3 py-1${index !== duplicatedImages.length - 1 ? ' mr-3' : ''}`}
               >
-                <img
+                <Image
                   src={src}
-                  alt={`scroll-row1-img-${index}`}
-                  className={`w-7 h-7 object-contain rounded-lg flex-shrink-0 ${imageClassName}`}
+                  alt={`scroll-img-${index}`}
+                  width={28}
+                  height={28}
+                  className={`object-contain rounded-lg flex-shrink-0 ${imageClassName}`}
                 />
               </div>
             ))}
@@ -71,10 +73,12 @@ const Scroll: React.FC<ScrollProps> = ({
                 style={{ backgroundColor: getBgColor(src) }}
                 className={`rounded-lg flex-shrink-0 flex items-center justify-center px-3 py-1${index !== duplicatedImages.length - 1 ? ' mr-3' : ''}`}
               >
-                <img
+                <Image
                   src={src}
-                  alt={`scroll-row2-img-${index}`}
-                  className={`w-7 h-7 object-contain rounded-lg flex-shrink-0 ${imageClassName}`}
+                  alt={`scroll-img-${index}`}
+                  width={28}
+                  height={28}
+                  className={`object-contain rounded-lg flex-shrink-0 ${imageClassName}`}
                 />
               </div>
             ))}
@@ -114,10 +118,12 @@ const Scroll: React.FC<ScrollProps> = ({
                 style={{ backgroundColor: getBgColor(src) }}
                 className="rounded-lg flex items-center justify-center px-3 py-1"
               >
-                <img
+                <Image
                   src={src}
                   alt={`col1-img-${index}`}
-                  className={`w-7 h-7 object-contain rounded-lg ${imageClassName}`}
+                  width={28}
+                  height={28}
+                  className={`object-contain rounded-lg ${imageClassName}`}
                 />
               </div>
             ))}
@@ -135,10 +141,12 @@ const Scroll: React.FC<ScrollProps> = ({
                 style={{ backgroundColor: getBgColor(src) }}
                 className="rounded-lg flex items-center justify-center px-3 py-1"
               >
-                <img
+                <Image
                   src={src}
                   alt={`col2-img-${index}`}
-                  className={`w-7 h-7 object-contain rounded-lg ${imageClassName}`}
+                  width={28}
+                  height={28}
+                  className={`object-contain rounded-lg ${imageClassName}`}
                 />
               </div>
             ))}

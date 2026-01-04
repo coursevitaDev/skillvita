@@ -21,10 +21,10 @@ export default function Header({
 
   return (
     <div className="pt-2">
-      <div className="bg-[#F3F5FC] dark:bg-[#18181B] rounded-2xl md:p-12 m-5 md:m-9">
+      <div className="bg-[#F3F5FC] dark:bg-[#18181B] rounded-2xl p-6 md:p-12 m-4 md:m-9">
         {/* Title and Description */}
         <div className="w-full flex flex-col md:flex-row justify-between items-start gap-4">
-          <div className="md:w-3/5 text-center md:text-left">
+          <div className="w-full md:w-3/5 text-center md:text-left">
             <h1 className="text-[24px] md:text-[36px] font-semibold font-poppins text-black dark:text-white">
               Are you ready to build next level <span className="text-[#32fe6b]">projects</span>?
             </h1>
@@ -92,7 +92,7 @@ export default function Header({
         {/* Image and Cards Section */}
         <div className="mt-10 flex flex-col md:grid md:grid-cols-3 gap-6">
           {/* Left Image */}
-          <div className="relative w-full h-[355px] rounded-xl overflow-hidden">
+          <div className="relative w-full h-[250px] md:h-[355px] rounded-xl overflow-hidden">
             <Image
               src="/images/projects/left_image.svg"
               alt="left"
@@ -102,8 +102,8 @@ export default function Header({
           </div>
 
           {/* Center Cards */}
-          <div className="flex flex-col gap-6 w-full h-[355px]">
-            <div className="bg-[#014051]  rounded-xl p-4 h-1/2 flex flex-col justify-between">
+          <div className="flex flex-col gap-6 w-full h-auto md:h-[355px]">
+            <div className="bg-[#014051] rounded-xl p-4 h-auto md:h-1/2 flex flex-col justify-between min-h-[160px]">
               <Image
                 src="/images/ProjectsPage/logov1.svg"
                 alt="logo1"
@@ -113,11 +113,11 @@ export default function Header({
               <p className="text-xl font-bold text-[#414141] dark:text-white">
                 75%
               </p>
-              <p className="text-sm text-black dark:text-gray-300 w-[400px]">
+              <p className="text-sm text-black dark:text-gray-300 w-full">
                 Learners successfully publish at least one <span className="text-[#32fe6b]">project</span> to their portfolio
               </p>
             </div>
-            <div className="bg-[#014051] rounded-xl p-4 h-1/2 flex flex-col justify-between">
+            <div className="bg-[#014051] rounded-xl p-4 h-auto md:h-1/2 flex flex-col justify-between min-h-[160px]">
               <Image
                 src="/images/projects/logov2.svg"
                 alt="logo2"
@@ -127,14 +127,14 @@ export default function Header({
               <p className="text-xl font-bold text-[#414141] dark:text-white">
                 80%
               </p>
-              <p className="text-sm text-black dark:text-gray-300 w-[350px]">
+              <p className="text-sm text-black dark:text-gray-300 w-full">
                 Learners report higher confidence after completing a <span className="text-[#32fe6b]">project</span>
               </p>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="relative w-full h-[355px] rounded-xl overflow-hidden">
+          <div className="relative w-full h-[250px] md:h-[355px] rounded-xl overflow-hidden">
             <Image
               src="/images/projects/right_image.svg"
               alt="right"

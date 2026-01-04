@@ -14,7 +14,7 @@ export default function HowToGetCertified() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6">
                             How to Get Your <span className="text-[#32fe6b]">Skills Certified</span>
                         </h2>
                         <div className="space-y-6 text-lg text-neutral-400 leading-relaxed">
@@ -31,7 +31,7 @@ export default function HowToGetCertified() {
                         transition={{ duration: 0.6 }}
                         className="flex items-center justify-center lg:justify-start"
                     >
-                        <p className="text-white font-bold text-2xl md:text-3xl border-l-4 border-[#32fe6b] pl-6 leading-tight">
+                        <p className="text-white font-bold text-xl md:text-3xl border-l-4 border-[#32fe6b] pl-6 leading-tight">
                             No shortcuts. No exams without execution. Just proof of work.
                         </p>
                     </motion.div>

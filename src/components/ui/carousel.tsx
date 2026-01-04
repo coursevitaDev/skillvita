@@ -18,7 +18,7 @@ const Carousel: React.FC<PropType> = (props) => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ playOnInit: true, delay: 3000 }),
-  ]); 
+  ]);
 
   const { autoplayIsPlaying, toggleAutoplay, onAutoplayButtonClick } =
     useAutoplay(emblaApi);
@@ -51,19 +51,17 @@ const Carousel: React.FC<PropType> = (props) => {
               onClick={() =>
                 onAutoplayButtonClick(() => onDotButtonClick(index))
               }
-              className={`w-3 h-3 rounded-full border-2 border-border transition-colors duration-200 ${
-                index === selectedIndex
+              className={`w-3 h-3 rounded-full border-2 border-border transition-colors duration-200 ${index === selectedIndex
                   ? "bg-foreground"
                   : "bg-transparent hover:bg-muted"
-              }`}
+                }`}
             />
           ))}
         </div>
 
         <div
-          className={`rounded-[1.8rem] border-2 border-border bg-background relative h-2 justify-self-center self-center w-40 max-w-[90%] overflow-hidden transition-opacity duration-300 ease-in-out ${
-            showAutoplayProgress ? "opacity-100" : "opacity-0"
-          }`}
+          className={`rounded-[1.8rem] border-2 border-border bg-background relative h-2 justify-self-center self-center w-40 max-w-[90%] overflow-hidden transition-opacity duration-300 ease-in-out ${showAutoplayProgress ? "opacity-100" : "opacity-0"
+            }`}
         >
           <div
             className="bg-foreground absolute w-full top-0 bottom-0 -left-full animate-[autoplay-progress_linear_1] [animation-play-state:running]"
@@ -174,7 +172,7 @@ export const useAutoplayProgress = <ProgressElement extends HTMLElement>(
     });
 
     setShowAutoplayProgress(true);
-  }, []);
+  }, [progressNode]);
 
   useEffect(() => {
     const autoplay = emblaApi?.plugins()?.autoplay;
@@ -183,7 +181,7 @@ export const useAutoplayProgress = <ProgressElement extends HTMLElement>(
     emblaApi
       .on("autoplay:timerset", () => startProgress(autoplay.timeUntilNext()))
       .on("autoplay:timerstopped", () => setShowAutoplayProgress(false));
-  }, [emblaApi]);
+  }, [emblaApi, startProgress]);
 
   useEffect(() => {
     return () => {

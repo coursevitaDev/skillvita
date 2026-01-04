@@ -39,7 +39,9 @@ const CourseDescriptionPage: React.FC<CourseDescriptionPageProps> = (props) => {
   const programId = pathname ? pathname.split("/").pop() : undefined;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   useEffect(() => {
@@ -81,7 +83,7 @@ const CourseDescriptionPage: React.FC<CourseDescriptionPageProps> = (props) => {
       </Head>
 
       {loader && programId ? (
-        <Preloader/>
+        <Preloader />
       ) : (
         <div className="bg-white dark:bg-black">
           {content && (

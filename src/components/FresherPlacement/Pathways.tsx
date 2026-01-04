@@ -9,7 +9,7 @@ const cardVariants: Variants = { hidden: { opacity: 0, y: 50 }, visible: { opaci
 export default function Pathways() {
   return (
     <section className="py-24 bg-zinc-950 border-t border-zinc-900">
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12">
         <motion.div className="text-center max-w-3xl mx-auto mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">Internship & <span className="text-[#32fe6b]">Placement</span> Pathways</h2>
           <div className="w-24 h-1 bg-[#22c55e] mx-auto rounded-full shadow-[0_0_10px_#22c55e]"></div>

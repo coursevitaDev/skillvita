@@ -88,11 +88,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-100 p-4 lg:hidden shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
-        <Button onClick={scrollToInternships} className="w-full bg-[#32fe6b] hover:bg-[#2ce660] text-[#014051] font-bold h-12 rounded-xl" aria-label="Explore internships list on mobile">
-          Explore Internships
-        </Button>
-      </div>
+
     </section>
   );
 }

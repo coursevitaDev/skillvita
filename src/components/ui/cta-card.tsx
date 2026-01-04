@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -27,11 +28,12 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
         {...props}
       >
         {/* Image Section */}
-        <div className="md:w-1/3 w-full">
-          <img
+        <div className="md:w-1/3 w-full relative h-56 md:h-auto">
+          <Image
             src={imageSrc}
             alt={imageAlt}
-            className="h-56 w-full object-cover md:h-full" // Ensure image covers the area
+            fill
+            className="object-cover" // Ensure image covers the area
           />
         </div>
 
@@ -46,8 +48,8 @@ const CtaCard = React.forwardRef<HTMLDivElement, CtaCardProps>(
               {description}
             </p>
             <div className="mt-6">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 onClick={onButtonClick}
                 className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 rounded-full"
               >

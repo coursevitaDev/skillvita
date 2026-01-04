@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import Image from "next/image"
 import { ContainerScroll, CardSticky } from "@/components/ui/cards-stack"
 
 const PROCESS_PHASES = [
@@ -177,13 +178,14 @@ const Work = () => {
                 ))}
               </div>
             </div>
-            <img
-              className="size-full object-cover"
-              width="100%"
-              height="100%"
-              src={project.imageUrl}
-              alt={project.title}
-            />
+            <div className="relative size-full min-h-[300px]">
+              <Image
+                className="object-cover"
+                fill
+                src={project.imageUrl}
+                alt={project.title}
+              />
+            </div>
           </CardSticky>
         ))}
       </ContainerScroll>

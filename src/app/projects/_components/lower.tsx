@@ -53,9 +53,9 @@ export default function ProjectsLowerSection() {
       </div>
 
       {/* Content Block */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch justify-center gap-10 px-2 md:px-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch justify-center gap-10 px-4 md:px-6">
         {/* Left Menu */}
-        <div className="flex flex-col w-full md:w-[45%] h-[300px] justify-between z-10 gap-3">
+        <div className="flex flex-col w-full md:w-[45%] h-auto md:h-[300px] justify-between z-10 gap-3">
           {logos.map((logo) => (
             <div
               key={logo.id}
@@ -88,7 +88,7 @@ export default function ProjectsLowerSection() {
         </div>
 
         {/* Right Image */}
-        <div className="w-full md:w-[55%] h-[300px] z-10">
+        <div className="w-full md:w-[55%] h-[250px] md:h-[300px] z-10">
           {activeLogo && (
             <Image
               src={activeLogo.image}

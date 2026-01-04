@@ -8,7 +8,7 @@ const staggerContainer: Variants = { hidden: { opacity: 0 }, visible: { opacity:
 export default function WhySkillVita() {
   return (
     <section className="py-24 bg-black border-t border-zinc-900">
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12">
         <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">Why <span className="text-[#32fe6b]">Skillvita</span>?</h2>
           <p className="text-zinc-500">The Skillvita advantage for freshers.</p>
