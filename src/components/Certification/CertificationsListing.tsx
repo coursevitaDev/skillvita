@@ -36,6 +36,9 @@ export default function CertificationsListing() {
             setLoading(true);
             try {
                 const base = process.env.NEXT_PUBLIC_BACKEND_URL ?? process.env.NEXT_PUBLIC_BACKEND_LINK;
+                if (!base) {
+                    throw new Error("Backend URL is not defined");
+                }
                 const response = await axios.get(`${base}/programs`);
                 const data = await response.data;
                 setPrograms(data?.data ?? []);
@@ -78,13 +81,13 @@ export default function CertificationsListing() {
         <section id="certification-listing" className="py-20 bg-black min-h-screen">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
                 <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-white mb-8">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
                         Explore <span className="text-[#32fe6b]">Certifications</span>
                     </h2>
 
                     <div className="grid gap-6 md:flex md:items-center md:gap-4 flex-wrap">
                         {/* Search Bar */}
-                        <div className="relative flex-1 min-w-[300px]">
+                        <div className="relative flex-1 w-full md:min-w-[300px]">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-500" />
                             <input
                                 type="text"
@@ -96,7 +99,7 @@ export default function CertificationsListing() {
                         </div>
 
                         {/* Filters */}
-                        <div className="flex gap-4 flex-wrap w-full md:w-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-auto md:flex">
                             <div className="relative flex-1 md:w-48">
                                 <select
                                     value={category}

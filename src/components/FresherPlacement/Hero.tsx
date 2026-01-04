@@ -21,22 +21,22 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] [background-size:32px_32px] opacity-20"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 
-      <motion.div animate={{ scale: [1, 1.2, 1], rotate: [0, 45, 0], opacity: [0.15, 0.25, 0.15] }} transition={{ duration: 15, repeat: Infinity, repeatType: "mirror" }} className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-brand-600 rounded-full filter blur-[120px] opacity-20 pointer-events-none" />
-      <motion.div animate={{ scale: [1, 1.3, 1], rotate: [0, -30, 0], opacity: [0.1, 0.2, 0.1] }} transition={{ duration: 18, repeat: Infinity, repeatType: "mirror", delay: 1 }} className="absolute bottom-[-10%] left-[-20%] w-[700px] h-[700px] bg-brand-900 rounded-full filter blur-[120px] opacity-10 pointer-events-none" />
+      <motion.div animate={{ scale: [1, 1.2, 1], rotate: [0, 45, 0], opacity: [0.15, 0.25, 0.15] }} transition={{ duration: 15, repeat: Infinity, repeatType: "mirror" }} className="absolute top-[-20%] right-[-10%] w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-brand-600 rounded-full filter blur-[80px] md:blur-[120px] opacity-20 pointer-events-none" />
+      <motion.div animate={{ scale: [1, 1.3, 1], rotate: [0, -30, 0], opacity: [0.1, 0.2, 0.1] }} transition={{ duration: 18, repeat: Infinity, repeatType: "mirror", delay: 1 }} className="absolute bottom-[-10%] left-[-20%] w-[350px] md:w-[700px] h-[350px] md:h-[700px] bg-brand-900 rounded-full filter blur-[80px] md:blur-[120px] opacity-10 pointer-events-none" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <motion.div className="lg:w-1/2 text-center lg:text-left" initial="hidden" animate="visible" variants={staggerContainer}>
             <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 backdrop-blur-sm mb-8 hover:border-[#22c55e]/50 transition-colors">
               <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse shadow-[0_0_10px_#22c55e]"></span>
               <span className="text-xs font-bold tracking-wider uppercase text-zinc-300">SkillVita Upskill & Placements</span>
             </motion.div>
-            <motion.h1 variants={fadeIn} className="text-5xl lg:text-7xl font-display font-bold leading-[1.1] mb-6 text-white">
+            <motion.h1 variants={fadeIn} className="text-4xl md:text-5xl lg:text-7xl font-display font-bold leading-[1.1] mb-6 text-white">
               Start Strong.
               <br />
               Step <span className="text-[#22c55e] drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]">Confidently</span> Into Your Career.
             </motion.h1>
-            <motion.p variants={fadeIn} className="text-lg lg:text-xl text-zinc-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <motion.p variants={fadeIn} className="text-base md:text-lg lg:text-xl text-zinc-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Build job ready skills, real proof of work, and a portfolio that helps you stand out before placement season even begins.
             </motion.p>
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

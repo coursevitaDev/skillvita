@@ -9,7 +9,7 @@ import RecruiterFAQ from "../../components/hiringportal/RecruiterFAQ";
 
 export default function HiringPortalPage() {
   return (
-    <main className="min-h-screen font-sans text-white bg-black selection:bg-green-500/30 selection:text-green-200 overflow-x-hidden">
+    <main className="min-h-screen font-sans text-white bg-black selection:bg-green-500/30 selection:text-green-200">
       {/* Structured Data */}
       <script
         type="application/ld+json"

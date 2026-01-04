@@ -54,11 +54,11 @@ export default function MentorSupport() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold text-white mb-4"
+                        className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4"
                     >
                         Mentor Support That <span className="text-[#32fe6b]">Matters</span>
                     </motion.h2>
-                    <p className="text-lg text-neutral-400">You’re not alone while learning.</p>
+                    <p className="text-base md:text-lg text-neutral-400">You’re not alone while learning.</p>
                 </div>
 
                 <AnimatedTestimonials

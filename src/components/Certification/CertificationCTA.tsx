@@ -36,7 +36,7 @@ export default function CertificationCTA() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="relative z-10 mb-4 text-4xl font-bold text-white max-w-2xl px-4"
+                className="relative z-10 mb-4 text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-2xl px-4"
             >
                 Build skills. Prove execution. <span className="text-[#32fe6b]">Get certified the right way.</span>
             </motion.h3>
@@ -55,7 +55,7 @@ export default function CertificationCTA() {
                 onClick={scrollToListing}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative z-10 bg-[#32fe6b] hover:bg-[#2ce660] text-black font-bold h-14 px-12 rounded-full text-lg shadow-[0_0_25px_rgba(50,254,107,0.3)] hover:shadow-[0_0_40px_rgba(50,254,107,0.5)] transition-all duration-300 flex items-center group"
+                className="relative z-10 bg-[#32fe6b] hover:bg-[#2ce660] text-black font-bold h-12 px-8 text-base sm:h-14 sm:px-12 sm:text-lg rounded-full shadow-[0_0_25px_rgba(50,254,107,0.3)] hover:shadow-[0_0_40px_rgba(50,254,107,0.5)] transition-all duration-300 flex items-center group"
             >
                 Explore Certifications
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

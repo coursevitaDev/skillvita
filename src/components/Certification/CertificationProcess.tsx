@@ -41,7 +41,7 @@ export default function CertificationProcess() {
     const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     return (
-        <section className="bg-black py-20 px-4" ref={containerRef}>
+        <section className="bg-black py-20 px-4 md:px-6" ref={containerRef}>
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.p
@@ -57,7 +57,7 @@ export default function CertificationProcess() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-5xl font-bold text-white mb-6"
+                        className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6"
                     >
                         How it <span className="text-[#32fe6b]">Works</span>
                     </motion.h2>
@@ -95,7 +95,7 @@ export default function CertificationProcess() {
                       ${index % 2 === 0 ? "md:mr-12" : "md:ml-12"}
                     `}
                                     >
-                                        <div className="text-[#32fe6b] text-5xl font-bold mb-4 opacity-20 select-none">
+                                        <div className="text-[#32fe6b] text-4xl md:text-5xl font-bold mb-4 opacity-20 select-none">
                                             {item.step}
                                         </div>
                                         <h3 className="text-2xl font-bold text-white mb-4">

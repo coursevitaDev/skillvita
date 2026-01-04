@@ -41,7 +41,7 @@ const certificationFAQs = [
 
 export default function CertificationPage() {
   return (
-    <main className="bg-black min-h-screen selection:bg-[#32fe6b] selection:text-black">
+    <main className="bg-black min-h-screen selection:bg-[#32fe6b] selection:text-black overflow-x-hidden">
       <CertificationHero />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6">

@@ -73,7 +73,7 @@ const FinalYearQA: React.FC<FinalYearQAProps> = ({ faqs }) => {
     return (
         <>
             {/* Community Q&A Section */}
-            <div className="max-w-7xl mx-auto my-16 px-6">
+            <div className="max-w-7xl mx-auto my-16 px-2 md:px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 font-outfit text-black dark:text-white">
                         Community Q&A
@@ -83,12 +83,12 @@ const FinalYearQA: React.FC<FinalYearQAProps> = ({ faqs }) => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     {communityQuestions.slice(0, visibleCount).map((q) => (
-                        <div key={q.id} className="bg-white dark:bg-[#18181B] rounded-2xl p-6 border border-gray-200 dark:border-[#27272A] shadow-sm hover:shadow-md transition-shadow">
-                            <div className="flex items-start gap-4">
+                        <div key={q.id} className="bg-white dark:bg-[#18181B] rounded-2xl p-4 md:p-6 border border-gray-200 dark:border-[#27272A] shadow-sm hover:shadow-md transition-shadow">
+                            <div className="flex items-start gap-3 md:gap-4">
                                 <div className="flex-shrink-0 mt-1">
-                                    <div className="w-10 h-10 rounded-full bg-[#014051]/10 dark:bg-[#014051]/30 flex items-center justify-center text-[#014051] dark:text-[#32fe6b] font-bold text-lg">
+                                    <div className="w-6 h-8 md:w-10 md:h-10 rounded-full bg-[#014051]/10 dark:bg-[#014051]/30 flex items-center justify-center text-[#014051] dark:text-[#32fe6b] font-bold text-sm md:text-lg">
                                         Q
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ const FinalYearQA: React.FC<FinalYearQAProps> = ({ faqs }) => {
                                         {q.shortDesc}
                                     </p>
 
-                                    <div className="bg-gray-50 dark:bg-black/40 rounded-xl p-4 border border-gray-100 dark:border-gray-800">
+                                    <div className="bg-gray-50 dark:bg-black/40 rounded-xl p-3 md:p-4 border border-gray-100 dark:border-gray-800">
                                         <div className="flex items-start gap-3">
                                             <div className="flex-shrink-0 mt-0.5">
                                                 <div className="w-6 h-6 rounded-full bg-[#32fe6b]/20 flex items-center justify-center">

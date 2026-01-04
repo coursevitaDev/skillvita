@@ -73,11 +73,11 @@ export default function CertificationOutcomes() {
         >
           <h2
             id="certification-outcomes-heading"
-            className="text-3xl md:text-5xl font-bold text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4"
           >
             What You <span className="text-[#32fe6b]">Gain</span>
           </h2>
-          <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-neutral-400 max-w-2xl mx-auto">
             Drag the cards to explore the verified outcomes of our certification
             simulations.
           </p>
@@ -85,7 +85,7 @@ export default function CertificationOutcomes() {
       </div>
 
       {/* Cards */}
-      <div className="relative mt-8 h-[450px] w-full max-w-[350px] mx-auto md:translate-x-[-175px]">
+      <div className="relative mt-8 h-[450px] w-full max-w-[90vw] md:max-w-[350px] mx-auto">
         {outcomes.map((item, index) => (
           <TestimonialCard
             key={item.id}

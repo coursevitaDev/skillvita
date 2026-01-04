@@ -50,7 +50,7 @@ export default function Roadmap() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
         <motion.div className="text-center mb-16" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
           <h2 className="text-sm font-bold text-[#22c55e] uppercase tracking-widest mb-3">Roadmap</h2>
           <h3 className="text-3xl md:text-4xl font-display font-bold text-white">How It Works Structured <span className="text-[#32fe6b]">Fresher</span> Journey</h3>

@@ -23,24 +23,24 @@ export default function CertificationHero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="flex flex-col items-start gap-6 text-left"
+                        className="flex flex-col items-center md:items-start gap-6 text-center md:text-left"
                     >
                         <div className="inline-flex items-center rounded-full border border-[#32fe6b]/50 bg-[#32fe6b]/10 px-3 py-1 text-sm font-medium ">
                             <span className="flex h-2 w-2 rounded-full bg-[#32fe6b] mr-2 animate-pulse" />
                             Skillvita Certifications
                         </div>
-                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                        <h1 className="text-3xl xs:text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
                             Get Your Skills Certified <br />
                             <span className="text-[#32fe6b]">Through Real Work</span>
                         </h1>
-                        <p className="max-w-xl text-lg text-neutral-400 leading-relaxed font-medium">
+                        <p className="max-w-xl text-base sm:text-lg text-neutral-400 leading-relaxed font-medium">
                             Earn industry aligned certifications by completing hands on job simulations, not theory exams.
                         </p>
-                        <div className="flex flex-col w-full sm:flex-row gap-4 pt-4">
+                        <div className="flex flex-col w-full sm:flex-row gap-4 pt-4 items-center justify-center md:justify-start">
                             <Button
                                 onClick={scrollToListing}
                                 size="lg"
-                                className="bg-[#32fe6b] hover:bg-[#2ce660] text-[#014051] border-0 rounded-full px-8 h-12 text-base font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+                                className="bg-[#32fe6b] hover:bg-[#2ce660] text-[#014051] border-0 rounded-full px-6 h-12 text-sm sm:text-base font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
                                 aria-label="Explore certifications"
                             >
                                 Explore Certifications
@@ -118,11 +118,10 @@ export default function CertificationHero() {
                                             repeat: Infinity,
                                             delay: i * 1.5
                                         }}
-                                        className="absolute p-3 bg-neutral-900 border border-[#32fe6b]/30 rounded-lg text-[#32fe6b] text-xs font-bold shadow-lg"
+                                        className={`absolute p-3 bg-neutral-900 border border-[#32fe6b]/30 rounded-lg text-[#32fe6b] text-xs font-bold shadow-lg ${i % 2 === 0 ? "right-0 md:-right-[10%]" : "left-0 md:-left-[10%]"
+                                            }`}
                                         style={{
-                                            top: `${20 + i * 25}%`,
-                                            right: i % 2 === 0 ? '-10%' : 'auto',
-                                            left: i % 2 !== 0 ? '-10%' : 'auto'
+                                            top: `${20 + i * 25}%`
                                         }}
                                     >
                                         VERIFIED
@@ -134,11 +133,7 @@ export default function CertificationHero() {
                 </div>
             </div>
 
-            <div className="fixed bottom-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-t border-neutral-800 p-4 lg:hidden">
-                <Button onClick={scrollToListing} className="w-full bg-[#32fe6b] hover:bg-[#2ce660] text-[#014051] font-bold h-12 rounded-xl" aria-label="Explore certifications">
-                    Explore Certifications
-                </Button>
-            </div>
+
         </section>
     );
 }

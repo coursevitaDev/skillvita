@@ -17,7 +17,7 @@ export default function Preend() {
             alt="Innovate Image"
             width={200}
             height={59}
-            className="rounded-full object-cover aspect-[4/1]"
+            className="rounded-full object-cover aspect-[4/1] w-[140px] md:w-[200px]"
           />
         </div>
 
@@ -32,7 +32,7 @@ export default function Preend() {
             alt="Create Image"
             width={200}
             height={59}
-            className="rounded-full object-cover aspect-[4/1]"
+            className="rounded-full object-cover aspect-[4/1] w-[140px] md:w-[200px]"
           />
         </div>
 

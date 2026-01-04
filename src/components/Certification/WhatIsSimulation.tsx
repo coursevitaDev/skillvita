@@ -17,7 +17,7 @@ export default function WhatIsSimulation() {
     return (
         <section className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
-                <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/30 p-8 shadow-2xl md:p-12 transition-all duration-500 hover:border-[#32fe6b]/30">
+                <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-900/30 p-6 sm:p-8 shadow-2xl md:p-12 transition-all duration-500 hover:border-[#32fe6b]/30">
                     <div className="absolute top-0 right-0 -mr-20 -mt-20 h-[300px] w-[300px] rounded-full bg-[#32fe6b]/5 blur-3xl filter" />
 
                     <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -26,7 +26,7 @@ export default function WhatIsSimulation() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl font-bold text-white mb-6">
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
                                 What is a <span className="text-[#32fe6b]">Simulation?</span>
                             </h2>
                             <p className="text-xl text-neutral-300 leading-relaxed mb-6">

@@ -85,7 +85,7 @@ const ProjectQA: React.FC<ProjectQAProps> = ({ faqs }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {communityQuestions.slice(0, visibleCount).map((q) => (
                         <div key={q.id} className="bg-white dark:bg-[#18181B] rounded-2xl p-6 border border-gray-200 dark:border-[#27272A] shadow-sm hover:shadow-md transition-shadow">
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-start gap-4 mb-4">
                                 <div className="flex-shrink-0 mt-1">
                                     <div className="w-10 h-10 rounded-full bg-[#014051]/10 dark:bg-[#014051]/30 flex items-center justify-center text-[#014051] dark:text-[#32fe6b] font-bold text-lg">
                                         Q
@@ -100,36 +100,36 @@ const ProjectQA: React.FC<ProjectQAProps> = ({ faqs }) => {
                                             {q.time}
                                         </span>
                                     </div>
-                                    <p className="text-[#014051] dark:text-gray-400 mb-4 text-sm">
+                                    <p className="text-[#014051] dark:text-gray-400 text-sm">
                                         {q.shortDesc}
                                     </p>
+                                </div>
+                            </div>
 
-                                    <div className="bg-gray-50 dark:bg-black/40 rounded-xl p-4 border border-gray-100 dark:border-gray-800">
-                                        <div className="flex items-start gap-3">
-                                            <div className="flex-shrink-0 mt-0.5">
-                                                <div className="w-6 h-6 rounded-full bg-[#32fe6b]/20 flex items-center justify-center">
-                                                    <CheckCircle2 className="w-4 h-4 text-[#014051] dark:text-[#32fe6b]" />
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                                                    {q.answer}
-                                                </p>
-                                                <span className="block mt-2 text-xs text-[#014051] dark:text-[#32fe6b] font-medium">
-                                                    ✓ Accepted Answer
-                                                </span>
-                                            </div>
+                            <div className="bg-gray-50 dark:bg-black/40 rounded-xl p-4 border border-gray-100 dark:border-gray-800">
+                                <div className="flex items-start gap-3">
+                                    <div className="flex-shrink-0 mt-0.5">
+                                        <div className="w-6 h-6 rounded-full bg-[#32fe6b]/20 flex items-center justify-center">
+                                            <CheckCircle2 className="w-4 h-4 text-[#014051] dark:text-[#32fe6b]" />
                                         </div>
                                     </div>
-
-                                    <div className="mt-4 flex items-center justify-end pt-4 border-t border-gray-100 dark:border-gray-800">
-                                        <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                                            <div className="w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                                <User className="w-3 h-3" />
-                                            </div>
-                                            <span>{q.author}</span>
-                                        </div>
+                                    <div>
+                                        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                                            {q.answer}
+                                        </p>
+                                        <span className="block mt-2 text-xs text-[#014051] dark:text-[#32fe6b] font-medium">
+                                            ✓ Accepted Answer
+                                        </span>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-4 flex items-center justify-end pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                                    <div className="w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                                        <User className="w-3 h-3" />
+                                    </div>
+                                    <span>{q.author}</span>
                                 </div>
                             </div>
                         </div>

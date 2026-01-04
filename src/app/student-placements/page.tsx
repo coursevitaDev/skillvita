@@ -88,7 +88,7 @@ function StudentPlacementsPage() {
   };
 
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-x-hidden">
       {/* Hero Section with Placement-specific content */}
       <PlacementHero
         {...heroContent}
