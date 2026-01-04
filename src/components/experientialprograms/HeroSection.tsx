@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -44,11 +45,14 @@ export default function HeroSection() {
             <div className="absolute -inset-1 bg-[#32FE6B] opacity-10 blur-sm rounded-lg group-hover:opacity-30 transition-opacity"></div>
             <div className="relative w-full overflow-hidden rounded-xl border border-zinc-800 bg-black shadow-2xl js-tilt-content">
               <div className="absolute inset-0 bg-[#014051]/20 mix-blend-overlay z-10 pointer-events-none"></div>
-              <img
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Futuristic Tech Workspace"
-                className="w-full h-auto object-cover img-matrix scale-105 group-hover:scale-110 transition-transform duration-700"
-              />
+              <div className="relative aspect-video w-full">
+                <Image
+                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                  alt="Futuristic Tech Workspace"
+                  fill
+                  className="object-cover img-matrix scale-105 group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/90 to-transparent z-20">
                 <div className="flex items-center justify-between border-t border-zinc-800/50 pt-6">
                   <div className="font-mono text-xs text-[#32FE6B] space-y-1">

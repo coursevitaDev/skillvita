@@ -8,6 +8,7 @@ import React, {
 } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface Testimonial {
   quote: string;
@@ -78,6 +79,16 @@ export const CircularTestimonials = ({
     [activeIndex, testimonials]
   );
 
+  // Navigation handlers
+  const handleNext = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % testimonialsLength);
+    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+  }, [testimonialsLength]);
+  const handlePrev = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
+    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+  }, [testimonialsLength]);
+
   // Responsive gap calculation
   useEffect(() => {
     function handleResize() {
@@ -110,18 +121,7 @@ export const CircularTestimonials = ({
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-    // eslint-disable-next-line
-  }, [activeIndex, testimonialsLength]);
-
-  // Navigation handlers
-  const handleNext = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % testimonialsLength);
-    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
-  }, [testimonialsLength]);
-  const handlePrev = useCallback(() => {
-    setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
-    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
-  }, [testimonialsLength]);
+  }, [handlePrev, handleNext]);
 
   // Compute transforms for each image (always show 3: left, center, right)
   function getImageStyle(index: number): React.CSSProperties {
@@ -179,10 +179,11 @@ export const CircularTestimonials = ({
         {/* Images */}
         <div className="image-container" ref={imageContainerRef}>
           {testimonials.map((testimonial, index) => (
-            <img
+            <Image
               key={testimonial.src}
               src={testimonial.src}
               alt={testimonial.name}
+              fill
               className="testimonial-image"
               data-index={index}
               style={getImageStyle(index)}

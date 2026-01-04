@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function LearningSpaces() {
@@ -59,10 +59,11 @@ export default function LearningSpaces() {
               <div
                 className="relative h-64 rounded-2xl overflow-hidden border border-zinc-800"
               >
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2670&auto=format&fit=crop"
                   alt="Students working on projects"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
@@ -73,10 +74,11 @@ export default function LearningSpaces() {
               <div
                 className="relative h-64 rounded-2xl overflow-hidden border border-zinc-800 mt-8"
               >
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop"
                   alt="Collaborative learning"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
@@ -87,10 +89,11 @@ export default function LearningSpaces() {
               <div
                 className="relative h-64 rounded-2xl overflow-hidden border border-zinc-800 col-span-2"
               >
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop"
                   alt="Workshops and events"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">

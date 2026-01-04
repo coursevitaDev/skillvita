@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 const logos = [
   { src: "/images/landing/companies/logo1.png", alt: "logo1", darkSrc: "/images/landing/companies/logo1.png" },
@@ -21,16 +22,18 @@ export const InfiniteMovingLogos = () => {
     <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
       <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
         {extendedLogos.map((logo, index) => (
-          <li key={index} className="group"> {/* <-- Add group here */}
-            <img
+          <li key={index} className="group relative h-10 w-32">
+            <Image
               src={logo.src}
               alt={logo.alt}
-              className="h-10 object-contain transition-all duration-200 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 block dark:hidden"
+              fill
+              className="object-contain transition-all duration-200 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 block dark:hidden"
             />
-            <img
+            <Image
               src={logo.darkSrc || logo.src}
               alt={logo.alt}
-              className="h-10 object-contain transition-all duration-200 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 hidden dark:block"
+              fill
+              className="object-contain transition-all duration-200 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 hidden dark:block"
             />
           </li>
         ))}

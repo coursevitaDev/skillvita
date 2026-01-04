@@ -1,13 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "coursevita-storate.s3.ap-south-1.amazonaws.com" },

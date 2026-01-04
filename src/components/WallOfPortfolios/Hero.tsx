@@ -1,5 +1,5 @@
-"use client";
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const imgWrapRef = useRef<HTMLDivElement | null>(null);
@@ -58,7 +58,12 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[#22c55e]/20 blur-2xl -z-10 rounded-2xl opacity-50"></div>
             <div className="h-full w-full bg-black rounded-xl overflow-hidden flex flex-col border border-zinc-800 relative">
               <div ref={imgWrapRef} className="h-64 md:h-80 bg-zinc-800 relative overflow-hidden group will-change-transform">
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop" alt="Student coding workspace" className="w-full h-full object-cover object-center bw-to-color transform scale-100 group-hover:scale-105 transition-transform duration-700" />
+                <Image
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop"
+                  alt="Student coding workspace"
+                  fill
+                  className="object-cover object-center bw-to-color transform scale-100 group-hover:scale-105 transition-transform duration-700"
+                />
                 <div className="absolute top-4 left-4 bg-black/80 backdrop-blur border border-[#22c55e]/30 text-[#4ade80] text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
                   Verified Placement Ready

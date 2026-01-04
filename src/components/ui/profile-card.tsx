@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
 interface SocialLink {
@@ -34,22 +35,19 @@ const GlassmorphismProfileCard = ({
 
   return (
     <div className="relative w-full max-w-sm">
-      <div 
+      <div
         className="relative flex flex-col items-center p-8 rounded-3xl border-2 transition-all duration-500 ease-out bg-white dark:bg-[#18181B] border-[#E4E4E7] dark:border-[#27272A] hover:border-gray-300 dark:hover:border-gray-600"
         style={{
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
         }}
       >
         <div className="w-24 h-24 mb-4 rounded-full p-1 border-2 border-[#E4E4E7] dark:border-[#27272A]">
-          <img 
-            src={avatarUrl} 
+          <Image
+            src={avatarUrl}
             alt={`${name}'s Avatar`}
-            className="w-full h-full rounded-full object-cover"
-            onError={(e) => { 
-              const target = e.target as HTMLImageElement;
-              target.onerror = null; 
-              target.src = `https://placehold.co/96x96/6366f1/white?text=${name.charAt(0)}`;
-            }}
+            width={96}
+            height={96}
+            className="rounded-full object-cover"
           />
         </div>
 
@@ -71,9 +69,9 @@ const GlassmorphismProfileCard = ({
   );
 };
 
-const SocialButton = ({ item, setHoveredItem, hoveredItem }: { 
-  item: SocialLink; 
-  setHoveredItem: (id: string | null) => void; 
+const SocialButton = ({ item, setHoveredItem, hoveredItem }: {
+  item: SocialLink;
+  setHoveredItem: (id: string | null) => void;
   hoveredItem: string | null;
 }) => (
   <div className="relative">
@@ -105,7 +103,7 @@ const ActionButton = ({ action }: { action: ActionButtonProps }) => (
 );
 
 const Tooltip = ({ item, hoveredItem }: { item: SocialLink; hoveredItem: string | null }) => (
-  <div 
+  <div
     role="tooltip"
     className={`absolute -top-12 left-1/2 -translate-x-1/2 z-50 px-3 py-1.5 rounded-lg border text-xs font-medium whitespace-nowrap transition-all duration-300 ease-out pointer-events-none bg-black text-white border-gray-800 ${hoveredItem === item.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
     style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.1)' }}
