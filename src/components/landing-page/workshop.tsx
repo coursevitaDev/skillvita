@@ -97,7 +97,7 @@ const Workshop = () => {
               onClick={() => setActiveTab(tab as TabType)}
               className={`px-5 py-2 rounded-lg transition-all duration-300 ${
                 activeTab === tab
-                  ? "bg-[#6B46FE] text-white"
+                  ? "bg-brand-500 text-white"
                   : "bg-gray-100 dark:bg-[#18181B] text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >
@@ -196,7 +196,7 @@ const Workshop = () => {
             </p>
             <button
               onClick={() => setActiveTab("all")}
-              className="mt-6 px-6 py-2 bg-[#6B46FE] text-white rounded-lg"
+              className="mt-6 px-6 py-2 bg-brand-500 text-white rounded-lg"
             >
               View All Workshops
             </button>

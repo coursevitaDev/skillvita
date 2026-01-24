@@ -330,7 +330,7 @@ export default function Navbar() {
 
               {/* CTA Button - Desktop Only */}
               <Link
-                href="https://dashboard.skillvita.com/"
+                href="https://dashboard.coursevita.com/"
                 className="hidden md:block bg-brand-500 hover:bg-brand-600 text-accent-500 text-sm px-5 py-3 rounded-full font-medium transition-colors"
               >
                 Get Started
@@ -540,7 +540,7 @@ export default function Navbar() {
                         </div>
                         <div className="sticky bottom-0 left-0 right-0 bg-white dark:bg-black pb-4 pt-2">
                           <Link
-                            href="https://dashboard.skillvita.com/"
+                            href="https://dashboard.coursevita.com/"
                             className="w-full block text-center bg-brand-500 hover:bg-brand-600 text-white font-medium py-3 rounded-full shadow-md"
                           >
                             Get Started

@@ -14,17 +14,18 @@ const sliderImages = [jImgM1, jImgM2, jImgM3, jImgM4];
 
 export default function Join() {
   return (
-    <div className="relative md:flex-row flex flex-col lg:flex-row items-center justify-center py-20 px-4 lg:px-24 min-h-[500px] w-full
-      bg-gradient-to-b from-white via-[#f5ecff] to-[#a56cff15]
-      dark:bg-gradient-to-b dark:from-[#18142b] dark:via-[#2a213b] dark:to-[#391e58]">
-
+    <div
+      className="relative md:flex-row flex flex-col lg:flex-row items-center justify-center py-20 px-4 lg:px-24 min-h-[500px] w-full
+      bg-gradient-to-b from-brand-950 via-brand-900 to-brand-950"
+    >
       {/* --- Left: Text --- */}
       <div className=" flex-1 flex flex-col items-center lg:items-start z-10">
-        <h2 className="text-[32px] lg:text-[36px] font-outfit font-semibold text-[#fe7465] dark:text-[#ff9681] text-center lg:text-left mb-2">
-          <span className="text-black dark:text-white">Why</span> Group Discussions
+        <h2 className="text-[32px] lg:text-[36px] font-outfit font-semibold text-accent-500 text-center lg:text-left mb-2">
+          <span className="text-white">Why</span> Group Discussions
         </h2>
-        <p className="max-w-xl text-[16px] text-black/90 dark:text-white/80 font-poppins text-center lg:text-left mb-4">
-          Because we want to help you become more confident, collaborative, and thoughtful by sharing and exploring different perspectives and ideas.
+        <p className="max-w-xl text-[16px] text-brand-200 font-poppins text-center lg:text-left mb-4">
+          Because we want to help you become more confident, collaborative, and
+          thoughtful by sharing and exploring different perspectives and ideas.
         </p>
       </div>
 
@@ -37,14 +38,14 @@ export default function Join() {
             alt="Group 1"
             width={180}
             height={120}
-            className="rounded-xl shadow-md bg-white dark:bg-[#23193c] transition"
+            className="rounded-xl shadow-md bg-brand-800 transition border border-brand-700"
           />
           <Image
             src={jImg2}
             alt="Group 2"
             width={180}
             height={120}
-            className="rounded-xl shadow-md bg-white dark:bg-[#23193c] transition"
+            className="rounded-xl shadow-md bg-brand-800 transition border border-brand-700"
           />
         </div>
         <div className="hidden md:flex flex-col gap-6">
@@ -53,14 +54,14 @@ export default function Join() {
             alt="Group 3"
             width={180}
             height={120}
-            className="rounded-xl shadow-md bg-white dark:bg-[#23193c] transition"
+            className="rounded-xl shadow-md bg-brand-800 transition border border-brand-700"
           />
           <Image
             src={jImg4}
             alt="Group 4"
             width={180}
             height={120}
-            className="rounded-xl shadow-md bg-white dark:bg-[#23193c] transition"
+            className="rounded-xl shadow-md bg-brand-800 transition border border-brand-700"
           />
         </div>
         {/* For mobile, show horizontal slider */}
@@ -68,7 +69,7 @@ export default function Join() {
           {sliderImages.map((src, i) => (
             <div
               key={i}
-              className="min-w-[160px] h-[100px] rounded-xl overflow-hidden shadow-md bg-white dark:bg-[#23193c] transition flex-shrink-0"
+              className="min-w-[160px] h-[100px] rounded-xl overflow-hidden shadow-md bg-brand-800 transition flex-shrink-0 border border-brand-700"
             >
               <Image
                 src={src}

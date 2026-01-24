@@ -157,7 +157,7 @@ const Sessions = forwardRef<HTMLElement>(function Sessions(props, ref) {
       <div className="bg-white dark:bg-black">
         <section ref={ref} className="mb-3 mx-5">
           <h2 className="text-center text-3xl md:text-[36px] font-bold py-12">
-            <span className="text-[#FE7465]">Join</span> Sessions
+            <span className="text-accent-500">Join</span> Sessions
           </h2>
 
           <div className="space-y-4 md:space-y-6 mx-auto max-w-[1200px] px-2 md:px-4">
@@ -234,7 +234,7 @@ const Sessions = forwardRef<HTMLElement>(function Sessions(props, ref) {
                   <div className="flex justify-center md:justify-end">
                     <button
                       onClick={handleOneToOneButtonClick}
-                      className="text-[16px] font-[600] leading-normal text-white rounded-[8px] bg-brand-500 px-6 md:px-10 py-2 md:py-3 hover:bg-opacity-90 transition"
+                      className="text-[16px] font-[600] leading-normal text-accent-500 rounded-[8px] bg-brand-500 px-6 md:px-10 py-2 md:py-3 hover:bg-opacity-90 transition"
                     >
                       Register Now
                     </button>
@@ -424,17 +424,7 @@ const Sessions = forwardRef<HTMLElement>(function Sessions(props, ref) {
 
         <div>
           {/* Career Success Coaching Section */}
-          <section className="relative py-12 md:py-[107px] px-4 md:px-[34px] bg-gradient-to-b from-transparent via-transparent to-[#EB00FF]/[0.05] dark:to-[#EB00FF]/[0.1]">
-            {/* Watermark */}
-            <div className="absolute right-0 top-0 max-w-[120px] md:max-w-full">
-              <Image
-                src="/images/mock-interview/watermark-mid.svg"
-                alt="Background decoration"
-                width={269}
-                height={188}
-                className="md:w-[269px] md:h-[188px] w-[120px] h-auto"
-              />
-            </div>
+          <section className="relative py-12 md:py-[107px] px-4 md:px-[34px] bg-gradient-to-b from-transparent via-transparent to-brand-500/[0.05] dark:to-brand-500/[0.1]">
 
             {/* Content */}
             <div className="flex md:flex-row flex-col-reverse items-center md:gap-[25px] gap-6 max-w-[1200px] mx-auto">
@@ -449,21 +439,11 @@ const Sessions = forwardRef<HTMLElement>(function Sessions(props, ref) {
                     className="w-full h-auto md:w-[673px] md:h-[300px] rounded-[10px] object-cover"
                   />
                 </div>
-                {/* Symbol */}
-                <div className="absolute bottom-[-15px] right-[-15px] md:bottom-[-35px] md:right-[-52px]">
-                  <Image
-                    src="/images/mock-interview/symbol1.svg"
-                    alt="Decoration"
-                    width={70}
-                    height={70}
-                    className="w-[40px] h-[40px] md:w-[75px] md:h-[75px]"
-                  />
-                </div>
               </div>
 
               {/* Text Content */}
               <div className="flex flex-col justify-center items-center gap-4 md:gap-[26px] px-3 md:px-0">
-                <h2 className="text-center text-xl md:text-[36px] font-[600] leading-tight md:leading-normal text-[#FE7465]">
+                <h2 className="text-center text-xl md:text-[36px] font-[600] leading-tight md:leading-normal text-accent-500">
                   Career Success Coaching
                 </h2>
                 <p className="text-center text-base md:text-[20px] font-[400] leading-normal text-black dark:text-white">
@@ -477,16 +457,6 @@ const Sessions = forwardRef<HTMLElement>(function Sessions(props, ref) {
 
           {/* Practice Interview Sessions */}
           <section className="relative py-12 md:py-[107px] px-4 md:px-[34px]">
-            {/* Watermark */}
-            <div className="absolute left-0 bottom-0 md:top-0 md:bottom-auto max-w-[120px] md:max-w-full">
-              <Image
-                src="/images/mock-interview/watermark-mid2.svg"
-                alt="Background decoration"
-                width={269}
-                height={188}
-                className="md:w-[269px] md:h-[188px] w-[120px] h-auto"
-              />
-            </div>
 
             {/* Content */}
             <div className="flex md:flex-row-reverse flex-col-reverse items-center md:gap-[25px] gap-6 max-w-[1200px] mx-auto">
@@ -501,21 +471,11 @@ const Sessions = forwardRef<HTMLElement>(function Sessions(props, ref) {
                     className="w-full h-auto md:w-[673px] md:h-[300px] rounded-[10px] object-cover"
                   />
                 </div>
-                {/* Symbol */}
-                <div className="absolute bottom-[-15px] left-[-15px] md:bottom-[-45px] md:left-[-50px] hidden sm:block">
-                  <Image
-                    src="/images/mock-interview/symbol2.svg"
-                    alt="Decoration"
-                    width={70}
-                    height={70}
-                    className="w-[40px] h-[40px] md:w-[100px] md:h-[100px]"
-                  />
-                </div>
               </div>
 
               {/* Text Content */}
               <div className="flex flex-col justify-center items-center gap-4 md:gap-[26px] px-3 md:px-0">
-                <h2 className="text-center text-xl md:text-[36px] font-[600] leading-tight md:leading-normal text-[#FE7465]">
+                <h2 className="text-center text-xl md:text-[36px] font-[600] leading-tight md:leading-normal text-accent-500">
                   Practice Interview Sessions
                 </h2>
                 <p className="text-center text-base md:text-[20px] font-[400] leading-normal text-black dark:text-white">

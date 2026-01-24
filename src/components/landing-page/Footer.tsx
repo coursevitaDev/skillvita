@@ -86,7 +86,7 @@ const Footer = () => {
               {/* Twitter */}
               <a
                 target="_blank"
-                href="https://x.com/skillvita"
+                href="https://x.com/coursevita"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
                 className="w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-brand-500 hover:bg-brand-600 transition-colors"
@@ -99,11 +99,11 @@ const Footer = () => {
               <div
                 className="flex items-center gap-2 cursor-pointer group"
                 onClick={() =>
-                  (window.location.href = "mailto:reachus@skillvita.com")
+                  (window.location.href = "mailto:reachus@skillvita.in")
                 }
               >
                 <Mail size={23} className="text-accent-500 group-hover:scale-110 transition-transform" />
-                <span className="break-all group-hover:text-accent-500 transition-colors">reachus@skillvita.com</span>
+                <span className="break-all group-hover:text-accent-500 transition-colors">reachus@skillvita.in</span>
               </div>
               <div
                 className="flex items-center gap-2 cursor-pointer group"
@@ -131,7 +131,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="https://skillvita.zohorecruit.in/jobs/Careers"
+                  href="https://coursevita.zohorecruit.in/jobs/Careers"
                   className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Careers
@@ -148,7 +148,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-3 font-normal text-[14px] lg:text-[16px] text-gray-600 dark:text-gray-400">
               <li>
                 <Link
-                  href="https://simulation.skillvita.com"
+                  href="https://simulation.coursevita.com"
                   className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Job Simulation
@@ -156,7 +156,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="https://portfolio.skillvita.com"
+                  href="https://portfolio.coursevita.com"
                   className="hover:text-accent-500 dark:hover:text-accent-400 transition-all duration-200 hover:translate-x-1 inline-block"
                 >
                   Portfolio Builder

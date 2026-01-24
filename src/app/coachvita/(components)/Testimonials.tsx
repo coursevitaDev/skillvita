@@ -73,37 +73,39 @@ export default function TestimonialsCarousel() {
   const handlePrev = () => emblaApi && emblaApi.scrollPrev();
 
   return (
-    <div className="bg-white dark:bg-black py-10">
+    <div className="bg-brand-950 py-10">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-semibold text-[#FE7465]">Testimonials</h2>
-        <p className="text-gray-700 dark:text-gray-300 mt-2 px-4">
-          Thousands of candidates using CourseVita&apos;s Coachvita and 
-          mock interviews to practice and land their dream jobs.
+        <h2 className="text-3xl font-semibold text-accent-500">Testimonials</h2>
+        <p className=" mt-2 px-4">
+          Thousands of candidates using CourseVita&apos;s Coachvita and mock
+          interviews to practice and land their dream jobs.
         </p>
       </div>
-      
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Gradient blur overlays */}
         <div className="absolute top-0 left-0 h-full w-12 z-20 pointer-events-none">
-          <div className="h-full w-full bg-gradient-to-r from-white dark:from-black via-white dark:via-black to-transparent" />
+          <div className="h-full w-full bg-gradient-to-r from-brand-950 via-brand-950 to-transparent" />
         </div>
         <div className="absolute top-0 right-0 h-full w-12 z-20 pointer-events-none">
-          <div className="h-full w-full bg-gradient-to-l from-white/90 dark:from-black/90 via-white dark:via-black to-transparent" />
+          <div className="h-full w-full bg-gradient-to-l from-brand-950 via-brand-950 to-transparent" />
         </div>
-        
+
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {testimonials.map((t, i) => (
-              <div key={i} className="w-full md:w-[90%] px-4 flex-shrink-0 box-border">
-                <div className="bg-white dark:bg-[#18181B] border border-gray-200 dark:border-[#27272A] rounded-2xl p-6 mb-6 h-full relative">
+              <div
+                key={i}
+                className="w-full md:w-[90%] px-4 flex-shrink-0 box-border"
+              >
+                <div className="bg-brand-900/40 border border-brand-800 rounded-2xl p-6 mb-6 h-full relative backdrop-blur-sm">
                   <div className="absolute top-5 right-5">
                     <Image
                       src={t.company}
                       alt="Company logo"
                       width={50}
                       height={30}
-                      className="object-contain h-[30px] w-auto"
+                      className="object-contain h-[30px] w-auto brightness-0 invert"
                     />
                   </div>
                   <div className="flex items-start gap-4">
@@ -112,16 +114,12 @@ export default function TestimonialsCarousel() {
                       alt={t.name}
                       width={56}
                       height={56}
-                      className="rounded-full object-cover w-14 h-14"
+                      className="rounded-full object-cover w-14 h-14 border border-brand-700"
                     />
                     <div>
-                      <h3 className="text-lg font-bold text-black dark:text-white">
-                        {t.name}
-                      </h3>
-                      <p className="text-sm text-gray-500 mb-2">{t.tag}</p>
-                      <p className="text-sm text-gray-700 dark:text-gray-300">
-                        {t.text}
-                      </p>
+                      <h3 className="text-lg font-bold text-white">{t.name}</h3>
+                      <p className="text-sm text-brand-300 mb-2">{t.tag}</p>
+                      <p className="text-sm ">{t.text}</p>
                     </div>
                   </div>
                 </div>
@@ -134,14 +132,14 @@ export default function TestimonialsCarousel() {
         <div className="mt-4 flex justify-center items-center gap-4">
           <button
             onClick={handlePrev}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="p-2 rounded-full hover:bg-brand-800 transition-colors"
           >
-            <ArrowLeft className="w-5 h-5 text-black dark:text-white" />
+            <ArrowLeft className="w-5 h-5 text-white" />
           </button>
 
-          <div className="w-40 h-2 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden relative">
+          <div className="w-40 h-2 bg-brand-900 rounded-full overflow-hidden relative">
             <div
-              className="h-full bg-[#0F002E] dark:bg-white rounded-full transition-all duration-300"
+              className="h-full bg-accent-500 rounded-full transition-all duration-300"
               style={{
                 width: `${100 / testimonials.length}%`,
                 left: `${(100 / testimonials.length) * selectedIndex}%`,
@@ -153,9 +151,9 @@ export default function TestimonialsCarousel() {
 
           <button
             onClick={handleNext}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="p-2 rounded-full hover:bg-brand-800 transition-colors"
           >
-            <ArrowRight className="w-5 h-5 text-black dark:text-white" />
+            <ArrowRight className="w-5 h-5 text-white" />
           </button>
         </div>
       </div>

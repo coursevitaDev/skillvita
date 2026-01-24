@@ -21,12 +21,12 @@ const MilestoneSection = () => {
           </h2>
 
           <div className="grid grid-cols-2 gap-4 max-w-xs w-full">
-            <div className="bg-white dark:bg-gray-900 shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-black shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-900">
               <strong className="text-xl text-brand-600 dark:text-accent-500">10k+</strong>
               <p className="text-sm text-gray-700 dark:text-gray-300">Learners</p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 shadow-md p-4 text-center row-span-2 rounded-lg border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-black shadow-md p-4 text-center row-span-2 rounded-lg border border-gray-100 dark:border-gray-900">
               <strong className="text-xl text-brand-600 dark:text-accent-500">3,50,000</strong>
               <p className="text-sm text-gray-700 dark:text-gray-300">YouTube Views</p>
               <div className="mt-2 flex justify-center">
@@ -39,22 +39,22 @@ const MilestoneSection = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-black shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-900">
               <strong className="text-xl text-brand-600 dark:text-accent-500">28k+</strong>
               <p className="text-sm text-gray-700 dark:text-gray-300">Strong Community</p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-black shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-900">
               <strong className="text-xl text-brand-600 dark:text-accent-500">180+</strong>
               <p className="text-sm text-gray-700 dark:text-gray-300">Alumni Placed</p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-black shadow-md p-4 text-center rounded-lg border border-gray-100 dark:border-gray-900">
               <strong className="text-xl text-brand-600 dark:text-accent-500">5k+</strong>
               <p className="text-sm text-gray-700 dark:text-gray-300">Premium Learners</p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 shadow-md p-4 text-center col-span-2 rounded-lg border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-black shadow-md p-4 text-center col-span-2 rounded-lg border border-gray-100 dark:border-gray-900">
               <strong className="text-xl text-brand-600 dark:text-accent-500">15k+</strong>
               <p className="text-sm text-gray-700 dark:text-gray-300">Careers Counselled</p>
             </div>

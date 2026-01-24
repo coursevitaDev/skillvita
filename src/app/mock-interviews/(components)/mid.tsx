@@ -5,7 +5,7 @@ import Image from "next/image";
 const logos = [
   "/images/mock-interview/c1.png",
   "/images/mock-interview/c2.svg",
-  "/images/mock-interview/c3.svg",
+  // "/images/mock-interview/c3.svg",
   "/images/mock-interview/c4.png",
   "/images/mock-interview/c5.png",
   "/images/mock-interview/c6.png",
@@ -15,33 +15,33 @@ const logos = [
 ];
 const logosRepeated = Array(4).fill(logos).flat();
 
-const steps = [
-  {
-    numIcon: "/images/mock-interview/1stNum.svg",
-    actionIcon: "/images/mock-interview/r1.svg",
-    label: "Register",
-    desc: "Fill the corresponding details & check your availability",
-  },
-  {
-    numIcon: "/images/mock-interview/2ndNum.svg",
-    actionIcon: "/images/mock-interview/r2.svg",
-    label: "Schedule",
-    desc: "Set a date and time for your mock interview and one-on-one career counseling session.",
-  },
-  {
-    numIcon: "/images/mock-interview/3rdNum.svg",
-    actionIcon: "/images/mock-interview/r3.svg",
-    label: "Confirm",
-    desc: "Confirm your Registration",
-  },
-];
+// const steps = [
+//   {
+//     numIcon: "/images/mock-interview/1stNum.svg",
+//     actionIcon: "/images/mock-interview/r1.svg",
+//     label: "Register",
+//     desc: "Fill the corresponding details & check your availability",
+//   },
+//   {
+//     numIcon: "/images/mock-interview/2ndNum.svg",
+//     actionIcon: "/images/mock-interview/r2.svg",
+//     label: "Schedule",
+//     desc: "Set a date and time for your mock interview and one-on-one career counseling session.",
+//   },
+//   {
+//     numIcon: "/images/mock-interview/3rdNum.svg",
+//     actionIcon: "/images/mock-interview/r3.svg",
+//     label: "Confirm",
+//     desc: "Confirm your Registration",
+//   },
+// ];
 
 const Mid: React.FC = () => {
   return (
     <section className="bg-white dark:bg-black">
       {/* Headings */}
       <div className="py-12">
-        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-[#fe7465] text-center">
+        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-accent-500 text-center">
           Our Interviewers And Mentors
         </h2>
         <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-black dark:text-white text-center mt-2">
@@ -50,7 +50,7 @@ const Mid: React.FC = () => {
       </div>
 
       {/* Marquee logos */}
-      <div className="relative overflow-hidden w-full max-w-7xl my-6 mx-auto">
+      <div className="relative overflow-hidden w-full max-w-7xl py-6 mx-auto">
         {/* Left Blur */}
         <div className="absolute top-0 left-0 h-full w-12 z-10 pointer-events-none">
           <div className="h-full w-full bg-gradient-to-r from-white/90 dark:from-black/90 to-transparent" />
@@ -68,15 +68,21 @@ const Mid: React.FC = () => {
         >
           {logosRepeated.map((src, i) => (
             <div key={i} className="flex-shrink-0">
-              <Image src={src} alt={`Logo ${i + 1}`} width={100} height={40} />
+              <Image
+                src={src}
+                alt={`Logo ${i + 1}`}
+                width={100}
+                height={40}
+                className="grayscale hover:grayscale-0 transition-all "
+              />
             </div>
           ))}
         </div>
       </div>
 
       {/* Steps to register */}
-      <div className="mt-24 bg-gradient-to-b from-transparent via-transparent to-[#EB00FF]/[0.05] dark:to-[#EB00FF]/[0.1] py-8">
-        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-[#fe7465] text-center">
+      {/* <div className="mt-24 bg-gradient-to-b from-transparent via-transparent to-brand-500/[0.05] dark:to-brand-500/[0.1] py-8">
+        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-accent-500 text-center">
           Steps <span className="text-black dark:text-white">to Register</span>
         </h2>
         <div className="flex flex-wrap justify-center gap-2.5 p-[50px] px-[10px]">
@@ -111,7 +117,7 @@ const Mid: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Keyframes for marquee */}
       <style jsx>{`

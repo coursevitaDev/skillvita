@@ -1,6 +1,7 @@
 // components/KeyBenefits.tsx
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
 
 const benefits = [
   "Enhance your interview confidence",
@@ -13,7 +14,7 @@ const KeyBenefits: React.FC = () => {
   return (
     <section className="py-[50px] px-[10px] bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-center text-[#fe7465] font-outfit font-semibold text-2xl md:text-4xl mb-[56px]">
+        <h2 className="text-center text-accent-500 font-outfit font-semibold text-2xl md:text-4xl mb-[56px]">
           Key <span className="text-black dark:text-white">Benefits</span>
         </h2>
 
@@ -25,13 +26,7 @@ const KeyBenefits: React.FC = () => {
                          rounded-[10px] border border-brand-200 dark:border-[#27272A]
                          bg-white dark:bg-[#18181B]"
             >
-              <Image
-                src="/images/mock-interview/correct.svg"
-                alt="Check icon"
-                width={28}
-                height={28}
-                className="flex-shrink-0 mt-1 "
-              />
+              <CheckCircle2 className="text-accent-500" />
               <p className="text-black dark:text-white font-poppins text-base font-normal leading-normal">
                 {text}
               </p>

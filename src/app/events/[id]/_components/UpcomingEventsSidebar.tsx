@@ -24,7 +24,7 @@ export default function UpcomingEventsSidebar({ events }: { events: EventType[] 
   return (
     <div className="sticky top-30 w-full dark:bg-[#18181B] rounded-xl  p-0">
       {/* Heading */}
-      <div className=" lg:px-0">
+      <div className="p-3">
         <h3 className="text-lg font-bold text-gray-900 dark:text-white">
           Upcoming Events
         </h3>

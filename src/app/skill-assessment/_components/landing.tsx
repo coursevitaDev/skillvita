@@ -15,7 +15,7 @@ export default function Landing({ setIsLanding }: Props) {
         <h1 className="text-black dark:text-white text-2xl sm:text-4xl font-bold">
           Step into choosing right path with
         </h1>
-        <h2 className="text-2xl sm:text-4xl font-medium bg-gradient-to-r from-[#7234F7] to-[#FF4B00] text-transparent bg-clip-text mt-2">
+        <h2 className="text-2xl sm:text-4xl font-medium text-accent-500 mt-2">
           Skillvita
         </h2>
 

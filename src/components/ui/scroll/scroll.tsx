@@ -53,8 +53,8 @@ const Scroll: React.FC<ScrollProps> = ({
                 <Image
                   src={src}
                   alt={`scroll-img-${index}`}
-                  width={28}
-                  height={28}
+                  width={20}
+                  height={20}
                   className={`object-contain rounded-lg flex-shrink-0 ${imageClassName}`}
                 />
               </div>
@@ -76,8 +76,8 @@ const Scroll: React.FC<ScrollProps> = ({
                 <Image
                   src={src}
                   alt={`scroll-img-${index}`}
-                  width={28}
-                  height={28}
+                  width={20}
+                  height={20}
                   className={`object-contain rounded-lg flex-shrink-0 ${imageClassName}`}
                 />
               </div>

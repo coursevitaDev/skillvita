@@ -50,7 +50,7 @@ export default function HiringMenu({
         className={`flex overflow-x-auto gap-4 -mx-1 scrollbar-hide md:grid md:grid-cols-3 md:gap-4 md:overflow-visible`}
       >
         {/* Card 1 - Get Hired */}
-        <Link href="/#courses" onClick={onItemClick}>
+        <Link href="https://skillvita.coursevita.com/" onClick={onItemClick}>
           <motion.div {...cardAnimation} className={`group ${cardClasses}`}>
             <h3 className="text-lg font-medium">
               <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
@@ -60,7 +60,7 @@ export default function HiringMenu({
             <p className="text-sm text-gray-700 dark:text-gray-400 mt-1">
               Apply to top companies with the right skills
             </p>
-            <div className="mt-5 max-w-[300px]">
+            <div className="mt-4 w-full max-w-[500px]">
               <Scroll
                 images={[
                   "/images/navbar/Blinkit_logo.svg",
@@ -90,7 +90,10 @@ export default function HiringMenu({
         </Link>
 
         {/* Card 2 - Hire for your company */}
-        <Link href="https://simulation.skillvita.com/recruiter" onClick={onItemClick}>
+        <Link
+          href="https://skill.coursevita.com/"
+          onClick={onItemClick}
+        >
           <motion.div
             {...cardAnimation}
             className={`group ${cardClasses} relative`}
@@ -113,7 +116,7 @@ export default function HiringMenu({
 
         {/* Card 3 - Work with Skillvita */}
         <Link
-          href="https://skillvita.zohorecruit.in/jobs/Careers"
+          href="https://coursevita.zohorecruit.in/jobs/Careers"
           onClick={onItemClick}
         >
           <motion.div
@@ -152,8 +155,9 @@ export default function HiringMenu({
             {cards.map((_, i) => (
               <div
                 key={i}
-                className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
-                  }`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
+                }`}
               />
             ))}
           </div>

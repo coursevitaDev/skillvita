@@ -1,17 +1,16 @@
-"use client"
-import React, { useRef } from 'react'
-import Mid from './(components)/mid';
-import Testimonials from './(components)/Testimonials';
-import KeyBenefits from './(components)/KeyBenefits';
-import Last from './(components)/Last';
-import Hero from './(components)/Hero';
-import Sessions from './(components)/Session';
-
+"use client";
+import React, { useRef } from "react";
+import Mid from "./(components)/mid";
+import Testimonials from "./(components)/Testimonials";
+import KeyBenefits from "./(components)/KeyBenefits";
+import Last from "./(components)/Last";
+import Hero from "./(components)/Hero";
+import Sessions from "./(components)/Session";
 
 function Page() {
-  const joinRef = useRef<HTMLElement>(null!)
+  const joinRef = useRef<HTMLElement>(null!);
   return (
-    <div className='-mt-4 md:-mt-8'>
+    <div className=" bg-brand-950 text-white">
       <Hero targetJoinNow={joinRef} />
 
       <Sessions ref={joinRef} />
@@ -23,7 +22,7 @@ function Page() {
       <KeyBenefits />
 
       {/* Testimonials */}
-      <Testimonials/>
+      <Testimonials />
 
       {/* Call to Action */}
       <Last targetJoinNow={joinRef} />
