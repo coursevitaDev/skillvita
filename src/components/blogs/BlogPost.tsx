@@ -17,7 +17,7 @@ export default function BlogPost({ id }: { id: string }) {
     const fetchBlog = async () => {
       try {
         const response = await fetch(
-          `https://api.coursevita.com/api/blogs/getallblogs`
+          `${process.env.NEXT_PUBLIC_BACKEND_LINK}/api/blogs/getallblogs`
         );
         const data = await response.json();
         const foundBlog = data.data.find((blog: Blog) => blog._id === id);

@@ -75,7 +75,7 @@ export default function TestimonialsCarousel() {
   return (
     <div className="bg-white dark:bg-black py-10">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-semibold text-[#FE7465]">Testimonials</h2>
+        <h2 className="text-3xl font-semibold text-accent-500">Testimonials</h2>
         <p className="text-gray-700 dark:text-gray-300 mt-2 px-4">
           Thousands of candidates using CourseVita&apos;s career counseling and
           mock interviews to practice and land their dream jobs.

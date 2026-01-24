@@ -3,67 +3,54 @@ import React from "react";
 import Image from "next/image";
 import GaugeSpeedometer from "./animation";
 import AnimatedTypography from "./AnimatedTypography";
+import { Users } from "lucide-react";
+import { FaSuitcase } from "react-icons/fa";
+import { LightBulbIcon } from "@heroicons/react/24/outline";
+import { Rocket } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 interface HeroProps {
   targetJoinNow: React.RefObject<HTMLElement>;
 }
 
 const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
-  <div className="bg-white dark:bg-black">
-    <section className="relative 2xl:max-w-7xl items-center mx-auto py-10 md:py-[70px] bg-gradient-to-bl from-transparent via-transparent to-[#EB00FF]/[0.05] dark:to-[#EB00FF]/[0.1] overflow-hidden">
+  <div className="bg-brand-950">
+    <section className="relative 2xl:max-w-7xl items-center mx-auto py-10 md:py-[70px] bg-gradient-to-bl from-transparent via-transparent to-brand-500/[0.05] overflow-hidden">
       <div className="mx-3 md:mx-5">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
           {/* Left Column */}
           <div className="flex flex-col gap-4 md:gap-6 px-2 md:pl-5 flex-1 z-10 w-full lg:max-w-[45%]">
-            <h1 className="text-[28px] md:text-[40px] font-[500] leading-tight md:leading-normal text-black dark:text-white">
+            <h1 className="text-[28px] md:text-[40px] font-[500] leading-tight md:leading-normal text-white">
               Boost your career with
               <br />
-              <span className="bg-gradient-to-r from-[#7234F7] to-[#FE7465] bg-clip-text text-transparent md:text-[40px] font-[600] leading-tight md:leading-normal">
+              <span className="bg-gradient-to-r from-brand-400 to-accent-500 bg-clip-text text-transparent md:text-[40px] font-[600] leading-tight md:leading-normal">
                 Expert counselling
               </span>{" "}
               and{" "}
-              <span className="bg-gradient-to-r from-[#F88282] to-[#7234F7] bg-clip-text text-transparent md:text-[40px] font-[700] leading-tight md:leading-normal">
+              <span className="bg-gradient-to-r from-accent-500 to-brand-400 bg-clip-text text-transparent md:text-[40px] font-[700] leading-tight md:leading-normal">
                 mock interviews
               </span>
             </h1>
 
             {/* Benefits - Stack vertically on mobile */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-5 mt-1 md:mt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-5 mt-1 md:mt-2 text-brand-200">
               <div className="flex flex-row sm:flex-col items-start justify-start gap-2 p-1 w-full sm:w-[130px]">
-                <Image
-                  src="/images/mock-interview/lightbulb.svg"
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="flex-shrink-0 mt-1"
-                />
-                <p className="text-[14px] md:text-[16px] font-normal leading-normal">
+                <LightBulbIcon className="flex-shrink-0 opacity-90 size-7"/>
+                <p className="text-[14px] md:text-[16px] font-normal leading-normal text-white">
                   Get valuable insights
                 </p>
               </div>
 
               <div className="flex flex-row sm:flex-col items-start justify-start gap-2 p-1 w-full sm:w-[130px]">
-                <Image
-                  src="/Images/mock-interview/rocket.svg"
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="flex-shrink-0 mt-1"
-                />
-                <p className="text-[14px] md:text-[16px] font-normal leading-normal">
+                <Rocket/>
+                <p className="text-[14px] md:text-[16px] font-normal leading-normal text-white">
                   Boost Your Interview Skills
                 </p>
               </div>
 
               <div className="flex flex-row sm:flex-col items-start justify-start gap-2 p-1 w-full sm:w-[130px]">
-                <Image
-                  src="/images/mock-interview/correct.svg"
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="flex-shrink-0 mt-1"
-                />
-                <p className="text-[14px] md:text-[16px] font-normal leading-normal">
+                <CheckCircle/>
+                <p className="text-[14px] md:text-[16px] font-normal leading-normal text-white">
                   Achieve Your Career Goals
                 </p>
               </div>
@@ -75,7 +62,7 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
                   targetJoinNow.current.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="flex justify-center items-center w-full sm:w-[233px] h-[45px] md:h-[50px] bg-gradient-to-r from-[rgba(114,52,247,0.89)] to-[rgba(254,116,101,0.9)] text-white rounded-md text-[16px] md:text-[18px] font-semibold z-10 mt-2 md:mt-4 hover:shadow-lg transition-shadow"
+              className="flex justify-center items-center w-full sm:w-[233px] h-[45px] md:h-[50px] bg-gradient-to-r from-brand-600 to-accent-600 text-white rounded-md text-[16px] md:text-[18px] font-semibold z-10 mt-2 md:mt-4 hover:shadow-[0_0_15px_rgba(50,254,107,0.3)] transition-all duration-300"
             >
               Join Now
             </button>
@@ -87,25 +74,20 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {/* Top row */}
               {/* Interview Image */}
-              <div className="h-[156px] sm:h-[250px] rounded-[14px] overflow-hidden">
+              <div className="h-[156px] sm:h-[250px] rounded-[14px] overflow-hidden border border-brand-800">
                 <Image
                   src="/images/mock-interview/hero-interview.jpg"
                   alt=""
                   width={400}
                   height={250}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity"
                 />
               </div>
 
               {/* 75% Progress Card */}
-              <div className="h-[156px] sm:h-[250px] sm:mb-1 bg-white dark:bg-[#18181B] border border-[#E4E4E7] dark:border-[#27272A] rounded-[14px] flex flex-col items-center justify-between p-3 sm:p-4 relative">
-                <div className="absolute top-2 sm:top-4 left-2 sm:left-4 h-8 w-8 sm:h-10 sm:w-10 flex justify-center items-center rounded-full bg-[#F5F0FF]">
-                  <Image
-                    src="/images/mock-interview/Users.svg"
-                    alt="users image"
-                    width={20}
-                    height={20}
-                  />
+              <div className="h-[156px] sm:h-[250px] sm:mb-1 bg-brand-900/40 border border-brand-800 rounded-[14px] flex flex-col items-center justify-between p-3 sm:p-4 relative backdrop-blur-sm">
+                <div className="absolute top-2 sm:top-4 left-2 sm:left-4 h-8 w-8 sm:h-10 sm:w-10 flex justify-center items-center rounded-full bg-brand-800/50">
+                  <Users className="text-accent-500"/>
                 </div>
 
                 <div className="flex flex-col items-center justify-center h-full">
@@ -114,7 +96,7 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
                     <GaugeSpeedometer percent={75} />
                   </div>
 
-                  <p className="text-center text-[12px] sm:text-[15px] font-normal mt-1 sm:mt-2 max-w-[95%] sm:max-w-[240px]">
+                  <p className="text-center text-[12px] sm:text-[15px] font-normal mt-1 sm:mt-2 max-w-[95%] sm:max-w-[240px] text-brand-200">
                     Participants say they feel more prepared for real
                     interviews.
                   </p>
@@ -125,7 +107,7 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
               {/* Stats cards column */}
               <div className="flex flex-col gap-3 sm:gap-4">
                 {/* 100+ Growth Card */}
-                <div className="h-[91px] sm:h-[120px] rounded-[14px] bg-gradient-to-r from-[#7234F7] to-[#BD89FF] p-3 sm:p-4">
+                <div className="h-[91px] sm:h-[120px] rounded-[14px] bg-gradient-to-r from-brand-700 to-brand-500 p-3 sm:p-4 border border-brand-600">
                   <div className="flex items-center gap-2 mb-1 sm:mb-2">
                     <Image
                       src="/images/mock-interview/boost.svg"
@@ -138,22 +120,16 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
                       <AnimatedTypography to={100} />+
                     </h3>
                   </div>
-                  <p className="text-[11px] sm:text-[13px] text-white leading-tight">
+                  <p className="text-[11px] sm:text-[13px] text-brand-100 leading-tight">
                     Individuals have advanced their careers with our support
                   </p>
                 </div>
 
                 {/* 85% Transition Card */}
-                <div className="h-[91px] sm:h-[120px] rounded-[14px] bg-white dark:bg-[#18181B] border border-[#E4E4E7] dark:border-[#27272A] p-3 sm:p-4">
+                <div className="h-[91px] sm:h-[120px] rounded-[14px] bg-brand-900/40 border border-brand-800 p-3 sm:p-4 backdrop-blur-sm">
                   <div className="flex items-center gap-2 mb-1 sm:mb-2">
-                    <Image
-                      src="/images/mock-interview/Job.svg"
-                      alt=""
-                      width={20}
-                      height={20}
-                      className="w-5 h-5 sm:w-6 sm:h-6"
-                    />
-                    <h3 className="text-[18px] sm:text-[22px] font-bold text-[#7234F7]">
+                    <FaSuitcase className="text-brand-500" size={20}/>
+                    <h3 className="text-[18px] sm:text-[22px] font-bold text-accent-500">
                       <AnimatedTypography to={85} />%
                     </h3>
                   </div>
@@ -165,13 +141,13 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
               </div>
 
               {/* Second image */}
-              <div className="h-[192px] sm:h-[250px] rounded-[14px] overflow-hidden">
+              <div className="h-[192px] sm:h-[250px] rounded-[14px] overflow-hidden border border-brand-800">
                 <Image
                   src="/images/mock-interview/interview2.jpg"
                   alt=""
                   width={400}
                   height={250}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity"
                 />
               </div>
             </div>
@@ -180,7 +156,7 @@ const Hero: React.FC<HeroProps> = ({ targetJoinNow }) => (
       </div>
 
       {/* Watermark SVG - Smaller size and better positioning */}
-      <div className="absolute bottom-[-10px] left-[10%] w-[350px] md:w-[450px] lg:w-[500px] pointer-events-none hidden lg:block opacity-70">
+      <div className="absolute bottom-[-10px] left-[10%] w-[350px] md:w-[450px] lg:w-[500px] pointer-events-none hidden lg:block opacity-30 mix-blend-overlay">
         <Image
           src="images/mock-interview/watermark.svg"
           alt=""

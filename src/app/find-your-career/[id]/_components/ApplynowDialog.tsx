@@ -167,7 +167,7 @@ catch (error: unknown) {
           <button
             onClick={validation}
             disabled={loading}
-            className="mt-5 w-full h-10 bg-[#7233f7] text-white font-outfit font-medium text-[14px] rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="mt-5 w-full h-10 bg-brand-500 text-white font-outfit font-medium text-[14px] rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Submitting..." : "Apply Now"}
           </button>
@@ -177,7 +177,7 @@ catch (error: unknown) {
             <a
               href="/terms"
               onClick={(e) => onClickHandler(e, "/terms")}
-              className="text-[#7234F7] no-underline"
+              className="text-brand-400 no-underline"
             >
               Terms and conditions
             </a>

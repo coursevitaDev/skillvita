@@ -12,7 +12,6 @@ export default function JobPrepMenu({
   isMobile?: boolean;
   onItemClick?: () => void;
 }) {
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   const cards = [
@@ -20,7 +19,7 @@ export default function JobPrepMenu({
       title: "Job simulation",
       desc: "Gain practical experience, and be prepared for dream job",
       image: "/images/navbar/js.svg",
-      href: "https://simulation.skillvita.com/",
+      href: "https://simulation.coursevita.com/",
     },
     {
       title: "Skill Assessment",
@@ -32,7 +31,7 @@ export default function JobPrepMenu({
       title: "Build your Portfolio",
       desc: "Build your portfolio easily, no design or code needed.",
       image: "/images/navbar/portfolio1.svg",
-      href: "https://portfolio.skillvita.com/",
+      href: "https://portfolio.coursevita.com/",
     },
     {
       title: "Build Interesting Projects",
@@ -50,7 +49,7 @@ export default function JobPrepMenu({
       title: "Play Learn Earn",
       desc: "Practice quizzes daily and get ready for any competitive exam.",
       image: "/images/navbar/quizvita.svg",
-      href: "https://play.google.com/store/apps/details?id=com.skillvita.quizvita",
+      href: "https://quizvita.in/",
     },
     {
       title: "Prepare Group Discussion",
@@ -88,7 +87,9 @@ export default function JobPrepMenu({
               href={card.href}
               className="absolute inset-0 z-20"
               target={card.href.startsWith("http") ? "_blank" : "_self"}
-              rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              rel={
+                card.href.startsWith("http") ? "noopener noreferrer" : undefined
+              }
             />
             <div className="z-10 relative">
               <h3 className="text-lg font-semibold mb-1 text-black dark:text-white">
@@ -149,7 +150,6 @@ export default function JobPrepMenu({
             )}
           </motion.div>
         ))}
-
       </div>
 
       {/* Pagination dots */}
@@ -158,8 +158,9 @@ export default function JobPrepMenu({
           {cards.map((_, i) => (
             <div
               key={i}
-              className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
-                }`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === activeIndex ? "bg-accent-500 w-4" : "bg-white w-1.5"
+              }`}
             />
           ))}
         </div>
@@ -169,7 +170,11 @@ export default function JobPrepMenu({
     <div className="grid grid-cols-3 gap-4">
       {/* Column 1 */}
       <div className="flex flex-col space-y-4">
-        <Link href="https://simulation.skillvita.com/" onClick={onItemClick} passHref>
+        <Link
+          href="https://simulation.coursevita.com/"
+          onClick={onItemClick}
+          passHref
+        >
           <motion.div
             {...cardAnimation}
             className="group min-h-1/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden cursor-pointer border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
@@ -197,7 +202,11 @@ export default function JobPrepMenu({
           {...cardAnimation}
           className="group h-2/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 relative overflow-hidden group cursor-pointer border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
         >
-          <Link href="https://portfolio.skillvita.com/" onClick={onItemClick} passHref>
+          <Link
+            href="https://portfolio.coursevita.com/"
+            onClick={onItemClick}
+            passHref
+          >
             <h3 className="text-lg font-medium text-black dark:text-white">
               <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                 Build your Portfolio
@@ -226,7 +235,6 @@ export default function JobPrepMenu({
             </div>
           </Link>
         </motion.div>
-
       </div>
 
       {/* Column 2 */}
@@ -309,7 +317,6 @@ export default function JobPrepMenu({
         >
           <Link href="/mock-interviews" onClick={onItemClick} passHref>
             <div className="flex-1">
-
               <h3 className="text-lg font-medium text-black dark:text-white">
                 <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
                   Mock Interview
@@ -328,7 +335,6 @@ export default function JobPrepMenu({
                 playsInline
                 className="w-full h-full object-cover"
               />
-
             </div>
           </Link>
         </motion.div>
@@ -336,37 +342,29 @@ export default function JobPrepMenu({
 
       {/* Column 3 */}
       <div className="flex flex-col space-y-4">
-
         <motion.div
           {...cardAnimation}
           className="group min-h-2/3 bg-[#F9F8FA] dark:bg-[#18181B] rounded-xl p-5 cursor-pointer relative overflow-hidden flex flex-col justify-between border border-white dark:border-black hover:border-accent-500/30 dark:hover:border-accent-500/30 transition-all duration-300"
         >
-
-          <div>
-            <h3 className="text-lg font-medium text-black dark:text-white">
-              <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
-                Play Learn Earn
-              </span>
-            </h3>
-            <p className="text-sm text-gray-700 dark:text-gray-400 mt-2">
-              Practice quizzes daily <br /> and get ready for any competitive{" "}
-              <br /> exam.
-            </p>
-          </div>
-          <div className="absolute bottom-3 left-4 text-left text-xs">
-            <p className="font-normal text-black dark:text-white">
-              Quizvita for Mobile
-            </p>
-            <p className="text-gray-500 text-[10px] dark:text-gray-400">
-              Available at Play Store
-            </p>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.skillvita.quizvita"
-              target="_blank"
-              className="block"
-              aria-label="Get the SkillVita app on Google Play (opens in a new tab)"
-              rel="noopener noreferrer"
-            >
+          <Link href="https://quizvita.in/" onClick={onItemClick} passHref>
+            <div>
+              <h3 className="text-lg font-medium text-black dark:text-white">
+                <span className="inline-block text-black dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-accent-500 dark:group-hover:text-transparent dark:group-hover:bg-clip-text dark:group-hover:bg-gradient-to-r dark:group-hover:from-brand-500 dark:group-hover:to-accent-500">
+                  Play Learn Earn
+                </span>
+              </h3>
+              <p className="text-sm text-gray-700 dark:text-gray-400 mt-2">
+                Practice quizzes daily <br /> and get ready for any competitive{" "}
+                <br /> exam.
+              </p>
+            </div>
+            <div className="absolute bottom-3 left-4 text-left text-xs">
+              <p className="font-normal text-black dark:text-white">
+                Quizvita for Mobile
+              </p>
+              <p className="text-gray-500 text-[10px] dark:text-gray-400">
+                Available at Play Store
+              </p>
               <Image
                 src="/images/navbar/play-store.svg"
                 alt="Google Play Badge"
@@ -374,18 +372,16 @@ export default function JobPrepMenu({
                 height={30}
                 className="mt-3"
               />
-            </a>
-          </div>
-          <Image
-            src="/images/navbar/quizvita.svg"
-            alt="QuizVita App UI"
-            width={240}
-            height={200}
-            className="absolute bottom-0 right-2"
-          />
-
+            </div>
+            <Image
+              src="/images/navbar/quizvita.svg"
+              alt="QuizVita App UI"
+              width={240}
+              height={200}
+              className="absolute bottom-0 right-2"
+            />
+          </Link>
         </motion.div>
-
 
         <motion.div
           {...cardAnimation}

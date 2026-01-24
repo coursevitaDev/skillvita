@@ -57,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       "CV-P33",
     ]);
     if (externalIds.has(project._id)) {
-      window.location.href = `https://skillvita.com/projects/${project._id}`;
+      window.location.href = `https://skillvita.in/projects/${project._id}`;
       return;
     }
     router.push(`/projects/${project._id}`);

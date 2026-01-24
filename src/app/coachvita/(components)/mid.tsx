@@ -15,50 +15,50 @@ const logos = [
 ];
 const logosRepeated = Array(4).fill(logos).flat();
 
-const steps = [
-  {
-    numIcon: "/images/mock-interview/1stNum.svg",
-    actionIcon: "/images/mock-interview/r1.svg",
-    label: "Register",
-    desc: "Fill the corresponding details & check your availability",
-  },
-  {
-    numIcon: "/images/mock-interview/2ndNum.svg",
-    actionIcon: "/images/mock-interview/r2.svg",
-    label: "Schedule",
-    desc: "Set a date and time for your mock interview and one-on-one career counseling session.",
-  },
-  {
-    numIcon: "/images/mock-interview/3rdNum.svg",
-    actionIcon: "/images/mock-interview/r3.svg",
-    label: "Start Earning",
-    desc: "Conduct coaching sessions & receive payments",
-  },
-];
+// const steps = [
+//   {
+//     numIcon: "/images/mock-interview/1stNum.svg",
+//     actionIcon: "/images/mock-interview/r1.svg",
+//     label: "Register",
+//     desc: "Fill the corresponding details & check your availability",
+//   },
+//   {
+//     numIcon: "/images/mock-interview/2ndNum.svg",
+//     actionIcon: "/images/mock-interview/r2.svg",
+//     label: "Schedule",
+//     desc: "Set a date and time for your mock interview and one-on-one career counseling session.",
+//   },
+//   {
+//     numIcon: "/images/mock-interview/3rdNum.svg",
+//     actionIcon: "/images/mock-interview/r3.svg",
+//     label: "Start Earning",
+//     desc: "Conduct coaching sessions & receive payments",
+//   },
+// ];
 
 const Mid: React.FC = () => {
   return (
-    <section className="bg-white dark:bg-black">
+    <section className="bg-brand-950">
       {/* Headings */}
       <div className="py-12">
-        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-[#fe7465] text-center">
+        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-accent-500 text-center">
           Our Mentors
         </h2>
-        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-black dark:text-white text-center mt-2">
+        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-white text-center mt-2">
           Have Worked At
         </h2>
       </div>
 
       {/* Marquee logos */}
-      <div className="relative overflow-hidden w-full max-w-7xl my-6 items-center mx-auto">
+      <div className="relative overflow-hidden w-full max-w-7xl py-6 items-center mx-auto">
         {/* Left Blur */}
         <div className="absolute top-0 left-0 h-full w-12 z-10 pointer-events-none">
-          <div className="h-full w-full bg-gradient-to-r from-white/90 dark:from-black/90 to-transparent" />
+          <div className="h-full w-full bg-gradient-to-r from-brand-950/90 to-transparent" />
         </div>
 
         {/* Right Blur */}
         <div className="absolute top-0 right-0 h-full w-12 z-10 pointer-events-none">
-          <div className="h-full w-full bg-gradient-to-l from-white/90 dark:from-black/90 to-transparent" />
+          <div className="h-full w-full bg-gradient-to-l from-brand-950/90 to-transparent" />
         </div>
 
         {/* Marquee Content */}
@@ -68,16 +68,22 @@ const Mid: React.FC = () => {
         >
           {logosRepeated.map((src, i) => (
             <div key={i} className="flex-shrink-0">
-              <Image src={src} alt={`Logo ${i + 1}`} width={100} height={40} />
+              <Image
+                src={src}
+                alt={`Logo ${i + 1}`}
+                width={100}
+                height={40}
+                className="brightness-0 invert opacity-70"
+              />
             </div>
           ))}
         </div>
       </div>
 
       {/* Steps to register */}
-      <div className="mt-24 bg-gradient-to-b from-transparent via-transparent to-[#EB00FF]/[0.05] dark:to-[#EB00FF]/[0.1] py-8">
-        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-[#fe7465] text-center">
-          Steps <span className="text-black dark:text-white">to Register</span>
+      {/* <div className="mt-24 bg-gradient-to-b from-transparent via-transparent to-brand-500/[0.05] py-8">
+        <h2 className="text-2xl lg:text-4xl font-outfit font-semibold text-accent-500 text-center">
+          Steps <span className="text-white">to Register</span>
         </h2>
         <div className="flex flex-wrap justify-center gap-2.5 p-[50px] px-[10px]">
           {steps.map((s, i) => (
@@ -90,7 +96,7 @@ const Mid: React.FC = () => {
                 alt={`Step ${i + 1}`}
                 width={80}
                 height={80}
-                className="flex-shrink-0"
+                className="flex-shrink-0 opacity-90"
               />
               <div className="flex flex-col items-center gap-[5px]">
                 <div className="flex items-center gap-[10px] mt-[15px]">
@@ -99,19 +105,20 @@ const Mid: React.FC = () => {
                     alt={s.label}
                     width={24}
                     height={24}
+                    className="brightness-0 invert"
                   />
-                  <span className="text-2xl lg:text-[24px] font-outfit font-semibold">
+                  <span className="text-2xl lg:text-[24px] font-outfit font-semibold text-white">
                     {s.label}
                   </span>
                 </div>
-                <p className="text-center text-base font-poppins font-normal leading-relaxed">
+                <p className="text-center text-base font-poppins font-normal leading-relaxed text-brand-200">
                   {s.desc}
                 </p>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Keyframes for marquee */}
       <style jsx>{`

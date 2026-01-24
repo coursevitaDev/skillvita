@@ -1,31 +1,31 @@
 // components/GaugeSpeedometer.tsx
-"use client"
+"use client";
 
-import React from 'react'
-import AnimatedTypography from './AnimatedTypography'
+import React from "react";
+import AnimatedTypography from "./AnimatedTypography";
 
 interface GaugeProps {
-  percent?: number
+  percent?: number;
 }
 
 const GaugeSpeedometer: React.FC<GaugeProps> = ({ percent = 75 }) => {
-  const radius = 35
-  const circumference = 2 * Math.PI * radius
+  const radius = 35;
+  const circumference = 2 * Math.PI * radius;
 
   return (
     <div className="w-[160px] h-[100px] relative mx-auto">
       <svg viewBox="0 0 160 100" className="w-full h-full">
         <defs>
           <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#7234f7" />
-            <stop offset="100%" stopColor="#7234f7" />
+            <stop offset="0%" stopColor="var(--color-accent-500)" />
+            <stop offset="100%" stopColor="var(--color-accent-500)" />
           </linearGradient>
         </defs>
 
         {/* background arc */}
         <path
           d="M 25 80 A 35 35 0 0 1 135 80"
-          stroke="#E6E6E6"
+          stroke="var(--color-brand-800)"
           strokeWidth={14}
           fill="none"
           strokeLinecap="round"
@@ -50,8 +50,8 @@ const GaugeSpeedometer: React.FC<GaugeProps> = ({ percent = 75 }) => {
           x="80"
           y="85"
           textAnchor="middle"
-          className="font-poppins font-semibold text-[24px] fill-[#7234f7] opacity-0 animate-fadeIn"
-          style={{ animationDelay: '1.2s' }}
+          className="font-poppins font-semibold text-[24px] fill-accent-500 opacity-0 animate-fadeIn"
+          style={{ animationDelay: "1.2s" }}
         >
           <AnimatedTypography to={percent} duration={1200} />%
         </text>
@@ -60,7 +60,8 @@ const GaugeSpeedometer: React.FC<GaugeProps> = ({ percent = 75 }) => {
       <style jsx>{`
         @keyframes fillGauge {
           to {
-            stroke-dashoffset: ${circumference - (percent / 120) * circumference};
+            stroke-dashoffset: ${circumference -
+            (percent / 120) * circumference};
           }
         }
         .animate-fillGauge {
@@ -76,7 +77,7 @@ const GaugeSpeedometer: React.FC<GaugeProps> = ({ percent = 75 }) => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default GaugeSpeedometer
+export default GaugeSpeedometer;

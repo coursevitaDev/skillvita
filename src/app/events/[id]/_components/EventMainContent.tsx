@@ -80,9 +80,9 @@ export default function EventMainContent({
       {/* Registration Box */}
       <div>
         {event.isCompleted ? (
-          <div className="rounded-xl overflow-hidden border border-[#E4E4E7] bg-[#f9f9ff] dark:bg-[#18181B] text-sm mb-6">
+          <div className="rounded-xl overflow-hidden border border-[#E4E4E7] dark:border-[#18181B] bg-[#f9f9ff] dark:bg-[#18181B] text-sm mb-6">
             <div className="bg-[#f1f1fb] dark:bg-[#26262f] px-4 py-2">
-              <p className="text-sm font-medium text-brand-500">Event Completed</p>
+              <p className="text-sm font-medium text-accent-500">Event Completed</p>
             </div>
             <div className="p-4 space-y-4">
               <p className="text-base text-gray-800 dark:text-gray-200">
@@ -132,7 +132,7 @@ export default function EventMainContent({
 
       {/* About Section */}
       <div>
-        <h3 className="text-xl font-semibold text-brand-500 mb-1">About Event</h3>
+        <h3 className="text-xl font-semibold text-accent-500 mb-1">About Event</h3>
         {event.isCompleted && event.youtubeLink && (
           <div className="mb-4">
             <YouTubeEmbed url={event.youtubeLink} />
@@ -147,7 +147,7 @@ export default function EventMainContent({
       {event.category === "hackathon" && event.tracksAndHighlights && (
         <div className="rounded-lg space-y-4">
           <div>
-            <h4 className="text-lg font-semibold text-brand-500">Event Tracks</h4>
+            <h4 className="text-lg font-semibold text-accent-500">Event Tracks</h4>
             <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300">
               {event.tracksAndHighlights.tracks.map((t, idx) => (
                 <li key={idx}>
@@ -157,7 +157,7 @@ export default function EventMainContent({
             </ul>
           </div>
           <div>
-            <h4 className="text-lg font-semibold text-brand-500">Perks & Highlights</h4>
+            <h4 className="text-lg font-semibold text-accent-500">Perks & Highlights</h4>
             <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300">
               {event.tracksAndHighlights.perks.map((p, i) => (
                 <li key={i}>{p}</li>
@@ -176,9 +176,9 @@ export default function EventMainContent({
       {/* Location Map */}
       {event.locationlink && (
         <div className="mt-6">
-          <h4 className="text-xl font-semibold text-brand-500 mb-2">Location</h4>
+          <h4 className="text-xl font-semibold text-accent-500 mb-2">Location</h4>
           <h3 className="mb-1">WeWork at Gachibowli</h3>
-          <p className="text-sm font-medium text-brand-500 mb-4">
+          <p className="text-sm font-medium mb-4">
             Plot 118, 3rd floor, Spaces and more, Business Park, Lumbini Avenue, Gachibowli, Hyderabad, Telangana 500032
           </p>
 

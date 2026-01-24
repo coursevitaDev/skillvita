@@ -24,7 +24,7 @@ export default function EventSidebarCard({ event }: EventSidebarCardProps) {
       </div>
 
       {/* Event Info */}
-      <div className="bg-[#1a237e] dark:bg-[#1a237e]/10 text-white px-5 py-6 space-y-3">
+      <div className="bg-[#1a237e] dark:bg-[#18181b96] text-white px-5 py-6 space-y-3">
         <h2 className="text-xl font-bold leading-snug">{event.title}</h2>
 
         <div className="text-sm space-y-1">
@@ -70,7 +70,7 @@ export default function EventSidebarCard({ event }: EventSidebarCardProps) {
       {/* Hosted By People */}
       {event.hostedBy?.length ? (
         <div className="bg-gray-50 dark:bg-[#18181B] p-4 pb-2 border-t">
-          <p className="text-sm font-medium text-brand-500 mb-3">Hosted By</p>
+          <p className="text-sm font-medium text-accent-500 mb-3">Hosted By</p>
           {event.hostedBy.map((h, i) => (
             <div key={i} className="flex items-center gap-3 mb-3">
               <Image
